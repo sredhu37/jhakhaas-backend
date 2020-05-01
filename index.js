@@ -9,6 +9,7 @@ const middleware = require('./utils/middleware');
 const usersController = require('./controllers/users');
 
 const app = express();
+app.use(express.json());
 app.use(middleware.logRequest);
 app.use('/api/users', usersController.usersRouter);
 
@@ -19,7 +20,7 @@ const connectToMongoDB = (mongoUri) => {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
-    .then((response) => {
+    .then(() => {
       logger.info('Successfully connected to MongoDB!');
     })
     .catch((error) => {

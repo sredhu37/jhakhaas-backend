@@ -1,98 +1,1047 @@
-[2020-05-01T13:17:11.652] [INFO] Logging:  - Listening on http://127.0.0.1:3000
-[2020-05-01T13:17:13.368] [INFO] Logging:  - Mongoose {
-  connections: [
-    NativeConnection {
-      base: [Circular],
-      collections: {},
-      models: {},
-      config: [Object],
-      replica: false,
-      options: null,
-      otherDbs: [],
-      relatedDbs: {},
-      states: [Object: null prototype],
-      _readyState: 1,
-      _closeCalled: false,
-      _hasOpened: true,
-      plugins: [],
-      id: 0,
-      _listening: false,
-      _connectionOptions: [Object],
-      client: [MongoClient],
-      '$initialConnection': [Promise],
-      name: 'jhakhaas',
-      host: 'sunnyredhu-shard-00-01-x5vx1.mongodb.net',
-      port: 27017,
-      user: 'read-write',
-      pass: 'read-write',
-      db: [Db]
-    }
-  ],
-  models: {},
-  modelSchemas: {},
-  options: { pluralization: true, [Symbol(mongoose:default)]: true },
-  _pluralize: [Function: pluralize],
-  Schema: [Function: Schema] {
-    reserved: [Object: null prototype] {
-      populated: 1,
-      remove: 1,
-      validate: 1,
-      toObject: 1,
-      schema: 1,
-      save: 1,
-      get: 1,
-      isNew: 1,
-      isModified: 1,
-      init: 1,
-      errors: 1,
-      db: 1,
-      collection: 1,
-      removeListener: 1,
-      listeners: 1,
-      once: 1,
-      on: 1,
-      emit: 1,
-      prototype: 1
-    },
-    Types: {
-      String: [Function],
-      Number: [Function],
-      Boolean: [Function],
-      DocumentArray: [Function],
-      Embedded: [Function: SingleNestedPath],
-      Array: [Function],
-      Buffer: [Function],
-      Date: [Function],
-      ObjectId: [Function],
-      Mixed: [Function],
-      Decimal: [Function],
-      Decimal128: [Function],
-      Map: [Function],
-      Oid: [Function],
-      Object: [Function],
-      Bool: [Function],
-      ObjectID: [Function]
-    },
-    ObjectId: [Function: ObjectId] {
-      schemaName: 'ObjectId',
-      defaultOptions: {},
-      get: [Function],
-      set: [Function: set],
-      _checkRequired: [Function],
-      _cast: [Function: castObjectId],
-      cast: [Function: cast],
-      checkRequired: [Function]
+[2020-05-01T15:10:28.428] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-01T15:21:56.168] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-01T15:21:57.756] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-01T15:22:12.600] [INFO] Logging:  - ---Request begins here---
+[2020-05-01T15:22:12.602] [INFO] Logging:  - Method: POST
+[2020-05-01T15:22:12.603] [INFO] Logging:  - Path:   /api/users
+[2020-05-01T15:22:12.605] [INFO] Logging:  - Body:   { email: 'Planet', phone: 9438343, password: 'fjdlkfjdk' }
+[2020-05-01T15:22:12.606] [INFO] Logging:  - ---Request ends here---
+[2020-05-01T15:22:12.621] [ERROR] Logging:  - Error [ValidationError]: User validation failed: passwordHash: Path `passwordHash` is required.
+    at ValidationError.inspect (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\error\validation.js:61:24)
+    at formatValue (internal/util/inspect.js:563:31)
+    at inspect (internal/util/inspect.js:221:10)
+    at formatWithOptions (internal/util/inspect.js:1693:40)
+    at Object.format (internal/util/inspect.js:1543:10)
+    at basicLayout (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\layouts.js:62:57)
+    at app (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\appenders\file.js:56:23)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\log4js.js:42:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\log4js.js:41:21)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:23:26
+    at Array.forEach (<anonymous>)
+    at sendToListeners (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:23:13)
+    at Object.send (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:89:7)
+    at Logger._log (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\logger.js:90:16)
+    at Logger.log (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\logger.js:73:12) {
+  errors: {
+    passwordHash: MongooseError [ValidatorError]: Path `passwordHash` is required.
+        at new ValidatorError (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\error\validator.js:29:11)
+        at validate (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\schematype.js:1170:13)
+        at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\schematype.js:1153:7
+        at Array.forEach (<anonymous>)
+        at SchemaString.SchemaType.doValidate (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\schematype.js:1098:14)
+        at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:2372:18
+        at processTicksAndRejections (internal/process/task_queues.js:76:11) {
+      message: 'Path `passwordHash` is required.',
+      name: 'ValidatorError',
+      properties: [Object],
+      kind: 'required',
+      path: 'passwordHash',
+      value: '',
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
     }
   },
-  model: [Function],
-  plugins: [
-    [ [Function], [Object] ],
-    [ [Function], [Object] ],
-    [ [Function], [Object] ],
-    [ [Function], [Object] ]
-  ]
+  _message: 'User validation failed',
+  name: 'ValidationError'
 }
-[2020-05-01T13:18:23.446] [INFO] Logging:  - Listening on http://127.0.0.1:3000
-[2020-05-01T13:18:24.884] [INFO] Logging:  - Connection to MongoDB is successful!
-[2020-05-01T13:18:46.699] [INFO] Logging:  - Listening on http://127.0.0.1:3000
-[2020-05-01T13:18:48.049] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-01T15:22:12.766] [INFO] Logging:  - $2b$10$6iblFjHebaweKNY/iDk8V.K1vKARTGNU1ex1sQc1Ubuj4EAJrkLzy
+[2020-05-01T15:23:45.741] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-01T15:23:47.332] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-01T15:24:34.265] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-01T15:24:35.810] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-01T15:24:52.052] [INFO] Logging:  - ---Request begins here---
+[2020-05-01T15:24:52.053] [INFO] Logging:  - Method: POST
+[2020-05-01T15:24:52.054] [INFO] Logging:  - Path:   /api/users
+[2020-05-01T15:24:52.055] [INFO] Logging:  - Body:   { email: 'Planet', phone: 9438343, password: 'fjdlkfjdk' }
+[2020-05-01T15:24:52.056] [INFO] Logging:  - ---Request ends here---
+[2020-05-01T15:24:52.378] [INFO] Logging:  - {
+  score: 0,
+  streak: 1,
+  role: 'USER',
+  _id: 5eabf1ecfa17463b909d8272,
+  email: 'Planet',
+  phoneNumber: 9438343,
+  passwordHash: '$2b$10$R6myPFiIjGn86Iec8dxMcek4x/t.bvJ0teFvQMNVhhpE2dc2i.sKK',
+  __v: 0
+}
+[2020-05-01T16:06:52.182] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-01T16:06:53.769] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-01T16:07:12.597] [INFO] Logging:  - ---Request begins here---
+[2020-05-01T16:07:12.599] [INFO] Logging:  - Method: POST
+[2020-05-01T16:07:12.599] [INFO] Logging:  - Path:   /api/users
+[2020-05-01T16:07:12.601] [INFO] Logging:  - Body:   { email: 'Plandfdet', phone: 94383343, password: 'fjdlksdfjdk' }
+[2020-05-01T16:07:12.603] [INFO] Logging:  - ---Request ends here---
+[2020-05-01T16:07:12.606] [ERROR] Logging:  - Error: Invalid email
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\controllers\users.js:30:12
+    at new Promise (<anonymous>)
+    at verifyEmail (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\controllers\users.js:25:34)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\controllers\users.js:43:50
+    at Layer.handle [as handle_request] (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\index.js:284:7
+[2020-05-01T16:07:33.146] [INFO] Logging:  - ---Request begins here---
+[2020-05-01T16:07:33.151] [INFO] Logging:  - Method: POST
+[2020-05-01T16:07:33.152] [INFO] Logging:  - Path:   /api/users
+[2020-05-01T16:07:33.153] [INFO] Logging:  - Body:   {
+  email: 'Plandfdet@gmail.c',
+  phone: 94383343,
+  password: 'fjdlksdfjdk'
+}
+[2020-05-01T16:07:33.156] [INFO] Logging:  - ---Request ends here---
+[2020-05-01T16:07:33.157] [ERROR] Logging:  - Error: Invalid email
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\controllers\users.js:30:12
+    at new Promise (<anonymous>)
+    at verifyEmail (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\controllers\users.js:25:34)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\controllers\users.js:43:50
+    at Layer.handle [as handle_request] (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\index.js:284:7
+[2020-05-01T16:07:40.173] [INFO] Logging:  - ---Request begins here---
+[2020-05-01T16:07:40.175] [INFO] Logging:  - Method: POST
+[2020-05-01T16:07:40.177] [INFO] Logging:  - Path:   /api/users
+[2020-05-01T16:07:40.178] [INFO] Logging:  - Body:   {
+  email: 'Plandfdet@gmail.c',
+  phone: 94383343,
+  password: 'fjdlksdfjdk'
+}
+[2020-05-01T16:07:40.197] [INFO] Logging:  - ---Request ends here---
+[2020-05-01T16:07:40.198] [ERROR] Logging:  - Error: Invalid email
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\controllers\users.js:30:12
+    at new Promise (<anonymous>)
+    at verifyEmail (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\controllers\users.js:25:34)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\controllers\users.js:43:50
+    at Layer.handle [as handle_request] (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\express\lib\router\index.js:284:7
+[2020-05-01T16:07:48.430] [INFO] Logging:  - ---Request begins here---
+[2020-05-01T16:07:48.431] [INFO] Logging:  - Method: POST
+[2020-05-01T16:07:48.431] [INFO] Logging:  - Path:   /api/users
+[2020-05-01T16:07:48.432] [INFO] Logging:  - Body:   {
+  email: 'Plandfdet@gmail.com',
+  phone: 94383343,
+  password: 'fjdlksdfjdk'
+}
+[2020-05-01T16:07:48.433] [INFO] Logging:  - ---Request ends here---
+[2020-05-01T16:07:48.498] [INFO] Logging:  - [
+  '$2b$10$8ZqRwNuEkuD0N7bwOJAyjOSy3VFmrlLRsw1WndVMUuaxlqC.4l7k.',
+  'Plandfdet@gmail.com',
+  []
+]
+[2020-05-01T16:07:48.522] [ERROR] Logging:  - Error [ValidationError]: User validation failed: phoneNumber: Cast to Number failed for value "[]" at path "phoneNumber"
+    at ValidationError.inspect (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\error\validation.js:61:24)
+    at formatValue (internal/util/inspect.js:563:31)
+    at inspect (internal/util/inspect.js:221:10)
+    at formatWithOptions (internal/util/inspect.js:1693:40)
+    at Object.format (internal/util/inspect.js:1543:10)
+    at basicLayout (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\layouts.js:62:57)
+    at app (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\appenders\file.js:56:23)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\log4js.js:42:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\log4js.js:41:21)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:23:26
+    at Array.forEach (<anonymous>)
+    at sendToListeners (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:23:13)
+    at Object.send (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:89:7)
+    at Logger._log (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\logger.js:90:16)
+    at Logger.log (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\logger.js:73:12) {
+  errors: {
+    phoneNumber: MongooseError [CastError]: Cast to Number failed for value "[]" at path "phoneNumber"
+        at new CastError (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\error\cast.js:29:11)
+        at model.$set (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:1239:9)
+        at model._handleIndex (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:978:14)
+        at model.$set (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:919:22)
+        at model.Document (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:136:12)
+        at model.Model (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\model.js:105:12)
+        at new model (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\model.js:4705:15)
+        at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\controllers\users.js:48:22 {
+      stringValue: '"[]"',
+      kind: 'Number',
+      value: [],
+      path: 'phoneNumber',
+      reason: [MongooseError],
+      message: 'Cast to Number failed for value "[]" at path "phoneNumber"',
+      name: 'CastError'
+    }
+  },
+  _message: 'User validation failed',
+  name: 'ValidationError'
+}
+[2020-05-01T16:08:20.108] [INFO] Logging:  - ---Request begins here---
+[2020-05-01T16:08:20.109] [INFO] Logging:  - Method: POST
+[2020-05-01T16:08:20.110] [INFO] Logging:  - Path:   /api/users
+[2020-05-01T16:08:20.111] [INFO] Logging:  - Body:   {
+  email: 'Plandfdet@gmail.com',
+  phone: 9740578879,
+  password: 'fjdlksdfjdk'
+}
+[2020-05-01T16:08:20.127] [INFO] Logging:  - ---Request ends here---
+[2020-05-01T16:08:20.192] [INFO] Logging:  - [
+  '$2b$10$KBI8D/hzsk3DmIGDZ8wpAOA6L8RH74sDViLqz/oD/ZsGu8y1kvBte',
+  'Plandfdet@gmail.com',
+  []
+]
+[2020-05-01T16:08:20.197] [ERROR] Logging:  - Error [ValidationError]: User validation failed: phoneNumber: Cast to Number failed for value "[]" at path "phoneNumber"
+    at ValidationError.inspect (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\error\validation.js:61:24)
+    at formatValue (internal/util/inspect.js:563:31)
+    at inspect (internal/util/inspect.js:221:10)
+    at formatWithOptions (internal/util/inspect.js:1693:40)
+    at Object.format (internal/util/inspect.js:1543:10)
+    at basicLayout (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\layouts.js:62:57)
+    at app (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\appenders\file.js:56:23)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\log4js.js:42:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\log4js.js:41:21)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:23:26
+    at Array.forEach (<anonymous>)
+    at sendToListeners (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:23:13)
+    at Object.send (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:89:7)
+    at Logger._log (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\logger.js:90:16)
+    at Logger.log (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\logger.js:73:12) {
+  errors: {
+    phoneNumber: MongooseError [CastError]: Cast to Number failed for value "[]" at path "phoneNumber"
+        at new CastError (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\error\cast.js:29:11)
+        at model.$set (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:1239:9)
+        at model._handleIndex (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:978:14)
+        at model.$set (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:919:22)
+        at model.Document (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:136:12)
+        at model.Model (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\model.js:105:12)
+        at new model (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\model.js:4705:15)
+        at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\controllers\users.js:48:22 {
+      stringValue: '"[]"',
+      kind: 'Number',
+      value: [],
+      path: 'phoneNumber',
+      reason: [MongooseError],
+      message: 'Cast to Number failed for value "[]" at path "phoneNumber"',
+      name: 'CastError'
+    }
+  },
+  _message: 'User validation failed',
+  name: 'ValidationError'
+}
+[2020-05-01T16:08:44.536] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-01T16:08:46.328] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-01T16:08:49.453] [INFO] Logging:  - ---Request begins here---
+[2020-05-01T16:08:49.456] [INFO] Logging:  - Method: POST
+[2020-05-01T16:08:49.459] [INFO] Logging:  - Path:   /api/users
+[2020-05-01T16:08:49.460] [INFO] Logging:  - Body:   {
+  email: 'Plandfdet@gmail.com',
+  phone: 9740578879,
+  password: 'fjdlksdfjdk'
+}
+[2020-05-01T16:08:49.462] [INFO] Logging:  - ---Request ends here---
+[2020-05-01T16:08:49.527] [INFO] Logging:  - [
+  '$2b$10$0mcnTICsrFLcTC6eVEn1Je9gfigscp88Oiu621JpMXzZ2oyD/joYS',
+  'Plandfdet@gmail.com',
+  []
+]
+[2020-05-01T16:08:49.550] [ERROR] Logging:  - Error [ValidationError]: User validation failed: phoneNumber: Cast to Number failed for value "[]" at path "phoneNumber"
+    at ValidationError.inspect (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\error\validation.js:61:24)
+    at formatValue (internal/util/inspect.js:563:31)
+    at inspect (internal/util/inspect.js:221:10)
+    at formatWithOptions (internal/util/inspect.js:1693:40)
+    at Object.format (internal/util/inspect.js:1543:10)
+    at basicLayout (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\layouts.js:62:57)
+    at app (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\appenders\file.js:56:23)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\log4js.js:42:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\log4js.js:41:21)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:23:26
+    at Array.forEach (<anonymous>)
+    at sendToListeners (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:23:13)
+    at Object.send (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:89:7)
+    at Logger._log (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\logger.js:90:16)
+    at Logger.log (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\logger.js:73:12) {
+  errors: {
+    phoneNumber: MongooseError [CastError]: Cast to Number failed for value "[]" at path "phoneNumber"
+        at new CastError (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\error\cast.js:29:11)
+        at model.$set (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:1239:9)
+        at model._handleIndex (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:978:14)
+        at model.$set (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:919:22)
+        at model.Document (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:136:12)
+        at model.Model (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\model.js:105:12)
+        at new model (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\model.js:4705:15)
+        at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\controllers\users.js:48:22 {
+      stringValue: '"[]"',
+      kind: 'Number',
+      value: [],
+      path: 'phoneNumber',
+      reason: [MongooseError],
+      message: 'Cast to Number failed for value "[]" at path "phoneNumber"',
+      name: 'CastError'
+    }
+  },
+  _message: 'User validation failed',
+  name: 'ValidationError'
+}
+[2020-05-01T16:10:08.773] [INFO] Logging:  - ---Request begins here---
+[2020-05-01T16:10:08.774] [INFO] Logging:  - Method: POST
+[2020-05-01T16:10:08.775] [INFO] Logging:  - Path:   /api/users
+[2020-05-01T16:10:08.787] [INFO] Logging:  - Body:   {
+  email: 'Plandfdet@gmail.com',
+  phone: 919740578879,
+  password: 'fjdlksdfjdk'
+}
+[2020-05-01T16:10:08.790] [INFO] Logging:  - ---Request ends here---
+[2020-05-01T16:10:08.856] [INFO] Logging:  - [
+  '$2b$10$fWR7wW8Pj2Dtf2ptX6NSoemuGtOvCUWW8SXamvyV39VyRrXpUJbLW',
+  'Plandfdet@gmail.com',
+  []
+]
+[2020-05-01T16:10:08.861] [ERROR] Logging:  - Error [ValidationError]: User validation failed: phoneNumber: Cast to Number failed for value "[]" at path "phoneNumber"
+    at ValidationError.inspect (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\error\validation.js:61:24)
+    at formatValue (internal/util/inspect.js:563:31)
+    at inspect (internal/util/inspect.js:221:10)
+    at formatWithOptions (internal/util/inspect.js:1693:40)
+    at Object.format (internal/util/inspect.js:1543:10)
+    at basicLayout (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\layouts.js:62:57)
+    at app (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\appenders\file.js:56:23)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\log4js.js:42:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\log4js.js:41:21)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:23:26
+    at Array.forEach (<anonymous>)
+    at sendToListeners (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:23:13)
+    at Object.send (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:89:7)
+    at Logger._log (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\logger.js:90:16)
+    at Logger.log (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\logger.js:73:12) {
+  errors: {
+    phoneNumber: MongooseError [CastError]: Cast to Number failed for value "[]" at path "phoneNumber"
+        at new CastError (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\error\cast.js:29:11)
+        at model.$set (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:1239:9)
+        at model._handleIndex (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:978:14)
+        at model.$set (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:919:22)
+        at model.Document (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:136:12)
+        at model.Model (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\model.js:105:12)
+        at new model (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\model.js:4705:15)
+        at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\controllers\users.js:48:22 {
+      stringValue: '"[]"',
+      kind: 'Number',
+      value: [],
+      path: 'phoneNumber',
+      reason: [MongooseError],
+      message: 'Cast to Number failed for value "[]" at path "phoneNumber"',
+      name: 'CastError'
+    }
+  },
+  _message: 'User validation failed',
+  name: 'ValidationError'
+}
+[2020-05-01T16:10:32.146] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-01T16:10:33.678] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-01T16:10:59.156] [INFO] Logging:  - ---Request begins here---
+[2020-05-01T16:10:59.158] [INFO] Logging:  - Method: POST
+[2020-05-01T16:10:59.179] [INFO] Logging:  - Path:   /api/users
+[2020-05-01T16:10:59.181] [INFO] Logging:  - Body:   {
+  email: 'Plandfdet@gmail.com',
+  phone: '+919740578879',
+  password: 'fjdlksdfjdk'
+}
+[2020-05-01T16:10:59.183] [INFO] Logging:  - ---Request ends here---
+[2020-05-01T16:10:59.250] [INFO] Logging:  - [
+  '$2b$10$TCIXiZRvWpj9Om2eeHmbquF1pHdPiaSUc50r4qKKoe7.N2I65JO4a',
+  'Plandfdet@gmail.com',
+  [ '+919740578879', 'IND' ]
+]
+[2020-05-01T16:10:59.262] [ERROR] Logging:  - Error [ValidationError]: User validation failed: phoneNumber: Cast to String failed for value "[ '+919740578879', 'IND' ]" at path "phoneNumber"
+    at ValidationError.inspect (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\error\validation.js:61:24)
+    at formatValue (internal/util/inspect.js:563:31)
+    at inspect (internal/util/inspect.js:221:10)
+    at formatWithOptions (internal/util/inspect.js:1693:40)
+    at Object.format (internal/util/inspect.js:1543:10)
+    at basicLayout (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\layouts.js:62:57)
+    at app (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\appenders\file.js:56:23)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\log4js.js:42:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\log4js.js:41:21)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:23:26
+    at Array.forEach (<anonymous>)
+    at sendToListeners (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:23:13)
+    at Object.send (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:89:7)
+    at Logger._log (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\logger.js:90:16)
+    at Logger.log (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\logger.js:73:12) {
+  errors: {
+    phoneNumber: MongooseError [CastError]: Cast to String failed for value "[ '+919740578879', 'IND' ]" at path "phoneNumber"
+        at new CastError (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\error\cast.js:29:11)
+        at model.$set (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:1239:9)
+        at model._handleIndex (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:978:14)
+        at model.$set (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:919:22)
+        at model.Document (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:136:12)
+        at model.Model (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\model.js:105:12)
+        at new model (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\model.js:4705:15)
+        at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\controllers\users.js:48:22 {
+      stringValue: `"[ '+919740578879', 'IND' ]"`,
+      kind: 'String',
+      value: [Array],
+      path: 'phoneNumber',
+      reason: [MongooseError],
+      message: `Cast to String failed for value "[ '+919740578879', 'IND' ]" at path "phoneNumber"`,
+      name: 'CastError'
+    }
+  },
+  _message: 'User validation failed',
+  name: 'ValidationError'
+}
+[2020-05-01T16:21:34.220] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-01T16:21:35.674] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-01T16:21:41.957] [INFO] Logging:  - ---Request begins here---
+[2020-05-01T16:21:41.958] [INFO] Logging:  - Method: POST
+[2020-05-01T16:21:41.959] [INFO] Logging:  - Path:   /api/users
+[2020-05-01T16:21:41.960] [INFO] Logging:  - Body:   {
+  email: 'Plandfdet@gmail.com',
+  phone: '+919740578879',
+  password: 'fjdlksdfjdk'
+}
+[2020-05-01T16:21:41.961] [INFO] Logging:  - ---Request ends here---
+[2020-05-01T16:21:42.028] [INFO] Logging:  - [
+  '$2b$10$7gDqmZnh0ca3snOOjV5lOugdvViMs3Acm5ngP9Ks2u6/fVGe/lo0C',
+  'Plandfdet@gmail.com',
+  [ '+919740578879', 'IND' ]
+]
+[2020-05-01T16:21:42.040] [ERROR] Logging:  - Error [ValidationError]: User validation failed: phoneNumber: Cast to String failed for value "[ '+919740578879', 'IND' ]" at path "phoneNumber"
+    at ValidationError.inspect (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\error\validation.js:61:24)
+    at formatValue (internal/util/inspect.js:563:31)
+    at inspect (internal/util/inspect.js:221:10)
+    at formatWithOptions (internal/util/inspect.js:1693:40)
+    at Object.format (internal/util/inspect.js:1543:10)
+    at basicLayout (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\layouts.js:62:57)
+    at app (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\appenders\file.js:56:23)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\log4js.js:42:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\log4js.js:41:21)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:23:26
+    at Array.forEach (<anonymous>)
+    at sendToListeners (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:23:13)
+    at Object.send (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:89:7)
+    at Logger._log (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\logger.js:90:16)
+    at Logger.log (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\logger.js:73:12) {
+  errors: {
+    phoneNumber: MongooseError [CastError]: Cast to String failed for value "[ '+919740578879', 'IND' ]" at path "phoneNumber"
+        at new CastError (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\error\cast.js:29:11)
+        at model.$set (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:1239:9)
+        at model._handleIndex (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:978:14)
+        at model.$set (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:919:22)
+        at model.Document (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:136:12)
+        at model.Model (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\model.js:105:12)
+        at new model (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\model.js:4705:15)
+        at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\controllers\users.js:48:22 {
+      stringValue: `"[ '+919740578879', 'IND' ]"`,
+      kind: 'String',
+      value: [Array],
+      path: 'phoneNumber',
+      reason: [MongooseError],
+      message: `Cast to String failed for value "[ '+919740578879', 'IND' ]" at path "phoneNumber"`,
+      name: 'CastError'
+    }
+  },
+  _message: 'User validation failed',
+  name: 'ValidationError'
+}
+[2020-05-01T16:22:11.802] [INFO] Logging:  - ---Request begins here---
+[2020-05-01T16:22:11.803] [INFO] Logging:  - Method: POST
+[2020-05-01T16:22:11.804] [INFO] Logging:  - Path:   /api/users
+[2020-05-01T16:22:11.813] [INFO] Logging:  - Body:   {
+  email: 'Plandfdet@gmail.com',
+  phone: '919740578879',
+  password: 'fjdlksdfjdk'
+}
+[2020-05-01T16:22:11.815] [INFO] Logging:  - ---Request ends here---
+[2020-05-01T16:22:11.879] [INFO] Logging:  - [
+  '$2b$10$y0qfqw.eMo0g6pu.nENROecQ40alf.QeLC.PVPQu0qiHONYaJXr4G',
+  'Plandfdet@gmail.com',
+  [ '+919740578879', 'IND' ]
+]
+[2020-05-01T16:22:11.882] [ERROR] Logging:  - Error [ValidationError]: User validation failed: phoneNumber: Cast to String failed for value "[ '+919740578879', 'IND' ]" at path "phoneNumber"
+    at ValidationError.inspect (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\error\validation.js:61:24)
+    at formatValue (internal/util/inspect.js:563:31)
+    at inspect (internal/util/inspect.js:221:10)
+    at formatWithOptions (internal/util/inspect.js:1693:40)
+    at Object.format (internal/util/inspect.js:1543:10)
+    at basicLayout (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\layouts.js:62:57)
+    at app (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\appenders\file.js:56:23)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\log4js.js:42:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\log4js.js:41:21)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:23:26
+    at Array.forEach (<anonymous>)
+    at sendToListeners (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:23:13)
+    at Object.send (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:89:7)
+    at Logger._log (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\logger.js:90:16)
+    at Logger.log (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\logger.js:73:12) {
+  errors: {
+    phoneNumber: MongooseError [CastError]: Cast to String failed for value "[ '+919740578879', 'IND' ]" at path "phoneNumber"
+        at new CastError (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\error\cast.js:29:11)
+        at model.$set (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:1239:9)
+        at model._handleIndex (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:978:14)
+        at model.$set (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:919:22)
+        at model.Document (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:136:12)
+        at model.Model (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\model.js:105:12)
+        at new model (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\model.js:4705:15)
+        at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\controllers\users.js:48:22 {
+      stringValue: `"[ '+919740578879', 'IND' ]"`,
+      kind: 'String',
+      value: [Array],
+      path: 'phoneNumber',
+      reason: [MongooseError],
+      message: `Cast to String failed for value "[ '+919740578879', 'IND' ]" at path "phoneNumber"`,
+      name: 'CastError'
+    }
+  },
+  _message: 'User validation failed',
+  name: 'ValidationError'
+}
+[2020-05-01T16:22:29.921] [INFO] Logging:  - ---Request begins here---
+[2020-05-01T16:22:29.922] [INFO] Logging:  - Method: POST
+[2020-05-01T16:22:29.923] [INFO] Logging:  - Path:   /api/users
+[2020-05-01T16:22:29.923] [INFO] Logging:  - Body:   {
+  email: 'Plandfdet@gmail.com',
+  phone: '919778879',
+  password: 'fjdlksdfjdk'
+}
+[2020-05-01T16:22:29.925] [INFO] Logging:  - ---Request ends here---
+[2020-05-01T16:22:29.989] [INFO] Logging:  - [
+  '$2b$10$yms7bK.ljPrWfLOsvWm8be/FfAoByn1.FFANZ9MJrFOwauFuhsFx.',
+  'Plandfdet@gmail.com',
+  []
+]
+[2020-05-01T16:22:29.992] [ERROR] Logging:  - Error [ValidationError]: User validation failed: phoneNumber: Cast to String failed for value "[]" at path "phoneNumber"
+    at ValidationError.inspect (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\error\validation.js:61:24)
+    at formatValue (internal/util/inspect.js:563:31)
+    at inspect (internal/util/inspect.js:221:10)
+    at formatWithOptions (internal/util/inspect.js:1693:40)
+    at Object.format (internal/util/inspect.js:1543:10)
+    at basicLayout (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\layouts.js:62:57)
+    at app (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\appenders\file.js:56:23)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\log4js.js:42:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\log4js.js:41:21)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:23:26
+    at Array.forEach (<anonymous>)
+    at sendToListeners (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:23:13)
+    at Object.send (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:89:7)
+    at Logger._log (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\logger.js:90:16)
+    at Logger.log (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\logger.js:73:12) {
+  errors: {
+    phoneNumber: MongooseError [CastError]: Cast to String failed for value "[]" at path "phoneNumber"
+        at new CastError (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\error\cast.js:29:11)
+        at model.$set (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:1239:9)
+        at model._handleIndex (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:978:14)
+        at model.$set (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:919:22)
+        at model.Document (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:136:12)
+        at model.Model (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\model.js:105:12)
+        at new model (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\model.js:4705:15)
+        at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\controllers\users.js:48:22 {
+      stringValue: '"[]"',
+      kind: 'String',
+      value: [],
+      path: 'phoneNumber',
+      reason: [MongooseError],
+      message: 'Cast to String failed for value "[]" at path "phoneNumber"',
+      name: 'CastError'
+    }
+  },
+  _message: 'User validation failed',
+  name: 'ValidationError'
+}
+[2020-05-01T16:22:40.718] [INFO] Logging:  - ---Request begins here---
+[2020-05-01T16:22:40.719] [INFO] Logging:  - Method: POST
+[2020-05-01T16:22:40.720] [INFO] Logging:  - Path:   /api/users
+[2020-05-01T16:22:40.720] [INFO] Logging:  - Body:   {
+  email: 'Plandfdet@gmail.com',
+  phone: '919740578879',
+  password: 'fjdlksdfjdk'
+}
+[2020-05-01T16:22:40.721] [INFO] Logging:  - ---Request ends here---
+[2020-05-01T16:22:40.786] [INFO] Logging:  - [
+  '$2b$10$eHf7mV4.HRH4Wdxz1bXyauNCFGp9Zlu55f2rNyV.F9YogmviMS/xG',
+  'Plandfdet@gmail.com',
+  [ '+919740578879', 'IND' ]
+]
+[2020-05-01T16:22:40.791] [ERROR] Logging:  - Error [ValidationError]: User validation failed: phoneNumber: Cast to String failed for value "[ '+919740578879', 'IND' ]" at path "phoneNumber"
+    at ValidationError.inspect (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\error\validation.js:61:24)
+    at formatValue (internal/util/inspect.js:563:31)
+    at inspect (internal/util/inspect.js:221:10)
+    at formatWithOptions (internal/util/inspect.js:1693:40)
+    at Object.format (internal/util/inspect.js:1543:10)
+    at basicLayout (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\layouts.js:62:57)
+    at app (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\appenders\file.js:56:23)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\log4js.js:42:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\log4js.js:41:21)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:23:26
+    at Array.forEach (<anonymous>)
+    at sendToListeners (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:23:13)
+    at Object.send (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:89:7)
+    at Logger._log (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\logger.js:90:16)
+    at Logger.log (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\logger.js:73:12) {
+  errors: {
+    phoneNumber: MongooseError [CastError]: Cast to String failed for value "[ '+919740578879', 'IND' ]" at path "phoneNumber"
+        at new CastError (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\error\cast.js:29:11)
+        at model.$set (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:1239:9)
+        at model._handleIndex (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:978:14)
+        at model.$set (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:919:22)
+        at model.Document (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:136:12)
+        at model.Model (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\model.js:105:12)
+        at new model (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\model.js:4705:15)
+        at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\controllers\users.js:48:22 {
+      stringValue: `"[ '+919740578879', 'IND' ]"`,
+      kind: 'String',
+      value: [Array],
+      path: 'phoneNumber',
+      reason: [MongooseError],
+      message: `Cast to String failed for value "[ '+919740578879', 'IND' ]" at path "phoneNumber"`,
+      name: 'CastError'
+    }
+  },
+  _message: 'User validation failed',
+  name: 'ValidationError'
+}
+[2020-05-01T16:24:08.679] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-01T16:24:10.171] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-01T16:24:17.667] [INFO] Logging:  - ---Request begins here---
+[2020-05-01T16:24:17.669] [INFO] Logging:  - Method: POST
+[2020-05-01T16:24:17.670] [INFO] Logging:  - Path:   /api/users
+[2020-05-01T16:24:17.671] [INFO] Logging:  - Body:   {
+  email: 'Plandfdet@gmail.com',
+  phone: '919740578879',
+  password: 'fjdlksdfjdk'
+}
+[2020-05-01T16:24:17.673] [INFO] Logging:  - ---Request ends here---
+[2020-05-01T16:24:17.738] [INFO] Logging:  - [
+  '$2b$10$5B7OBkU26lpLST8ES.QV8OkmOPBaUDKfTWGH9wJfElVkDA/3oAzd.',
+  'Plandfdet@gmail.com',
+  [ '+919740578879', 'IND' ]
+]
+[2020-05-01T16:24:17.741] [INFO] Logging:  - [ '+919740578879', 'IND' ]
+[2020-05-01T16:24:17.749] [ERROR] Logging:  - Error [ValidationError]: User validation failed: phoneNumber: Cast to String failed for value "[ '+919740578879', 'IND' ]" at path "phoneNumber"
+    at ValidationError.inspect (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\error\validation.js:61:24)
+    at formatValue (internal/util/inspect.js:563:31)
+    at inspect (internal/util/inspect.js:221:10)
+    at formatWithOptions (internal/util/inspect.js:1693:40)
+    at Object.format (internal/util/inspect.js:1543:10)
+    at basicLayout (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\layouts.js:62:57)
+    at app (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\appenders\file.js:56:23)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\log4js.js:42:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\log4js.js:41:21)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:23:26
+    at Array.forEach (<anonymous>)
+    at sendToListeners (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:23:13)
+    at Object.send (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:89:7)
+    at Logger._log (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\logger.js:90:16)
+    at Logger.log (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\logger.js:73:12) {
+  errors: {
+    phoneNumber: MongooseError [CastError]: Cast to String failed for value "[ '+919740578879', 'IND' ]" at path "phoneNumber"
+        at new CastError (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\error\cast.js:29:11)
+        at model.$set (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:1239:9)
+        at model._handleIndex (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:978:14)
+        at model.$set (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:919:22)
+        at model.Document (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:136:12)
+        at model.Model (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\model.js:105:12)
+        at new model (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\model.js:4705:15)
+        at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\controllers\users.js:48:22 {
+      stringValue: `"[ '+919740578879', 'IND' ]"`,
+      kind: 'String',
+      value: [Array],
+      path: 'phoneNumber',
+      reason: [MongooseError],
+      message: `Cast to String failed for value "[ '+919740578879', 'IND' ]" at path "phoneNumber"`,
+      name: 'CastError'
+    }
+  },
+  _message: 'User validation failed',
+  name: 'ValidationError'
+}
+[2020-05-01T16:24:36.899] [INFO] Logging:  - ---Request begins here---
+[2020-05-01T16:24:36.900] [INFO] Logging:  - Method: POST
+[2020-05-01T16:24:36.901] [INFO] Logging:  - Path:   /api/users
+[2020-05-01T16:24:36.901] [INFO] Logging:  - Body:   {
+  email: 'Plandfdet@gmail.com',
+  phone: '9740578879',
+  password: 'fjdlksdfjdk'
+}
+[2020-05-01T16:24:36.902] [INFO] Logging:  - ---Request ends here---
+[2020-05-01T16:24:36.966] [INFO] Logging:  - [
+  '$2b$10$uL6aEw2m5cUhwcP5F8K2iurMaGthAVZbmX/.WcmRbK.MX/1Cfq/A.',
+  'Plandfdet@gmail.com',
+  [ '+919740578879', 'IND' ]
+]
+[2020-05-01T16:24:36.968] [INFO] Logging:  - [ '+919740578879', 'IND' ]
+[2020-05-01T16:24:36.971] [ERROR] Logging:  - Error [ValidationError]: User validation failed: phoneNumber: Cast to String failed for value "[ '+919740578879', 'IND' ]" at path "phoneNumber"
+    at ValidationError.inspect (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\error\validation.js:61:24)
+    at formatValue (internal/util/inspect.js:563:31)
+    at inspect (internal/util/inspect.js:221:10)
+    at formatWithOptions (internal/util/inspect.js:1693:40)
+    at Object.format (internal/util/inspect.js:1543:10)
+    at basicLayout (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\layouts.js:62:57)
+    at app (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\appenders\file.js:56:23)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\log4js.js:42:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\log4js.js:41:21)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:23:26
+    at Array.forEach (<anonymous>)
+    at sendToListeners (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:23:13)
+    at Object.send (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:89:7)
+    at Logger._log (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\logger.js:90:16)
+    at Logger.log (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\logger.js:73:12) {
+  errors: {
+    phoneNumber: MongooseError [CastError]: Cast to String failed for value "[ '+919740578879', 'IND' ]" at path "phoneNumber"
+        at new CastError (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\error\cast.js:29:11)
+        at model.$set (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:1239:9)
+        at model._handleIndex (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:978:14)
+        at model.$set (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:919:22)
+        at model.Document (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:136:12)
+        at model.Model (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\model.js:105:12)
+        at new model (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\model.js:4705:15)
+        at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\controllers\users.js:48:22 {
+      stringValue: `"[ '+919740578879', 'IND' ]"`,
+      kind: 'String',
+      value: [Array],
+      path: 'phoneNumber',
+      reason: [MongooseError],
+      message: `Cast to String failed for value "[ '+919740578879', 'IND' ]" at path "phoneNumber"`,
+      name: 'CastError'
+    }
+  },
+  _message: 'User validation failed',
+  name: 'ValidationError'
+}
+[2020-05-01T16:25:46.385] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-01T16:25:47.861] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-01T16:26:11.709] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-01T16:26:13.156] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-01T16:26:17.394] [INFO] Logging:  - ---Request begins here---
+[2020-05-01T16:26:17.395] [INFO] Logging:  - Method: POST
+[2020-05-01T16:26:17.396] [INFO] Logging:  - Path:   /api/users
+[2020-05-01T16:26:17.397] [INFO] Logging:  - Body:   {
+  email: 'Plandfdet@gmail.com',
+  phone: 9740578879,
+  password: 'fjdlksdfjdk'
+}
+[2020-05-01T16:26:17.399] [INFO] Logging:  - ---Request ends here---
+[2020-05-01T16:26:17.475] [INFO] Logging:  - [
+  '$2b$10$gIBIwHb86K8CDTSQU8gcUOGblPuvAd7zGGMmAVQOC5.DkalLQT6lW',
+  'Plandfdet@gmail.com',
+  []
+]
+[2020-05-01T16:26:17.477] [ERROR] Logging:  - TypeError: Assignment to constant variable.
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\controllers\users.js:47:21
+[2020-05-01T16:26:42.396] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-01T16:26:43.837] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-01T16:26:48.172] [INFO] Logging:  - ---Request begins here---
+[2020-05-01T16:26:48.175] [INFO] Logging:  - Method: POST
+[2020-05-01T16:26:48.176] [INFO] Logging:  - Path:   /api/users
+[2020-05-01T16:26:48.178] [INFO] Logging:  - Body:   {
+  email: 'Plandfdet@gmail.com',
+  phone: 9740578879,
+  password: 'fjdlksdfjdk'
+}
+[2020-05-01T16:26:48.179] [INFO] Logging:  - ---Request ends here---
+[2020-05-01T16:26:48.244] [INFO] Logging:  - [
+  '$2b$10$/NgJ7CgQPujHkJF2l3cY2.bSA3lVtBExUqLmKMWRCKs1MDIlpZ09e',
+  'Plandfdet@gmail.com',
+  []
+]
+[2020-05-01T16:26:48.246] [INFO] Logging:  - undefined
+[2020-05-01T16:26:48.255] [ERROR] Logging:  - Error [ValidationError]: User validation failed: phoneNumber: Path `phoneNumber` is required.
+    at ValidationError.inspect (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\error\validation.js:61:24)
+    at formatValue (internal/util/inspect.js:563:31)
+    at inspect (internal/util/inspect.js:221:10)
+    at formatWithOptions (internal/util/inspect.js:1693:40)
+    at Object.format (internal/util/inspect.js:1543:10)
+    at basicLayout (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\layouts.js:62:57)
+    at app (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\appenders\file.js:56:23)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\log4js.js:42:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\log4js.js:41:21)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:23:26
+    at Array.forEach (<anonymous>)
+    at sendToListeners (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:23:13)
+    at Object.send (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:89:7)
+    at Logger._log (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\logger.js:90:16)
+    at Logger.log (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\logger.js:73:12) {
+  errors: {
+    phoneNumber: MongooseError [ValidatorError]: Path `phoneNumber` is required.
+        at new ValidatorError (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\error\validator.js:29:11)
+        at validate (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\schematype.js:1170:13)
+        at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\schematype.js:1153:7
+        at Array.forEach (<anonymous>)
+        at SchemaString.SchemaType.doValidate (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\schematype.js:1098:14)
+        at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:2372:18
+        at processTicksAndRejections (internal/process/task_queues.js:76:11) {
+      message: 'Path `phoneNumber` is required.',
+      name: 'ValidatorError',
+      properties: [Object],
+      kind: 'required',
+      path: 'phoneNumber',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'User validation failed',
+  name: 'ValidationError'
+}
+[2020-05-01T16:27:23.572] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-01T16:27:25.109] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-01T16:27:29.581] [INFO] Logging:  - ---Request begins here---
+[2020-05-01T16:27:29.582] [INFO] Logging:  - Method: POST
+[2020-05-01T16:27:29.583] [INFO] Logging:  - Path:   /api/users
+[2020-05-01T16:27:29.584] [INFO] Logging:  - Body:   {
+  email: 'Plandfdet@gmail.com',
+  phone: 9740578879,
+  password: 'fjdlksdfjdk'
+}
+[2020-05-01T16:27:29.587] [INFO] Logging:  - ---Request ends here---
+[2020-05-01T16:27:29.654] [INFO] Logging:  - [
+  '$2b$10$IfhMYzE1mcX3oFa5gVI.qemrMpl9bIffd.E45HptgJjphbxdB33la',
+  'Plandfdet@gmail.com',
+  []
+]
+[2020-05-01T16:27:29.659] [INFO] Logging:  - undefined
+[2020-05-01T16:27:29.667] [ERROR] Logging:  - Error [ValidationError]: User validation failed: phoneNumber: Path `phoneNumber` is required.
+    at ValidationError.inspect (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\error\validation.js:61:24)
+    at formatValue (internal/util/inspect.js:563:31)
+    at inspect (internal/util/inspect.js:221:10)
+    at formatWithOptions (internal/util/inspect.js:1693:40)
+    at Object.format (internal/util/inspect.js:1543:10)
+    at basicLayout (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\layouts.js:62:57)
+    at app (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\appenders\file.js:56:23)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\log4js.js:42:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\log4js.js:41:21)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:23:26
+    at Array.forEach (<anonymous>)
+    at sendToListeners (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:23:13)
+    at Object.send (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:89:7)
+    at Logger._log (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\logger.js:90:16)
+    at Logger.log (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\logger.js:73:12) {
+  errors: {
+    phoneNumber: MongooseError [ValidatorError]: Path `phoneNumber` is required.
+        at new ValidatorError (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\error\validator.js:29:11)
+        at validate (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\schematype.js:1170:13)
+        at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\schematype.js:1153:7
+        at Array.forEach (<anonymous>)
+        at SchemaString.SchemaType.doValidate (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\schematype.js:1098:14)
+        at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:2372:18
+        at processTicksAndRejections (internal/process/task_queues.js:76:11) {
+      message: 'Path `phoneNumber` is required.',
+      name: 'ValidatorError',
+      properties: [Object],
+      kind: 'required',
+      path: 'phoneNumber',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'User validation failed',
+  name: 'ValidationError'
+}
+[2020-05-01T16:27:42.826] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-01T16:27:44.418] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-01T16:28:09.094] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-01T16:28:10.555] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-01T16:28:15.964] [INFO] Logging:  - ---Request begins here---
+[2020-05-01T16:28:15.965] [INFO] Logging:  - Method: POST
+[2020-05-01T16:28:15.966] [INFO] Logging:  - Path:   /api/users
+[2020-05-01T16:28:15.966] [INFO] Logging:  - Body:   {
+  email: 'Plandfdet@gmail.com',
+  phone: 9740578879,
+  password: 'fjdlksdfjdk'
+}
+[2020-05-01T16:28:15.968] [INFO] Logging:  - ---Request ends here---
+[2020-05-01T16:28:16.034] [INFO] Logging:  - [
+  '$2b$10$uYXftLAL.7rZhnFTnPGLiOfDzqwpaKRJTW6keqnevNSARqcDhKYbC',
+  'Plandfdet@gmail.com',
+  []
+]
+[2020-05-01T16:28:16.036] [INFO] Logging:  - undefined
+[2020-05-01T16:28:16.045] [ERROR] Logging:  - Error [ValidationError]: User validation failed: phoneNumber: Path `phoneNumber` is required.
+    at ValidationError.inspect (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\error\validation.js:61:24)
+    at formatValue (internal/util/inspect.js:563:31)
+    at inspect (internal/util/inspect.js:221:10)
+    at formatWithOptions (internal/util/inspect.js:1693:40)
+    at Object.format (internal/util/inspect.js:1543:10)
+    at basicLayout (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\layouts.js:62:57)
+    at app (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\appenders\file.js:56:23)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\log4js.js:42:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\log4js.js:41:21)
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:23:26
+    at Array.forEach (<anonymous>)
+    at sendToListeners (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:23:13)
+    at Object.send (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\clustering.js:89:7)
+    at Logger._log (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\logger.js:90:16)
+    at Logger.log (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\log4js\lib\logger.js:73:12) {
+  errors: {
+    phoneNumber: MongooseError [ValidatorError]: Path `phoneNumber` is required.
+        at new ValidatorError (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\error\validator.js:29:11)
+        at validate (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\schematype.js:1170:13)
+        at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\schematype.js:1153:7
+        at Array.forEach (<anonymous>)
+        at SchemaString.SchemaType.doValidate (C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\schematype.js:1098:14)
+        at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\node_modules\mongoose\lib\document.js:2372:18
+        at processTicksAndRejections (internal/process/task_queues.js:76:11) {
+      message: 'Path `phoneNumber` is required.',
+      name: 'ValidatorError',
+      properties: [Object],
+      kind: 'required',
+      path: 'phoneNumber',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'User validation failed',
+  name: 'ValidationError'
+}
+[2020-05-01T16:28:41.233] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-01T16:28:42.759] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-01T16:29:04.649] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-01T16:29:06.082] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-01T16:29:16.484] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-01T16:29:17.864] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-01T16:29:34.860] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-01T16:29:36.241] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-01T16:29:40.218] [INFO] Logging:  - ---Request begins here---
+[2020-05-01T16:29:40.219] [INFO] Logging:  - Method: POST
+[2020-05-01T16:29:40.220] [INFO] Logging:  - Path:   /api/users
+[2020-05-01T16:29:40.221] [INFO] Logging:  - Body:   {
+  email: 'Plandfdet@gmail.com',
+  phone: 9740578879,
+  password: 'fjdlksdfjdk'
+}
+[2020-05-01T16:29:40.222] [INFO] Logging:  - ---Request ends here---
+[2020-05-01T16:29:40.287] [INFO] Logging:  - [
+  '$2b$10$103T9qDPHzO6GqJNTqg70O0NtiwjvpG6xjT4dto66RGlBvrnhyn4e',
+  'Plandfdet@gmail.com',
+  9740578879
+]
+[2020-05-01T16:29:40.289] [ERROR] Logging:  - ReferenceError: phoneNumberArr is not defined
+    at C:\Users\sunny.redhu\Desktop\current-stuff\jhakhaas-backend\controllers\users.js:47:21
+[2020-05-01T16:29:51.794] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-01T16:29:53.429] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-01T16:29:56.388] [INFO] Logging:  - ---Request begins here---
+[2020-05-01T16:29:56.389] [INFO] Logging:  - Method: POST
+[2020-05-01T16:29:56.390] [INFO] Logging:  - Path:   /api/users
+[2020-05-01T16:29:56.391] [INFO] Logging:  - Body:   {
+  email: 'Plandfdet@gmail.com',
+  phone: 9740578879,
+  password: 'fjdlksdfjdk'
+}
+[2020-05-01T16:29:56.400] [INFO] Logging:  - ---Request ends here---
+[2020-05-01T16:29:56.466] [INFO] Logging:  - [
+  '$2b$10$tXSntiKLAcN4.x7rPMHRgOUGtSWRA92CrYLwhZhl2v7jePh1lg9cG',
+  'Plandfdet@gmail.com',
+  9740578879
+]
+[2020-05-01T16:29:56.468] [INFO] Logging:  - 9740578879
+[2020-05-01T16:29:56.719] [INFO] Logging:  - {
+  score: 0,
+  streak: 1,
+  role: 'USER',
+  isPhoneVerified: false,
+  isEmailVerified: false,
+  _id: 5eac012cafc2584968db649f,
+  email: 'Plandfdet@gmail.com',
+  phoneNumber: 9740578879,
+  passwordHash: '$2b$10$tXSntiKLAcN4.x7rPMHRgOUGtSWRA92CrYLwhZhl2v7jePh1lg9cG',
+  __v: 0
+}
+[2020-05-01T16:31:11.037] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-01T16:31:12.588] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-01T16:32:15.679] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-01T16:32:17.220] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-01T16:32:38.667] [INFO] Logging:  - ---Request begins here---
+[2020-05-01T16:32:38.669] [INFO] Logging:  - Method: POST
+[2020-05-01T16:32:38.669] [INFO] Logging:  - Path:   /api/users
+[2020-05-01T16:32:38.670] [INFO] Logging:  - Body:   { email: 'Planet@gmail.com', phone: 9740578898, password: 'fjdfjdk' }
+[2020-05-01T16:32:38.671] [INFO] Logging:  - ---Request ends here---
+[2020-05-01T16:32:38.737] [INFO] Logging:  - [
+  '$2b$10$YGL2XNUNNNcfJHfg6Z5x4.aNTLLCsrs2cKEUa0yGF1RlGSGoqpffO',
+  'Planet@gmail.com',
+  9740578898
+]
+[2020-05-01T16:32:38.739] [INFO] Logging:  - 9740578898
+[2020-05-01T16:32:38.985] [INFO] Logging:  - {
+  score: 0,
+  streak: 1,
+  role: 'USER',
+  isPhoneVerified: false,
+  isEmailVerified: false,
+  joinedOn: 2020-05-01T11:02:15.665Z,
+  _id: 5eac01ce8f831571f0772799,
+  email: 'Planet@gmail.com',
+  phoneNumber: 9740578898,
+  passwordHash: '$2b$10$YGL2XNUNNNcfJHfg6Z5x4.aNTLLCsrs2cKEUa0yGF1RlGSGoqpffO',
+  __v: 0
+}
+[2020-05-01T16:39:31.763] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-01T16:39:33.253] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-01T16:39:35.386] [INFO] Logging:  - ---Request begins here---
+[2020-05-01T16:39:35.386] [INFO] Logging:  - Method: GET
+[2020-05-01T16:39:35.387] [INFO] Logging:  - Path:   /
+[2020-05-01T16:39:35.388] [INFO] Logging:  - Body:   {}
+[2020-05-01T16:39:35.389] [INFO] Logging:  - ---Request ends here---
+[2020-05-01T16:39:41.517] [INFO] Logging:  - ---Request begins here---
+[2020-05-01T16:39:41.518] [INFO] Logging:  - Method: GET
+[2020-05-01T16:39:41.518] [INFO] Logging:  - Path:   /api/users
+[2020-05-01T16:39:41.519] [INFO] Logging:  - Body:   {}
+[2020-05-01T16:39:41.531] [INFO] Logging:  - ---Request ends here---
+[2020-05-01T16:52:38.767] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-01T16:52:40.346] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-01T16:52:43.855] [INFO] Logging:  - ---Request begins here---
+[2020-05-01T16:52:43.856] [INFO] Logging:  - Method: GET
+[2020-05-01T16:52:43.857] [INFO] Logging:  - Path:   /
+[2020-05-01T16:52:43.865] [INFO] Logging:  - Body:   {}
+[2020-05-01T16:52:43.866] [INFO] Logging:  - ---Request ends here---
+[2020-05-01T16:52:51.309] [INFO] Logging:  - ---Request begins here---
+[2020-05-01T16:52:51.310] [INFO] Logging:  - Method: GET
+[2020-05-01T16:52:51.310] [INFO] Logging:  - Path:   /api/users
+[2020-05-01T16:52:51.311] [INFO] Logging:  - Body:   {}
+[2020-05-01T16:52:51.320] [INFO] Logging:  - ---Request ends here---
+[2020-05-01T16:53:05.272] [INFO] Logging:  - ---Request begins here---
+[2020-05-01T16:53:05.273] [INFO] Logging:  - Method: GET
+[2020-05-01T16:53:05.274] [INFO] Logging:  - Path:   /api/users/9740578879
+[2020-05-01T16:53:05.276] [INFO] Logging:  - Body:   {}
+[2020-05-01T16:53:05.284] [INFO] Logging:  - ---Request ends here---
+[2020-05-01T16:53:05.286] [ERROR] Logging:  - Phone number missing from the body. Incorrect request body!
+[2020-05-01T16:55:16.430] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-01T16:55:18.265] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-01T16:55:23.938] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-01T16:55:25.689] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-01T16:55:33.676] [INFO] Logging:  - ---Request begins here---
+[2020-05-01T16:55:33.677] [INFO] Logging:  - Method: GET
+[2020-05-01T16:55:33.678] [INFO] Logging:  - Path:   /api/users/9740578879
+[2020-05-01T16:55:33.679] [INFO] Logging:  - Body:   {}
+[2020-05-01T16:55:33.687] [INFO] Logging:  - ---Request ends here---
+[2020-05-01T16:58:03.490] [INFO] Logging:  - Listening on http://127.0.0.1:3000
