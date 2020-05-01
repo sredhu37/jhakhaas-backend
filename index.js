@@ -1,13 +1,15 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
-const morgan = require('morgan');
+
 const logger = require('./utils/logger');
 const middleware = require('./utils/middleware');
+const usersController = require('./controllers/users');
 
 const app = express();
-app.use(morgan('tiny'));
 app.use(middleware.logRequest);
+app.use('/api/users', usersController.usersRouter);
+
 const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
