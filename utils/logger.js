@@ -4,8 +4,9 @@ const path = require('path');
 const logFile = path.join(__dirname, '../logs/app.log');
 
 log4js.configure({
+  // 10 MB max file size
   appenders: {
-    file: { type: 'file', filename: logFile },
+    file: { type: 'file', filename: logFile , maxLogSize: 10000000},
     console: { type: 'console' },
   },
   categories: { default: { appenders: ['file', 'console'], level: 'debug' } },

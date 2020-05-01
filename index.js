@@ -1,6 +1,8 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
+const mongoose = require('mongoose');
+require('dotenv').config();
 
 const logger = require('./utils/logger');
 const middleware = require('./utils/middleware');
@@ -11,6 +13,29 @@ app.use(middleware.logRequest);
 app.use('/api/users', usersController.usersRouter);
 
 const PORT = process.env.PORT || 3000;
+
+const connectToMongoDB = (mongoUri) => {
+  mongoose.connect(mongoUri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+    .then((response) => {
+      logger.info('Successfully connected to MongoDB!');
+    })
+    .catch((error) => {
+      logger.error(error);
+    });
+};
+
+const { MONGO_URI } = process.env;
+
+if (MONGO_URI && (MONGO_URI !== 'undefined')) {
+  connectToMongoDB(MONGO_URI);
+} else {
+  logger.error('ERROR: Make sure MONGO_URI environment variable is set properly!');
+  // process.exit(1);
+}
+
 
 app.get('/', (req, res) => {
   res.json({ msg: 'This page seems to be working fine :)' });
