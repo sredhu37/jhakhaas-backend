@@ -12,10 +12,6 @@ This is the backend application. Connect to it via REST api.
 
 * Set this as env variable in heroku. Don't mention it in code, script or github. I repeat <b>NEVER mention it in code, script or github.</b>
 
-#### TODO / THINGS TO KEEP IN MIND
+#### ADD ISSUES
 
-* Add Design in the README.
-* Connection to Back End REST APIs need to `authenticated` properly.
-* Use Logging service in order to store application logs instead of local files.
-* Write Unit tests.
-* Write Integration tests.
+Feel free to create new issues here: [ISSUES](https://github.com/sredhu37/jhakhaas-backend/issues)
