@@ -1,8 +1,0 @@
-POST http://127.0.0.1:3000/api/users
-content-type: application/json
-
-{
-    "email": "Planet@gmail.com",
-    "phone": 9740578898,
-    "password": "fjdfjdk"
-}
