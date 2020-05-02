@@ -13,6 +13,16 @@ const userSchema = new Schema({
   isEmailVerified: { type: Boolean, required: true, default: false },
   joinedOn: { type: Date, required: true, default: new Date() },
   isActive: { type: Boolean, required: true, default: true },
+  questionsAttempted: {
+    type: [
+      {
+        __id: mongoose.Types.ObjectId,
+        optionsSelected: [String],
+      },
+    ],
+    required: true,
+    default: [],
+  },
 });
 
 const UserModel = mongoose.model('User', userSchema);

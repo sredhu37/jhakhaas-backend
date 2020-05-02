@@ -7,11 +7,13 @@ require('dotenv').config();
 const logger = require('./utils/logger');
 const middleware = require('./utils/middleware');
 const usersController = require('./controllers/users');
+const questionsController = require('./controllers/questions');
 
 const app = express();
 app.use(express.json());
 app.use(middleware.logRequest);
 app.use('/api/users', usersController.usersRouter);
+app.use('/api/questions', questionsController.questionsRouter);
 
 const PORT = process.env.PORT || 3000;
 
@@ -19,6 +21,7 @@ const connectToMongoDB = (mongoUri) => {
   mongoose.connect(mongoUri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    useFindAndModify: false,
   })
     .then(() => {
       logger.info('Successfully connected to MongoDB!');

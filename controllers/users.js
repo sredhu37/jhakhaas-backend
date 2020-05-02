@@ -31,6 +31,22 @@ const validateEmail = (emailId) => new Promise((resolve, reject) => {
   }
 });
 
+const createNewQueryObject = (body, email, phoneNumber, passwordHash) => {
+  const obj = {
+    email,
+    phoneNumber,
+    passwordHash,
+  };
+
+  const keys = Object.keys(body);
+
+  keys.forEach((key) => {
+    obj[key] = body[key];
+  });
+
+  return obj;
+};
+
 usersRouter.get('/', (req, res) => {
   UserModel.find({})
     .then((response) => {
@@ -72,11 +88,9 @@ usersRouter.post('/', (req, res) => {
         const [passwordHash, email, phoneNumber] = response;
         logger.info(phoneNumber);
 
-        const user = new UserModel({
-          email,
-          phoneNumber,
-          passwordHash,
-        });
+        const userObject = createNewQueryObject(body, email, phoneNumber, passwordHash);
+
+        const user = new UserModel(userObject);
 
         return user.save();
       })
