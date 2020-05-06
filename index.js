@@ -8,12 +8,14 @@ const logger = require('./utils/logger');
 const middleware = require('./utils/middleware');
 const usersController = require('./controllers/users');
 const questionsController = require('./controllers/questions');
+const auth = require('./services/auth');
 
 const app = express();
 app.use(express.json());
 app.use(middleware.logRequest);
 app.use('/api/users', usersController.usersRouter);
 app.use('/api/questions', questionsController.questionsRouter);
+app.use('/auth', auth.authRouter);
 
 const PORT = process.env.PORT || 3000;
 

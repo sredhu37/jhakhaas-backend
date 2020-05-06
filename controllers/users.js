@@ -1,26 +1,16 @@
 const express = require('express');
 
 const usersRouter = express.Router();
-const phone = require('phone');
 const emailValidator = require('email-validator');
 const bcrypt = require('bcrypt');
 const logger = require('../utils/logger');
 const { UserModel } = require('../models/user');
+const { verifyAuthToken } = require('../utils/verifyToken');
 
 const validatePassword = (password) => {
   const bcryptSaltRounds = 10;
   return bcrypt.hash(password, bcryptSaltRounds);
 };
-
-const validatePhone = (phoneNum) => new Promise((resolve, reject) => {
-  const isPhoneValid = phone(phoneNum, 'IND');
-
-  if (isPhoneValid) {
-    resolve(phoneNum);
-  } else {
-    reject(new Error('Error: Invalid phone number'));
-  }
-});
 
 const validateEmail = (emailId) => new Promise((resolve, reject) => {
   const isValid = emailValidator.validate(emailId);
@@ -31,10 +21,9 @@ const validateEmail = (emailId) => new Promise((resolve, reject) => {
   }
 });
 
-const createNewQueryObject = (body, email, phoneNumber, passwordHash) => {
+const createNewQueryObject = (body, email, passwordHash) => {
   const obj = {
     email,
-    phoneNumber,
     passwordHash,
   };
 
@@ -47,7 +36,7 @@ const createNewQueryObject = (body, email, phoneNumber, passwordHash) => {
   return obj;
 };
 
-usersRouter.get('/', (req, res) => {
+usersRouter.get('/', verifyAuthToken, (req, res) => {
   UserModel.find({})
     .then((response) => {
       res.send(response);
@@ -57,11 +46,11 @@ usersRouter.get('/', (req, res) => {
     });
 });
 
-usersRouter.get('/:phone', (req, res) => {
-  const phoneNumber = req.params.phone;
+usersRouter.get('/:id', verifyAuthToken, (req, res) => {
+  const { id } = req.params;
 
-  if (phoneNumber && phoneNumber !== 'undefined') {
-    UserModel.find({ phoneNumber })
+  if (id && id !== 'undefined') {
+    UserModel.find({ __id: id })
       .then((response) => {
         res.send(response);
       })
@@ -69,26 +58,24 @@ usersRouter.get('/:phone', (req, res) => {
         res.send(error);
       });
   } else {
-    const message = 'Phone number missing from the body. Incorrect request body!';
+    const message = 'ID missing from the body. Incorrect request body!';
     res.status(400).send(message);
     logger.error(message);
   }
 });
 
-usersRouter.post('/', (req, res) => {
+usersRouter.post('/', verifyAuthToken, (req, res) => {
   const { body } = req;
-  if (body.email && body.phone && body.password) {
+  if (body.email && body.password) {
     Promise.all([
       validatePassword(body.password),
       validateEmail(body.email),
-      validatePhone(body.phone),
     ])
       .then((response) => {
         logger.info(response);
-        const [passwordHash, email, phoneNumber] = response;
-        logger.info(phoneNumber);
+        const [passwordHash, email] = response;
 
-        const userObject = createNewQueryObject(body, email, phoneNumber, passwordHash);
+        const userObject = createNewQueryObject(body, email, passwordHash);
 
         const user = new UserModel(userObject);
 
@@ -100,11 +87,12 @@ usersRouter.post('/', (req, res) => {
       })
       .catch((error) => {
         logger.error(error);
+        res.status(401).send(`Couldn't add the user: ${error}`);
       });
   } else {
     const message = 'Unable to add new user. Incorrect request body!';
-    res.status(400).send(message);
     logger.error(message);
+    res.status(400).send(message);
   }
 });
 
