@@ -14,6 +14,7 @@ if (!(
     && exists(process.env.GOOGLE_CLIENT_ID)
     && exists(process.env.GOOGLE_CLIENT_SECRET)
     && exists(process.env.GOOGLE_REDIRECT_URI)
+    && exists(process.env.JWT_SECRET)
 )) {
   logger.error('Issue with ENV VARIABLES! Please check that they are set properly!');
   process.exit(1);
