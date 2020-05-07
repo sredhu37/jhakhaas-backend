@@ -62,8 +62,6 @@ const validatePassword = (password) => {
 
 // User registration: First time
 authRouter.post('/register', (req, res) => {
-  logger.info(`HOST: ${config.HOST}, POST: ${config.PORT}`);
-
   const isValidEmail = emailValidator.validate(req.body.email);
   const invalidPasswordRules = validatePassword(req.body.password);
 
