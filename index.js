@@ -2,6 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const mongoose = require('mongoose');
+const cors = require('cors');
 require('dotenv').config();
 
 const logger = require('./utils/logger');
@@ -11,6 +12,7 @@ const questionsController = require('./controllers/questions');
 const auth = require('./services/auth');
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 app.use(middleware.logRequest);
 app.use('/api/users', usersController.usersRouter);
