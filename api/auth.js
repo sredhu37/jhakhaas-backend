@@ -6,7 +6,7 @@ const PasswordValidator = require('password-validator');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const logger = require('../utils/logger');
-const config = require('../config');
+const config = require('../utils/config');
 const { UserModel } = require('../models/user');
 
 
@@ -78,7 +78,7 @@ authRouter.post('/register', (req, res) => {
 
     user.save()
       .then((response) => {
-        const jwtToken = jwt.sign({ __id: response.__id }, config.JWT_SECRET);
+        const jwtToken = jwt.sign({ __id: response.__id }, config.other.JWT_SECRET);
         res.header('auth-token', jwtToken).send(jwtToken);
       })
       .catch((error) => {
@@ -103,7 +103,7 @@ authRouter.post('/login', async (req, res) => {
     const isPasswordMatching = await bcrypt.compare(password, user.passwordHash);
     if (isPasswordMatching) {
       logger.info(`User ${email} is signed in!`);
-      const jwtToken = jwt.sign({ __id: user.__id }, config.JWT_SECRET);
+      const jwtToken = jwt.sign({ __id: user.__id }, config.other.JWT_SECRET);
       res.header('auth-token', jwtToken).send(jwtToken);
     } else {
       throw new Error('Incorrect password!');

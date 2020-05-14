@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const config = require('../config');
+const config = require('./config');
 
 const verifyAuthToken = (req, res, next) => {
   const token = req.header('auth-token');
@@ -9,7 +9,7 @@ const verifyAuthToken = (req, res, next) => {
   }
 
   try {
-    jwt.verify(token, config.JWT_SECRET);
+    jwt.verify(token, config.other.JWT_SECRET);
   } catch (error) {
     res.status(400).send('Invalid Token!');
   }
