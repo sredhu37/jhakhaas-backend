@@ -1,9 +1,10 @@
 const express = require('express');
+
 const questionsRouter = express.Router();
 const mongoose = require('mongoose');
 const logger = require('../utils/logger');
 const { QuestionModel } = require('../models/question');
-
+const { verifyAuthToken } = require('../utils/verifyToken');
 
 const createNewQueryObject = (body) => {
   const obj = {
@@ -20,7 +21,7 @@ const createNewQueryObject = (body) => {
 };
 
 // Get all questions
-questionsRouter.get('/', (req, res) => {
+questionsRouter.get('/', verifyAuthToken, (req, res) => {
   QuestionModel.find({})
     .then((response) => {
       res.send(response);
@@ -31,7 +32,7 @@ questionsRouter.get('/', (req, res) => {
 });
 
 // Get all questions of a particular difficultyLevel
-questionsRouter.get('/:difficulty', (req, res) => {
+questionsRouter.get('/:difficulty', verifyAuthToken, (req, res) => {
   const difficultyLevel = req.params.difficulty;
 
   if (difficultyLevel && difficultyLevel !== 'undefined') {
@@ -50,7 +51,7 @@ questionsRouter.get('/:difficulty', (req, res) => {
 });
 
 // Add a new question
-questionsRouter.post('/', (req, res) => {
+questionsRouter.post('/', verifyAuthToken, (req, res) => {
   const { body } = req;
   if (body.problemStatement && body.options && body.solution) {
     const questionObject = createNewQueryObject(body);
@@ -74,7 +75,7 @@ questionsRouter.post('/', (req, res) => {
 });
 
 // Update a single question using objectId
-questionsRouter.put('/:objectId', (req, res) => {
+questionsRouter.put('/:objectId', verifyAuthToken, (req, res) => {
   const { body } = req;
   const objectIdStr = req.params.objectId;
   const objectId = mongoose.Types.ObjectId(objectIdStr);
@@ -82,14 +83,14 @@ questionsRouter.put('/:objectId', (req, res) => {
   const questionObject = createNewQueryObject(body);
 
   QuestionModel.findByIdAndUpdate(objectId, questionObject, { returnOriginal: false })
-  .then((response) => {
+    .then((response) => {
     // logger.info(response);
-    res.status(200).send(response);
-  })
-  .catch((error) => {
+      res.status(200).send(response);
+    })
+    .catch((error) => {
     // logger.error(error);
-    res.send(error);
-  });
+      res.send(error);
+    });
 });
 
 module.exports = {

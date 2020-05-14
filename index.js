@@ -2,20 +2,24 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const mongoose = require('mongoose');
-require('dotenv').config();
+const cors = require('cors');
+const config = require('./utils/config');
 
 const logger = require('./utils/logger');
 const middleware = require('./utils/middleware');
-const usersController = require('./controllers/users');
-const questionsController = require('./controllers/questions');
+const usersController = require('./api/users');
+const questionsController = require('./api/questions');
+const auth = require('./api/auth');
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 app.use(middleware.logRequest);
 app.use('/api/users', usersController.usersRouter);
 app.use('/api/questions', questionsController.questionsRouter);
+app.use('/auth', auth.authRouter);
 
-const PORT = process.env.PORT || 3000;
+const { PORT } = config.other;
 
 const connectToMongoDB = (mongoUri) => {
   mongoose.connect(mongoUri, {
@@ -31,13 +35,13 @@ const connectToMongoDB = (mongoUri) => {
     });
 };
 
-const { MONGO_URI } = process.env;
+const MONGO_URI = config.mongo.URI;
 
 if (MONGO_URI && (MONGO_URI !== 'undefined')) {
   connectToMongoDB(MONGO_URI);
 } else {
   logger.error('ERROR: Make sure MONGO_URI environment variable is set properly!');
-  // process.exit(1);
+  process.exit(1);
 }
 
 
