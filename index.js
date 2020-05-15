@@ -3,8 +3,8 @@ const fs = require('fs');
 const path = require('path');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const passport = require('passport');
 const config = require('./utils/config');
-
 const logger = require('./utils/logger');
 const middleware = require('./utils/middleware');
 const usersController = require('./api/users');
@@ -15,6 +15,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(middleware.logRequest);
+app.use(passport.initialize());
 app.use('/api/users', usersController.usersRouter);
 app.use('/api/questions', questionsController.questionsRouter);
 app.use('/auth', auth.authRouter);
@@ -44,9 +45,9 @@ if (MONGO_URI && (MONGO_URI !== 'undefined')) {
   process.exit(1);
 }
 
-
+// routes begin here
 app.get('/', (req, res) => {
-  res.json({ msg: 'This page seems to be working fine :)' });
+  res.json({ msg: 'Backend seems to be running fine. Yay!' });
 });
 
 app.get('/logs', (req, res) => {
@@ -62,6 +63,8 @@ app.get('/logs', (req, res) => {
   // We replaced all the event handlers with a simple call to readStream.pipe()
   readStream.pipe(res);
 });
+
+// routes end here
 
 app.listen(PORT, () => {
   logger.info('Listening on http://127.0.0.1:3000');

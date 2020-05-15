@@ -1,0 +1,310 @@
+[2020-05-15T09:17:27.961] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T09:17:29.654] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T09:19:14.471] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T09:19:14.473] [INFO] Logging:  - Method: GET
+[2020-05-15T09:19:14.489] [INFO] Logging:  - Path:   /auth/google/register
+[2020-05-15T09:19:14.490] [INFO] Logging:  - Body:   {}
+[2020-05-15T09:19:14.492] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T09:19:21.119] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T09:19:21.120] [INFO] Logging:  - Method: GET
+[2020-05-15T09:19:21.121] [INFO] Logging:  - Path:   /auth/google/callback
+[2020-05-15T09:19:21.135] [INFO] Logging:  - Body:   {}
+[2020-05-15T09:19:21.139] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T09:19:21.540] [WARN] Logging:  - AccessToken: ya29.a0AfH6SMBLJH6FruwQY8ibFD_aXlYfZeFdQfbZIWG8ZhvO0MKE8ggrqU_BSW3Y3mYNzKoVR-_yzM4Jgwh7a9XevWdrapuNui7w7J4dMc_iccGhg4QAJ3wo3kS4uydG4m1FEFKbUmIIfuIn31Hs4nR7ryAUrJssfBrzbik
+        RefreshToken: undefined
+        Profile: [object Object]
+    
+[2020-05-15T09:19:21.583] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T09:19:21.596] [INFO] Logging:  - Method: GET
+[2020-05-15T09:19:21.597] [INFO] Logging:  - Path:   /auth/google/google/login
+[2020-05-15T09:19:21.598] [INFO] Logging:  - Body:   {}
+[2020-05-15T09:19:21.598] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T09:19:47.587] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T09:19:49.337] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T09:20:02.829] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T09:20:04.576] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T09:21:15.097] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T09:21:16.997] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T09:21:27.687] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T09:21:27.690] [INFO] Logging:  - Method: GET
+[2020-05-15T09:21:27.692] [INFO] Logging:  - Path:   /auth/google/register
+[2020-05-15T09:21:27.700] [INFO] Logging:  - Body:   {}
+[2020-05-15T09:21:27.701] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T09:21:31.212] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T09:21:31.213] [INFO] Logging:  - Method: GET
+[2020-05-15T09:21:31.214] [INFO] Logging:  - Path:   /auth/google/callback
+[2020-05-15T09:21:31.230] [INFO] Logging:  - Body:   {}
+[2020-05-15T09:21:31.231] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T09:21:31.615] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T09:21:31.650] [INFO] Logging:  - Method: GET
+[2020-05-15T09:21:31.651] [INFO] Logging:  - Path:   /login
+[2020-05-15T09:21:31.652] [INFO] Logging:  - Body:   {}
+[2020-05-15T09:21:31.657] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T09:22:05.915] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T09:22:08.639] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T09:22:10.194] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T09:23:38.573] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T09:23:38.574] [INFO] Logging:  - Method: GET
+[2020-05-15T09:23:38.575] [INFO] Logging:  - Path:   /auth/google/register
+[2020-05-15T09:23:38.576] [INFO] Logging:  - Body:   {}
+[2020-05-15T09:23:38.583] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T09:23:41.967] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T09:23:41.968] [INFO] Logging:  - Method: GET
+[2020-05-15T09:23:41.970] [INFO] Logging:  - Path:   /auth/google/callback
+[2020-05-15T09:23:41.971] [INFO] Logging:  - Body:   {}
+[2020-05-15T09:23:41.986] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T09:23:42.402] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T09:23:42.407] [INFO] Logging:  - Method: GET
+[2020-05-15T09:23:42.409] [INFO] Logging:  - Path:   /auth/google/login
+[2020-05-15T09:23:42.412] [INFO] Logging:  - Body:   {}
+[2020-05-15T09:23:42.413] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T09:23:42.608] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T09:23:42.609] [INFO] Logging:  - Method: GET
+[2020-05-15T09:23:42.610] [INFO] Logging:  - Path:   /favicon.ico
+[2020-05-15T09:23:42.611] [INFO] Logging:  - Body:   {}
+[2020-05-15T09:23:42.630] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T14:44:08.893] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T14:44:10.452] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T14:44:59.970] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T14:44:59.971] [INFO] Logging:  - Method: GET
+[2020-05-15T14:44:59.973] [INFO] Logging:  - Path:   /auth/google/register
+[2020-05-15T14:45:00.006] [INFO] Logging:  - Body:   {}
+[2020-05-15T14:45:00.039] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T14:45:12.851] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T14:45:12.852] [INFO] Logging:  - Method: GET
+[2020-05-15T14:45:12.853] [INFO] Logging:  - Path:   /auth/google/callback
+[2020-05-15T14:45:12.854] [INFO] Logging:  - Body:   {}
+[2020-05-15T14:45:12.855] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T14:45:13.226] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T14:45:13.226] [INFO] Logging:  - Method: GET
+[2020-05-15T14:45:13.227] [INFO] Logging:  - Path:   /favicon.ico
+[2020-05-15T14:45:13.228] [INFO] Logging:  - Body:   {}
+[2020-05-15T14:45:13.257] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T14:49:23.025] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T14:49:24.923] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T14:49:26.593] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T14:50:15.100] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T14:50:16.702] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T14:51:29.911] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T14:51:29.912] [INFO] Logging:  - Method: GET
+[2020-05-15T14:51:29.913] [INFO] Logging:  - Path:   /auth/google/register
+[2020-05-15T14:51:29.929] [INFO] Logging:  - Body:   {}
+[2020-05-15T14:51:29.932] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T14:51:33.067] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T14:51:33.068] [INFO] Logging:  - Method: GET
+[2020-05-15T14:51:33.069] [INFO] Logging:  - Path:   /auth/google/callback
+[2020-05-15T14:51:33.070] [INFO] Logging:  - Body:   {}
+[2020-05-15T14:51:33.082] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T14:52:14.184] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T14:52:14.185] [INFO] Logging:  - Method: GET
+[2020-05-15T14:52:14.186] [INFO] Logging:  - Path:   /auth/google/register
+[2020-05-15T14:52:14.187] [INFO] Logging:  - Body:   {}
+[2020-05-15T14:52:14.199] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T14:52:20.373] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T14:52:20.375] [INFO] Logging:  - Method: GET
+[2020-05-15T14:52:20.377] [INFO] Logging:  - Path:   /auth/google/callback
+[2020-05-15T14:52:20.391] [INFO] Logging:  - Body:   {}
+[2020-05-15T14:52:20.392] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T14:54:49.769] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T14:54:51.517] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T15:14:35.773] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T15:14:37.506] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T15:14:52.019] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T15:14:52.021] [INFO] Logging:  - Method: GET
+[2020-05-15T15:14:52.022] [INFO] Logging:  - Path:   /auth/google/register
+[2020-05-15T15:14:52.023] [INFO] Logging:  - Body:   {}
+[2020-05-15T15:14:52.026] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T15:14:56.347] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T15:14:56.348] [INFO] Logging:  - Method: GET
+[2020-05-15T15:14:56.349] [INFO] Logging:  - Path:   /auth/google/callback
+[2020-05-15T15:14:56.350] [INFO] Logging:  - Body:   {}
+[2020-05-15T15:14:56.351] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T15:37:33.301] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T15:37:34.881] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T15:38:09.540] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T15:38:11.129] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T15:39:42.982] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T15:39:42.984] [INFO] Logging:  - Method: GET
+[2020-05-15T15:39:42.988] [INFO] Logging:  - Path:   /auth/google/register
+[2020-05-15T15:39:42.999] [INFO] Logging:  - Body:   {}
+[2020-05-15T15:39:43.000] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T15:39:54.215] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T15:39:54.216] [INFO] Logging:  - Method: GET
+[2020-05-15T15:39:54.216] [INFO] Logging:  - Path:   /auth/google/callback
+[2020-05-15T15:39:54.217] [INFO] Logging:  - Body:   {}
+[2020-05-15T15:39:54.228] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T15:40:16.105] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T15:40:17.677] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T15:40:20.675] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T15:40:20.677] [INFO] Logging:  - Method: GET
+[2020-05-15T15:40:20.678] [INFO] Logging:  - Path:   /auth/google/callback
+[2020-05-15T15:40:20.680] [INFO] Logging:  - Body:   {}
+[2020-05-15T15:40:20.694] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T15:40:43.657] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T15:40:45.146] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T15:40:49.875] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T15:40:49.876] [INFO] Logging:  - Method: GET
+[2020-05-15T15:40:49.877] [INFO] Logging:  - Path:   /auth/google/register
+[2020-05-15T15:40:49.879] [INFO] Logging:  - Body:   {}
+[2020-05-15T15:40:49.888] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T15:40:59.032] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T15:40:59.034] [INFO] Logging:  - Method: GET
+[2020-05-15T15:40:59.052] [INFO] Logging:  - Path:   /auth/google/callback
+[2020-05-15T15:40:59.057] [INFO] Logging:  - Body:   {}
+[2020-05-15T15:40:59.058] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T16:00:02.215] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T16:00:04.261] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T16:00:21.013] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T16:00:22.797] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T16:00:30.025] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T16:00:30.026] [INFO] Logging:  - Method: GET
+[2020-05-15T16:00:30.027] [INFO] Logging:  - Path:   /auth/google/register
+[2020-05-15T16:00:30.029] [INFO] Logging:  - Body:   {}
+[2020-05-15T16:00:30.069] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T16:00:34.246] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T16:00:34.247] [INFO] Logging:  - Method: GET
+[2020-05-15T16:00:34.248] [INFO] Logging:  - Path:   /auth/google/callback
+[2020-05-15T16:00:34.249] [INFO] Logging:  - Body:   {}
+[2020-05-15T16:00:34.279] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T16:02:27.679] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T16:02:29.573] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T16:03:04.835] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T16:03:06.479] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T16:03:24.276] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T16:03:24.277] [INFO] Logging:  - Method: GET
+[2020-05-15T16:03:24.278] [INFO] Logging:  - Path:   /auth/google/register
+[2020-05-15T16:03:24.279] [INFO] Logging:  - Body:   {}
+[2020-05-15T16:03:24.301] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T16:03:30.078] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T16:03:30.081] [INFO] Logging:  - Method: GET
+[2020-05-15T16:03:30.123] [INFO] Logging:  - Path:   /auth/google/callback
+[2020-05-15T16:03:30.129] [INFO] Logging:  - Body:   {}
+[2020-05-15T16:03:30.132] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T16:04:20.108] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T16:04:22.788] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T16:04:34.659] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T16:04:34.661] [INFO] Logging:  - Method: GET
+[2020-05-15T16:04:34.663] [INFO] Logging:  - Path:   /auth/google/register
+[2020-05-15T16:04:34.682] [INFO] Logging:  - Body:   {}
+[2020-05-15T16:04:34.684] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T16:04:38.580] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T16:04:38.581] [INFO] Logging:  - Method: GET
+[2020-05-15T16:04:38.584] [INFO] Logging:  - Path:   /auth/google/callback
+[2020-05-15T16:04:38.628] [INFO] Logging:  - Body:   {}
+[2020-05-15T16:04:38.640] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T16:07:48.050] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T16:07:49.817] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T16:08:23.567] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T16:08:25.532] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T16:09:06.213] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T16:09:08.209] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T16:10:31.397] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T16:10:33.384] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T16:11:01.746] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T16:11:03.721] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T16:12:28.166] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T16:12:30.168] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T16:13:13.319] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T16:13:15.376] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T16:14:08.231] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T16:14:09.916] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T16:14:20.348] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T16:14:20.350] [INFO] Logging:  - Method: GET
+[2020-05-15T16:14:20.351] [INFO] Logging:  - Path:   /auth/google/register
+[2020-05-15T16:14:20.352] [INFO] Logging:  - Body:   {}
+[2020-05-15T16:14:20.382] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T16:14:25.139] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T16:14:25.141] [INFO] Logging:  - Method: GET
+[2020-05-15T16:14:25.144] [INFO] Logging:  - Path:   /auth/google/callback
+[2020-05-15T16:14:25.211] [INFO] Logging:  - Body:   {}
+[2020-05-15T16:14:25.241] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T16:16:11.606] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T16:16:13.677] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T16:16:19.861] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T16:16:19.863] [INFO] Logging:  - Method: GET
+[2020-05-15T16:16:19.866] [INFO] Logging:  - Path:   /auth/google/register
+[2020-05-15T16:16:19.883] [INFO] Logging:  - Body:   {}
+[2020-05-15T16:16:19.887] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T16:16:23.980] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T16:16:23.982] [INFO] Logging:  - Method: GET
+[2020-05-15T16:16:23.985] [INFO] Logging:  - Path:   /auth/google/callback
+[2020-05-15T16:16:24.041] [INFO] Logging:  - Body:   {}
+[2020-05-15T16:16:24.044] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T16:16:24.751] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T16:16:24.757] [INFO] Logging:  - Method: GET
+[2020-05-15T16:16:24.758] [INFO] Logging:  - Path:   /
+[2020-05-15T16:16:24.777] [INFO] Logging:  - Body:   {}
+[2020-05-15T16:16:24.781] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T16:16:43.329] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T16:16:45.200] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T16:16:57.346] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T16:16:57.347] [INFO] Logging:  - Method: GET
+[2020-05-15T16:16:57.349] [INFO] Logging:  - Path:   /auth/google/register
+[2020-05-15T16:16:57.368] [INFO] Logging:  - Body:   {}
+[2020-05-15T16:16:57.371] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T16:17:01.274] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T16:17:01.277] [INFO] Logging:  - Method: GET
+[2020-05-15T16:17:01.279] [INFO] Logging:  - Path:   /auth/google/callback
+[2020-05-15T16:17:01.281] [INFO] Logging:  - Body:   {}
+[2020-05-15T16:17:01.327] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T16:17:02.072] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T16:17:02.081] [INFO] Logging:  - Method: GET
+[2020-05-15T16:17:02.083] [INFO] Logging:  - Path:   /auth
+[2020-05-15T16:17:02.085] [INFO] Logging:  - Body:   {}
+[2020-05-15T16:17:02.086] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T16:18:00.067] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T16:18:01.895] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T16:18:04.839] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T16:18:04.845] [INFO] Logging:  - Method: GET
+[2020-05-15T16:18:04.846] [INFO] Logging:  - Path:   /auth/google/register
+[2020-05-15T16:18:04.847] [INFO] Logging:  - Body:   {}
+[2020-05-15T16:18:04.848] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T16:18:12.550] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T16:18:12.552] [INFO] Logging:  - Method: GET
+[2020-05-15T16:18:12.555] [INFO] Logging:  - Path:   /auth/google/callback
+[2020-05-15T16:18:12.603] [INFO] Logging:  - Body:   {}
+[2020-05-15T16:18:12.630] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T16:18:13.259] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T16:18:13.267] [INFO] Logging:  - Method: GET
+[2020-05-15T16:18:13.270] [INFO] Logging:  - Path:   /auth
+[2020-05-15T16:18:13.301] [INFO] Logging:  - Body:   {}
+[2020-05-15T16:18:13.303] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T16:18:43.325] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T16:18:45.139] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T16:18:45.855] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T16:18:45.856] [INFO] Logging:  - Method: GET
+[2020-05-15T16:18:45.857] [INFO] Logging:  - Path:   /auth/google/register
+[2020-05-15T16:18:45.874] [INFO] Logging:  - Body:   {}
+[2020-05-15T16:18:45.877] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T16:18:52.211] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T16:18:52.213] [INFO] Logging:  - Method: GET
+[2020-05-15T16:18:52.214] [INFO] Logging:  - Path:   /auth/google/callback
+[2020-05-15T16:18:52.237] [INFO] Logging:  - Body:   {}
+[2020-05-15T16:18:52.243] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T16:19:02.759] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T16:19:04.608] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T16:19:08.421] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T16:19:08.423] [INFO] Logging:  - Method: GET
+[2020-05-15T16:19:08.426] [INFO] Logging:  - Path:   /auth/google/register
+[2020-05-15T16:19:08.429] [INFO] Logging:  - Body:   {}
+[2020-05-15T16:19:08.431] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T16:19:13.104] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T16:19:13.106] [INFO] Logging:  - Method: GET
+[2020-05-15T16:19:13.109] [INFO] Logging:  - Path:   /auth/google/callback
+[2020-05-15T16:19:13.176] [INFO] Logging:  - Body:   {}
+[2020-05-15T16:19:13.187] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T16:19:13.829] [INFO] Logging:  - ---Request begins here---
+[2020-05-15T16:19:13.837] [INFO] Logging:  - Method: GET
+[2020-05-15T16:19:13.839] [INFO] Logging:  - Path:   /auth
+[2020-05-15T16:19:13.840] [INFO] Logging:  - Body:   {}
+[2020-05-15T16:19:13.841] [INFO] Logging:  - ---Request ends here---
+[2020-05-15T16:19:53.563] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T16:19:55.575] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T16:20:08.253] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T16:20:10.534] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T16:20:39.380] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T16:20:41.342] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T16:20:49.797] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T16:20:51.679] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-15T16:20:53.854] [INFO] Logging:  - Listening on http://127.0.0.1:3000
+[2020-05-15T16:20:55.883] [INFO] Logging:  - Successfully connected to MongoDB!
