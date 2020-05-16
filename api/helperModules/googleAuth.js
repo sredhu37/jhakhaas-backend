@@ -1,7 +1,10 @@
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 const config = require('../../utils/config');
-// const logger = require('../../utils/logger');
+const logger = require('../../utils/logger');
+const { UserModel } = require('../../models/user');
+const { createNewUser } = require('./usersUtils');
+const { exists } = require('../../utils/commonMethods');
 
 // Use the GoogleStrategy within Passport.
 //   Strategies in Passport require a `verify` function, which accept
@@ -13,9 +16,34 @@ passport.use(new GoogleStrategy({
   callbackURL: config.google.REDIRECT_URI,
 },
 (accessToken, refreshToken, profile, done) => {
-  console.log('Profile: ', profile);
-  //    User.findOrCreate({ googleId: profile.id }, function (err, user) {
-  //      return done(err, user);
-  //    });
-  return done(null, profile.name);
+  logger.info(`Profile: ${JSON.stringify(profile)}`);
+
+  UserModel.findOne({ googleId: profile.id })
+    .then((user) => {
+      if (exists(user)) {
+        return new Promise((resolve) => {
+          logger.info('User already exists. Logging in. Please wait...');
+          resolve(user);
+        });
+      }
+      logger.info('Registering the new user. Please wait...');
+
+      const userObject = createNewUser({
+        loginSource: 'google',
+        googleId: profile.id,
+        isEmailVerified: profile.emails[0].verified,
+      }, profile.emails[0].value, null);
+
+      const usr = new UserModel(userObject);
+
+      return usr.save();
+    })
+    .then((user) => {
+      // Implement the JWT token here
+      done(null, user);
+    })
+    .catch((error) => {
+      logger.error(error);
+      done(error, null);
+    });
 }));

@@ -123,21 +123,22 @@ authRouter.get(
   '/google/login',
   passport.authenticate(
     'google',
-    { scope: ['profile'] },
+    { scope: ['profile', 'email'] },
   ),
 );
 
 authRouter.get('/google/callback',
   passport.authenticate('google', {
-    successRedirect: '/auth',
+    // successRedirect: '/auth/google/success',
     failureRedirect: '/auth/google/error',
-    session: false
+    session: false,
   }),
   (req, res) => {
-    res.send('You are not supposed to see this page! Inform Sunny!: Callback function under redirect URI of Google Authentication.');
+    const jwtToken = jwt.sign({ __id: req.user.__id }, config.other.JWT_SECRET);
+    res.header('auth-token', jwtToken).send(jwtToken);
   });
 
-authRouter.get('/google/error', async (req, res) => {
+authRouter.get('/google/error', (req, res) => {
   res.send('Some error in google authentication! Contact Sunny!');
 });
 
