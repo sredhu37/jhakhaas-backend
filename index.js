@@ -67,5 +67,5 @@ app.get('/logs', (req, res) => {
 // routes end here
 
 app.listen(PORT, () => {
-  logger.info('Listening on http://127.0.0.1:3000');
+  logger.info(`Listening on ${config.other.HOST}:${PORT}`);
 });
