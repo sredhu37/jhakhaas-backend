@@ -5,11 +5,18 @@ const mongoose = require('mongoose');
 const logger = require('../utils/logger');
 const { QuestionModel } = require('../models/question');
 const { verifyAuthToken } = require('../utils/verifyToken');
+const { exists } = require('../utils/commonMethods');
+
+const getCurrentFormattedDate = () => {
+  const todaysDate = new Date();
+  // year-month-date
+  const formattedDate = `${todaysDate.getFullYear()}-${(todaysDate.getMonth()) + 1}-${todaysDate.getDate()}`;
+
+  return formattedDate;
+};
 
 const createNewQueryObject = (body) => {
-  const obj = {
-    dateAsked: new Date(),
-  };
+  const obj = {};
 
   const keys = Object.keys(body);
 
@@ -31,11 +38,25 @@ questionsRouter.get('/', verifyAuthToken, (req, res) => {
     });
 });
 
+// Get today's question
+questionsRouter.get('/today', verifyAuthToken, (req, res) => {
+  const todaysDate = getCurrentFormattedDate();
+  console.log(todaysDate);
+
+  QuestionModel.find({ dateAsked: todaysDate })
+    .then((response) => {
+      res.send(response);
+    })
+    .catch((error) => {
+      res.send(error);
+    });
+});
+
 // Get all questions of a particular difficultyLevel
 questionsRouter.get('/:difficulty', verifyAuthToken, (req, res) => {
   const difficultyLevel = req.params.difficulty;
 
-  if (difficultyLevel && difficultyLevel !== 'undefined') {
+  if (exists(difficultyLevel)) {
     QuestionModel.find({ difficultyLevel, isAlreadyAsked: false })
       .then((response) => {
         res.send(response);
