@@ -14,7 +14,7 @@ const questionSchema = new Schema({
     required: true,
   },
   solution: { type: String, required: true },
-  dateAsked: { type: String, required: true },
+  dateAsked: { type: String, required: true, unique: true },
   isAlreadyAsked: { type: Boolean, required: true, default: false },
   difficultyLevel: {
     type: Number, required: true, default: 1, min: 1, max: 5,

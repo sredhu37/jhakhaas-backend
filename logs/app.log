@@ -1,0 +1,467 @@
+[2020-05-22T21:11:18.961] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T21:11:22.077] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T21:13:58.145] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T21:14:01.774] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T21:18:17.489] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T21:18:20.301] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T21:19:01.734] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T21:19:04.298] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T21:19:07.023] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T21:19:09.553] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T21:21:08.870] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T21:21:12.185] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T21:26:27.070] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T21:26:27.075] [INFO] Logging:  - Method: POST
+[2020-05-22T21:26:27.077] [INFO] Logging:  - Path:   /auth/local/login
+[2020-05-22T21:26:27.081] [INFO] Logging:  - Body:   { email: 'xykdsffgfdfjz@gmail.com', password: 'Hello@123' }
+[2020-05-22T21:26:27.085] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T21:26:27.496] [INFO] Logging:  - User exists! {
+  _id: 5ebf77d352574a399cd22e86,
+  passwordHash: '$2b$10$7WtVNc8Mf3MxdbiGW9BGuOIxcmYWzuHsLDsOupc14A4gl/0leiYuq'
+}
+[2020-05-22T21:26:27.739] [INFO] Logging:  - User xykdsffgfdfjz@gmail.com is signed in!
+[2020-05-22T21:26:27.864] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T21:26:27.865] [INFO] Logging:  - Method: GET
+[2020-05-22T21:26:27.866] [INFO] Logging:  - Path:   /api/questions/today
+[2020-05-22T21:26:27.867] [INFO] Logging:  - Body:   {}
+[2020-05-22T21:26:27.869] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T21:27:08.742] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T21:27:08.742] [INFO] Logging:  - Method: GET
+[2020-05-22T21:27:08.747] [INFO] Logging:  - Path:   /api/questions/today
+[2020-05-22T21:27:08.748] [INFO] Logging:  - Body:   {}
+[2020-05-22T21:27:08.750] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T21:27:18.877] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T21:27:18.878] [INFO] Logging:  - Method: GET
+[2020-05-22T21:27:18.879] [INFO] Logging:  - Path:   /api/questions/today
+[2020-05-22T21:27:18.880] [INFO] Logging:  - Body:   {}
+[2020-05-22T21:27:18.881] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T21:27:42.601] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T21:27:42.603] [INFO] Logging:  - Method: GET
+[2020-05-22T21:27:42.604] [INFO] Logging:  - Path:   /api/questions/today
+[2020-05-22T21:27:42.605] [INFO] Logging:  - Body:   {}
+[2020-05-22T21:27:42.606] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T21:28:56.506] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T21:28:56.507] [INFO] Logging:  - Method: GET
+[2020-05-22T21:28:56.508] [INFO] Logging:  - Path:   /api/questions/today
+[2020-05-22T21:28:56.509] [INFO] Logging:  - Body:   {}
+[2020-05-22T21:28:56.510] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T21:30:18.632] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T21:30:18.633] [INFO] Logging:  - Method: GET
+[2020-05-22T21:30:18.633] [INFO] Logging:  - Path:   /api/questions/today
+[2020-05-22T21:30:18.634] [INFO] Logging:  - Body:   {}
+[2020-05-22T21:30:18.635] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T21:30:56.641] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T21:30:56.643] [INFO] Logging:  - Method: GET
+[2020-05-22T21:30:56.647] [INFO] Logging:  - Path:   /api/questions/today
+[2020-05-22T21:30:56.650] [INFO] Logging:  - Body:   {}
+[2020-05-22T21:30:56.652] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T21:31:36.432] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T21:31:36.434] [INFO] Logging:  - Method: GET
+[2020-05-22T21:31:36.435] [INFO] Logging:  - Path:   /api/questions/today
+[2020-05-22T21:31:36.436] [INFO] Logging:  - Body:   {}
+[2020-05-22T21:31:36.438] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T21:32:55.642] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T21:32:55.643] [INFO] Logging:  - Method: GET
+[2020-05-22T21:32:55.644] [INFO] Logging:  - Path:   /api/questions/today
+[2020-05-22T21:32:55.645] [INFO] Logging:  - Body:   {}
+[2020-05-22T21:32:55.646] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T21:34:33.593] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T21:34:33.594] [INFO] Logging:  - Method: GET
+[2020-05-22T21:34:33.595] [INFO] Logging:  - Path:   /api/questions/today
+[2020-05-22T21:34:33.597] [INFO] Logging:  - Body:   {}
+[2020-05-22T21:34:33.598] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T21:37:00.280] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T21:37:00.286] [INFO] Logging:  - Method: GET
+[2020-05-22T21:37:00.287] [INFO] Logging:  - Path:   /api/questions/today
+[2020-05-22T21:37:00.288] [INFO] Logging:  - Body:   {}
+[2020-05-22T21:37:00.290] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T21:37:52.702] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T21:37:52.703] [INFO] Logging:  - Method: GET
+[2020-05-22T21:37:52.703] [INFO] Logging:  - Path:   /api/questions/today
+[2020-05-22T21:37:52.704] [INFO] Logging:  - Body:   {}
+[2020-05-22T21:37:52.705] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T21:39:31.913] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T21:39:35.410] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T21:39:54.084] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T21:39:56.637] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T21:40:11.146] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T21:40:13.702] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T21:40:32.884] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T21:40:36.949] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T21:41:41.972] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T21:41:45.145] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T21:42:12.048] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T21:42:12.050] [INFO] Logging:  - Method: POST
+[2020-05-22T21:42:12.052] [INFO] Logging:  - Path:   /auth/local/login
+[2020-05-22T21:42:12.054] [INFO] Logging:  - Body:   { email: 'xykdsffgfdfjz@gmail.com', password: 'Hello@123' }
+[2020-05-22T21:42:12.057] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T21:42:12.509] [INFO] Logging:  - User exists! {
+  _id: 5ebf77d352574a399cd22e86,
+  passwordHash: '$2b$10$7WtVNc8Mf3MxdbiGW9BGuOIxcmYWzuHsLDsOupc14A4gl/0leiYuq'
+}
+[2020-05-22T21:42:12.650] [INFO] Logging:  - User xykdsffgfdfjz@gmail.com is signed in!
+[2020-05-22T21:42:12.722] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T21:42:12.723] [INFO] Logging:  - Method: GET
+[2020-05-22T21:42:12.724] [INFO] Logging:  - Path:   /api/questions/today
+[2020-05-22T21:42:12.726] [INFO] Logging:  - Body:   {}
+[2020-05-22T21:42:12.727] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T21:42:18.278] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T21:42:18.279] [INFO] Logging:  - Method: POST
+[2020-05-22T21:42:18.280] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-22T21:42:18.281] [INFO] Logging:  - Body:   {
+  question: {
+    isAlreadyAsked: false,
+    difficultyLevel: 1,
+    questionRating: 4,
+    _id: '5eacebfb592de34a9854b710',
+    problemStatement: 'Sum of 10 and 20 is: ',
+    options: { a: '10', b: '30', c: '200', d: '2' },
+    solution: 'Answer: B\nSince 10 + 20 = 30',
+    dateAsked: '2020-5-22',
+    __v: 0
+  },
+  usersAnswer: { a: true, b: true, c: false, d: false }
+}
+[2020-05-22T21:42:18.293] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T21:43:42.561] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T21:43:46.196] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T21:44:48.798] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T21:44:51.801] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T21:47:22.360] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T21:47:25.183] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T21:47:31.809] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T21:47:34.673] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T21:47:38.817] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T21:47:38.817] [INFO] Logging:  - Method: GET
+[2020-05-22T21:47:38.818] [INFO] Logging:  - Path:   /api/questions/today
+[2020-05-22T21:47:38.819] [INFO] Logging:  - Body:   {}
+[2020-05-22T21:47:38.821] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T21:47:50.594] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T21:47:53.435] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T21:48:10.594] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T21:48:13.265] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T21:48:56.808] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T21:48:56.809] [INFO] Logging:  - Method: GET
+[2020-05-22T21:48:56.809] [INFO] Logging:  - Path:   /api/questions/today
+[2020-05-22T21:48:56.810] [INFO] Logging:  - Body:   {}
+[2020-05-22T21:48:56.826] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T21:49:25.187] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T21:49:28.017] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T21:50:03.652] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T21:50:03.653] [INFO] Logging:  - Method: GET
+[2020-05-22T21:50:03.654] [INFO] Logging:  - Path:   /api/questions/today
+[2020-05-22T21:50:03.674] [INFO] Logging:  - Body:   {}
+[2020-05-22T21:50:03.675] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T21:50:04.191] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T21:50:04.193] [INFO] Logging:  - Method: GET
+[2020-05-22T21:50:04.194] [INFO] Logging:  - Path:   /favicon.ico
+[2020-05-22T21:50:04.194] [INFO] Logging:  - Body:   {}
+[2020-05-22T21:50:04.210] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T21:50:50.309] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T21:50:53.125] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T21:50:56.713] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T21:50:56.713] [INFO] Logging:  - Method: GET
+[2020-05-22T21:50:56.714] [INFO] Logging:  - Path:   /api/questions/today
+[2020-05-22T21:50:56.715] [INFO] Logging:  - Body:   {}
+[2020-05-22T21:50:56.729] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T21:51:28.188] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T21:51:30.593] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T21:51:32.037] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T21:51:32.038] [INFO] Logging:  - Method: GET
+[2020-05-22T21:51:32.039] [INFO] Logging:  - Path:   /api/questions/today
+[2020-05-22T21:51:32.039] [INFO] Logging:  - Body:   {}
+[2020-05-22T21:51:32.053] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T21:51:43.445] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T21:51:45.875] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T21:55:27.918] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T21:55:27.919] [INFO] Logging:  - Method: POST
+[2020-05-22T21:55:27.920] [INFO] Logging:  - Path:   /auth/local/login
+[2020-05-22T21:55:27.921] [INFO] Logging:  - Body:   { email: 'xykdsffgfdfjz@gmail.com', password: 'Hello@123' }
+[2020-05-22T21:55:27.922] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T21:55:28.302] [INFO] Logging:  - User exists! {
+  _id: 5ebf77d352574a399cd22e86,
+  passwordHash: '$2b$10$7WtVNc8Mf3MxdbiGW9BGuOIxcmYWzuHsLDsOupc14A4gl/0leiYuq'
+}
+[2020-05-22T21:55:28.384] [INFO] Logging:  - User xykdsffgfdfjz@gmail.com is signed in!
+[2020-05-22T21:55:28.442] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T21:55:28.443] [INFO] Logging:  - Method: GET
+[2020-05-22T21:55:28.445] [INFO] Logging:  - Path:   /api/questions/today
+[2020-05-22T21:55:28.446] [INFO] Logging:  - Body:   {}
+[2020-05-22T21:55:28.448] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T21:55:41.526] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T21:55:41.527] [INFO] Logging:  - Method: POST
+[2020-05-22T21:55:41.528] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-22T21:55:41.530] [INFO] Logging:  - Body:   {
+  question: {
+    difficultyLevel: 1,
+    _id: '5eacebfb592de34a9854b710',
+    problemStatement: 'Sum of 10 and 20 is: ',
+    options: { a: '10', b: '30', c: '200', d: '2' }
+  },
+  usersAnswer: { a: false, b: false, c: true, d: true }
+}
+[2020-05-22T21:55:41.541] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T22:04:50.219] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T22:04:53.542] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T22:05:02.454] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T22:05:04.830] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T22:05:53.575] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T22:05:57.269] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T22:09:09.139] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T22:09:09.145] [INFO] Logging:  - Method: POST
+[2020-05-22T22:09:09.146] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-22T22:09:09.147] [INFO] Logging:  - Body:   {
+  question: { _id: '5eacebfb592de34a9854b710' },
+  usersAnswer: { a: true, b: true, c: false, d: false }
+}
+[2020-05-22T22:09:09.150] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T22:09:45.949] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T22:09:47.266] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T22:09:47.267] [INFO] Logging:  - Method: POST
+[2020-05-22T22:09:47.267] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-22T22:09:47.268] [INFO] Logging:  - Body:   {
+  question: { _id: '5eacebfb592de34a9854b710' },
+  usersAnswer: { a: true, b: true, c: false, d: false }
+}
+[2020-05-22T22:09:47.279] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T22:09:49.412] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T22:09:59.464] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T22:09:59.465] [INFO] Logging:  - Method: POST
+[2020-05-22T22:09:59.466] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-22T22:09:59.467] [INFO] Logging:  - Body:   {
+  question: { _id: '5eacebfb592de34a9854b710' },
+  usersAnswer: { a: true, b: true, c: false, d: false }
+}
+[2020-05-22T22:09:59.487] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T22:13:01.019] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T22:13:03.699] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T22:13:52.438] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T22:13:54.850] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T22:13:57.978] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T22:13:57.979] [INFO] Logging:  - Method: POST
+[2020-05-22T22:13:57.980] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-22T22:13:57.981] [INFO] Logging:  - Body:   {
+  question: { _id: '5eacebfb592de34a9854b710' },
+  usersAnswer: { a: true, b: true, c: false, d: false }
+}
+[2020-05-22T22:13:57.995] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T22:14:22.501] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T22:14:26.344] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T22:14:28.939] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T22:14:28.940] [INFO] Logging:  - Method: POST
+[2020-05-22T22:14:28.942] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-22T22:14:28.945] [INFO] Logging:  - Body:   {
+  question: { _id: '5eacebfb592de34a9854b710' },
+  usersAnswer: { a: true, b: true, c: false, d: false }
+}
+[2020-05-22T22:14:28.971] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T22:14:56.887] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T22:14:59.225] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T22:15:03.353] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T22:15:03.354] [INFO] Logging:  - Method: POST
+[2020-05-22T22:15:03.356] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-22T22:15:03.365] [INFO] Logging:  - Body:   {
+  question: { _id: '5eacebfb592de34a9854b710' },
+  usersAnswer: { a: true, b: true, c: false, d: false }
+}
+[2020-05-22T22:15:03.369] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T22:15:38.328] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T22:15:41.168] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T22:15:41.169] [INFO] Logging:  - Method: POST
+[2020-05-22T22:15:41.170] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-22T22:15:41.171] [INFO] Logging:  - Body:   {
+  question: { _id: '5eacebfb592de34a9854b710' },
+  usersAnswer: { a: true, b: true, c: false, d: false }
+}
+[2020-05-22T22:15:41.184] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T22:15:41.368] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T22:16:03.130] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T22:16:05.596] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T22:16:08.127] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T22:16:08.128] [INFO] Logging:  - Method: POST
+[2020-05-22T22:16:08.129] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-22T22:16:08.131] [INFO] Logging:  - Body:   {
+  question: { _id: '5eacebfb592de34a9854b710' },
+  usersAnswer: { a: true, b: true, c: false, d: false }
+}
+[2020-05-22T22:16:08.148] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T22:17:37.675] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T22:17:40.362] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T22:17:42.289] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T22:17:42.290] [INFO] Logging:  - Method: POST
+[2020-05-22T22:17:42.291] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-22T22:17:42.293] [INFO] Logging:  - Body:   {
+  question: { _id: '5eacebfb592de34a9854b710' },
+  usersAnswer: { a: true, b: true, c: false, d: false }
+}
+[2020-05-22T22:17:42.307] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T22:18:11.600] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T22:18:14.013] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T22:18:48.237] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T22:18:50.980] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T22:18:53.449] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T22:18:53.450] [INFO] Logging:  - Method: POST
+[2020-05-22T22:18:53.451] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-22T22:18:53.463] [INFO] Logging:  - Body:   {
+  question: { _id: '5eacebfb592de34a9854b710' },
+  usersAnswer: { a: true, b: true, c: false, d: false }
+}
+[2020-05-22T22:18:53.467] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T22:19:36.238] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T22:19:38.634] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T22:19:45.034] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T22:19:45.035] [INFO] Logging:  - Method: POST
+[2020-05-22T22:19:45.036] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-22T22:19:45.037] [INFO] Logging:  - Body:   {
+  question: { _id: '5eacebfb592de34a9854b710' },
+  usersAnswer: { a: true, b: true, c: false, d: false }
+}
+[2020-05-22T22:19:45.052] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T22:23:52.007] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T22:23:55.062] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T22:23:58.276] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T22:23:58.277] [INFO] Logging:  - Method: POST
+[2020-05-22T22:23:58.278] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-22T22:23:58.279] [INFO] Logging:  - Body:   {
+  question: { _id: '5eacebfb592de34a9854b710' },
+  usersAnswer: { a: true, b: true, c: false, d: false }
+}
+[2020-05-22T22:23:58.305] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T22:24:35.452] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T22:24:38.185] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T22:24:40.937] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T22:24:40.937] [INFO] Logging:  - Method: POST
+[2020-05-22T22:24:40.938] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-22T22:24:40.955] [INFO] Logging:  - Body:   {
+  question: { _id: '5eacebfb592de34a9854b710' },
+  usersAnswer: { a: true, b: true, c: false, d: false }
+}
+[2020-05-22T22:24:40.962] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T22:24:59.398] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T22:24:59.398] [INFO] Logging:  - Method: POST
+[2020-05-22T22:24:59.399] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-22T22:24:59.400] [INFO] Logging:  - Body:   {
+  question: { _id: '5eacebfb592de34a9854b710' },
+  usersAnswer: { a: true, b: true, c: true, d: false }
+}
+[2020-05-22T22:24:59.413] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T22:25:08.138] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T22:25:08.139] [INFO] Logging:  - Method: POST
+[2020-05-22T22:25:08.140] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-22T22:25:08.141] [INFO] Logging:  - Body:   {
+  question: { _id: '5eacebfb592de34a9854b710' },
+  usersAnswer: { a: true, b: true, c: false, d: false }
+}
+[2020-05-22T22:25:08.151] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T22:26:59.579] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T22:27:03.683] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T22:27:10.662] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T22:27:13.235] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T22:27:40.202] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T22:27:42.708] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T22:28:07.776] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T22:28:11.355] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T22:28:47.425] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T22:28:50.163] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T22:29:55.723] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-22T22:29:59.531] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-22T22:30:16.783] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T22:30:16.785] [INFO] Logging:  - Method: POST
+[2020-05-22T22:30:16.789] [INFO] Logging:  - Path:   /auth/local/login
+[2020-05-22T22:30:16.791] [INFO] Logging:  - Body:   { email: 'xykdsffgfdfjz@gmail.com', password: 'Hello@123' }
+[2020-05-22T22:30:16.793] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T22:30:17.195] [INFO] Logging:  - User exists! {
+  _id: 5ebf77d352574a399cd22e86,
+  passwordHash: '$2b$10$7WtVNc8Mf3MxdbiGW9BGuOIxcmYWzuHsLDsOupc14A4gl/0leiYuq'
+}
+[2020-05-22T22:30:17.400] [INFO] Logging:  - User xykdsffgfdfjz@gmail.com is signed in!
+[2020-05-22T22:30:17.461] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T22:30:17.462] [INFO] Logging:  - Method: GET
+[2020-05-22T22:30:17.463] [INFO] Logging:  - Path:   /api/questions/today
+[2020-05-22T22:30:17.463] [INFO] Logging:  - Body:   {}
+[2020-05-22T22:30:17.464] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T22:30:24.054] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T22:30:24.056] [INFO] Logging:  - Method: POST
+[2020-05-22T22:30:24.058] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-22T22:30:24.059] [INFO] Logging:  - Body:   {
+  question: {
+    difficultyLevel: 1,
+    _id: '5eacebfb592de34a9854b710',
+    problemStatement: 'Sum of 10 and 20 is: ',
+    options: { a: '10', b: '30', c: '200', d: '2' }
+  },
+  usersAnswer: { a: true, b: true, c: false, d: false }
+}
+[2020-05-22T22:30:24.063] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T22:30:59.418] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T22:30:59.419] [INFO] Logging:  - Method: GET
+[2020-05-22T22:30:59.425] [INFO] Logging:  - Path:   /api/questions/today
+[2020-05-22T22:30:59.428] [INFO] Logging:  - Body:   {}
+[2020-05-22T22:30:59.430] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T22:31:06.604] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T22:31:06.607] [INFO] Logging:  - Method: POST
+[2020-05-22T22:31:06.608] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-22T22:31:06.609] [INFO] Logging:  - Body:   {
+  question: {
+    difficultyLevel: 1,
+    _id: '5eacebfb592de34a9854b710',
+    problemStatement: 'Sum of 10 and 20 is: ',
+    options: { a: '10', b: '30', c: '200', d: '2' }
+  },
+  usersAnswer: { a: true, b: true, c: false, d: false }
+}
+[2020-05-22T22:31:06.615] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T22:32:21.703] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T22:32:21.704] [INFO] Logging:  - Method: GET
+[2020-05-22T22:32:21.704] [INFO] Logging:  - Path:   /api/questions/today
+[2020-05-22T22:32:21.705] [INFO] Logging:  - Body:   {}
+[2020-05-22T22:32:21.706] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T22:32:42.321] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T22:32:42.321] [INFO] Logging:  - Method: GET
+[2020-05-22T22:32:42.322] [INFO] Logging:  - Path:   /api/questions/today
+[2020-05-22T22:32:42.323] [INFO] Logging:  - Body:   {}
+[2020-05-22T22:32:42.323] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T22:32:46.457] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T22:32:46.458] [INFO] Logging:  - Method: POST
+[2020-05-22T22:32:46.458] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-22T22:32:46.459] [INFO] Logging:  - Body:   {
+  question: {
+    difficultyLevel: 1,
+    _id: '5eacebfb592de34a9854b710',
+    problemStatement: 'Sum of 10 and 20 is: ',
+    options: { a: '10', b: '30', c: '200', d: '2' }
+  },
+  usersAnswer: { a: true, b: false, c: true, d: false }
+}
+[2020-05-22T22:32:46.466] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T22:35:42.990] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T22:35:42.994] [INFO] Logging:  - Method: GET
+[2020-05-22T22:35:42.997] [INFO] Logging:  - Path:   /api/questions/today
+[2020-05-22T22:35:42.999] [INFO] Logging:  - Body:   {}
+[2020-05-22T22:35:43.000] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T22:35:50.473] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T22:35:50.475] [INFO] Logging:  - Method: POST
+[2020-05-22T22:35:50.480] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-22T22:35:50.483] [INFO] Logging:  - Body:   {
+  question: {
+    difficultyLevel: 1,
+    _id: '5eacebfb592de34a9854b710',
+    problemStatement: 'Sum of 10 and 20 is: ',
+    options: { a: '10', b: '30', c: '200', d: '2' }
+  },
+  usersAnswer: { a: true, b: true, c: false, d: false }
+}
+[2020-05-22T22:35:50.495] [INFO] Logging:  - ---Request ends here---
+[2020-05-22T22:35:56.877] [INFO] Logging:  - ---Request begins here---
+[2020-05-22T22:35:56.878] [INFO] Logging:  - Method: POST
+[2020-05-22T22:35:56.881] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-22T22:35:56.883] [INFO] Logging:  - Body:   {
+  question: {
+    difficultyLevel: 1,
+    _id: '5eacebfb592de34a9854b710',
+    problemStatement: 'Sum of 10 and 20 is: ',
+    options: { a: '10', b: '30', c: '200', d: '2' }
+  },
+  usersAnswer: { a: true, b: true, c: true, d: false }
+}
+[2020-05-22T22:35:56.895] [INFO] Logging:  - ---Request ends here---

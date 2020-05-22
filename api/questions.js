@@ -41,15 +41,44 @@ questionsRouter.get('/', verifyAuthToken, (req, res) => {
 // Get today's question
 questionsRouter.get('/today', verifyAuthToken, (req, res) => {
   const todaysDate = getCurrentFormattedDate();
-  console.log(todaysDate);
 
-  QuestionModel.find({ dateAsked: todaysDate })
+  QuestionModel.find({ dateAsked: todaysDate }, '_id problemStatement options difficultyLevel')
     .then((response) => {
       res.send(response);
     })
     .catch((error) => {
       res.send(error);
     });
+});
+
+// Check if answer is correct
+questionsRouter.post('/submit', verifyAuthToken, (req, res) => {
+  const { body } = req;
+  const { _id } = body.question;
+  const { usersAnswer } = body;
+  console.log(body);
+
+  QuestionModel.findById(_id, '_id solution')
+  .then(response => {
+    console.log('Response: ', response);
+    const usersAns = Object.keys(usersAnswer).map((key) => usersAnswer[key] ? key : '');
+    console.log('usersAns: ', usersAns);
+
+    const actualSolution = response.solution.split('').sort().join('');
+    const usersSolution = usersAns.sort().join('');
+
+    console.log('actualSolution: ', actualSolution);
+    console.log('usersSolution: ', usersSolution);
+
+    if(actualSolution === usersSolution) {
+      res.status(200).send('Correct Answer');
+    } else {
+      res.status(204).send('Incorrect Answer');
+    }
+  })
+  .catch(error => {
+    res.status(400).send(error);
+  });
 });
 
 // Get all questions of a particular difficultyLevel
