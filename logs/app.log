@@ -1,0 +1,592 @@
+[2020-05-23T08:22:03.259] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T08:22:06.161] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T08:24:58.467] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T08:25:01.579] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T08:26:56.790] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T08:26:59.651] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T08:28:14.669] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T08:28:17.528] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T08:31:52.795] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T08:31:58.411] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T08:32:01.009] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T08:32:10.596] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T08:32:13.238] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T08:33:36.175] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T08:33:39.025] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T08:35:28.278] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T08:35:31.157] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T08:38:06.332] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T08:38:10.596] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T08:38:50.611] [INFO] Logging:  - ---Request begins here---
+[2020-05-23T08:38:50.612] [INFO] Logging:  - Method: POST
+[2020-05-23T08:38:50.613] [INFO] Logging:  - Path:   /auth/local/login
+[2020-05-23T08:38:50.613] [INFO] Logging:  - Body:   { email: 'xykdsffgfdfjz@gmail.com', password: 'Hello@123' }
+[2020-05-23T08:38:50.622] [INFO] Logging:  - ---Request ends here---
+[2020-05-23T08:38:51.037] [INFO] Logging:  - User exists! {
+  _id: 5ebf77d352574a399cd22e86,
+  passwordHash: '$2b$10$7WtVNc8Mf3MxdbiGW9BGuOIxcmYWzuHsLDsOupc14A4gl/0leiYuq'
+}
+[2020-05-23T08:38:51.127] [INFO] Logging:  - User xykdsffgfdfjz@gmail.com is signed in!
+[2020-05-23T08:38:51.197] [INFO] Logging:  - ---Request begins here---
+[2020-05-23T08:38:51.198] [INFO] Logging:  - Method: GET
+[2020-05-23T08:38:51.198] [INFO] Logging:  - Path:   /api/questions/today
+[2020-05-23T08:38:51.199] [INFO] Logging:  - Body:   {}
+[2020-05-23T08:38:51.200] [INFO] Logging:  - ---Request ends here---
+[2020-05-23T08:40:41.571] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T08:40:45.454] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T08:41:07.995] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T08:41:10.586] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T08:41:50.104] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T08:41:53.606] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T09:20:44.844] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T09:20:48.140] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T09:21:38.307] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T09:21:40.886] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T09:27:08.736] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T09:27:12.391] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T09:29:14.491] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T09:29:17.748] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T09:29:38.275] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T09:29:40.813] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T09:30:25.838] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T09:30:28.653] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T09:30:41.499] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T09:30:44.060] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T09:58:28.454] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T09:58:32.021] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T09:59:42.073] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T09:59:45.441] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:00:21.618] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:00:24.234] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:01:15.978] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:01:19.971] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:01:49.449] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:01:52.071] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:01:59.179] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:02:01.807] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:05:29.907] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:05:32.990] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:14:44.832] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:14:49.028] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:23:48.376] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:23:52.023] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:24:33.535] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:24:36.567] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:25:08.264] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:25:12.845] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:26:16.437] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:26:20.429] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:26:33.399] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:26:37.301] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:26:50.301] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:26:54.241] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:28:56.099] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:30:59.706] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:31:15.177] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:31:18.093] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:31:21.276] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:31:24.568] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:36:52.999] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:36:56.881] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:37:35.357] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:37:39.525] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:38:05.367] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:38:08.797] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:40:24.214] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:40:27.870] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:42:43.072] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:42:46.854] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:42:57.422] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:43:00.771] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:43:22.702] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:43:25.902] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:43:39.523] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:43:43.000] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:43:49.977] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:43:55.496] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:44:00.552] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:44:11.526] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:44:15.099] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:44:41.747] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:44:45.006] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:45:05.401] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:45:09.369] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:45:31.014] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:45:34.649] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:46:24.245] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:46:27.926] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:49:59.791] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:50:03.506] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:50:12.282] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:50:15.901] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:50:19.404] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:50:23.261] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:50:49.484] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:50:52.414] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:50:59.886] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:51:04.332] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:51:28.970] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:51:32.143] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:51:41.767] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:51:45.296] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:52:11.758] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:52:15.122] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:52:26.628] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:52:30.168] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:53:16.311] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:53:19.681] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T10:54:28.228] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T10:54:31.554] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T12:32:35.421] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T12:32:39.030] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T12:32:58.583] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T12:33:02.199] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T12:33:40.100] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T12:33:44.811] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T12:34:30.388] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T12:34:33.783] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T12:35:10.283] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T12:35:13.988] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T12:35:18.046] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T12:35:22.937] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T12:36:47.958] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T12:36:51.318] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T12:38:38.689] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T12:38:43.033] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T12:39:18.155] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T12:39:23.580] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T12:39:28.427] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T12:40:02.520] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T12:40:08.416] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T12:41:28.434] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T12:41:32.728] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T12:41:47.579] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T12:41:51.027] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T12:42:00.003] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T12:42:03.782] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T12:53:06.192] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T12:53:10.541] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T12:53:15.040] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T12:53:18.721] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T12:55:22.287] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T12:55:26.831] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T12:56:34.755] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T12:56:38.788] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T12:56:40.537] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T12:56:44.554] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T12:57:40.254] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T12:57:44.923] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T12:57:49.563] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T12:57:52.695] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T12:58:24.125] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T12:58:27.267] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T12:59:34.663] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T12:59:39.854] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T13:11:56.984] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T13:12:01.105] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T13:13:08.802] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T13:13:13.073] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T13:14:19.445] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T13:14:23.324] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T13:15:13.798] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T13:15:16.614] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T13:15:20.134] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T13:15:24.557] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T13:15:28.058] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T13:15:43.283] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T13:15:46.210] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T13:16:02.858] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T13:16:07.209] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T13:16:44.169] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T13:16:48.021] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T13:16:55.667] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T13:16:58.975] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T13:17:25.874] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T13:17:29.503] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T13:17:36.877] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T13:17:39.904] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T13:17:43.929] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T13:18:01.221] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T13:18:05.660] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T14:47:02.113] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T14:47:06.523] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T14:47:13.883] [INFO] Logging:  - ---Request begins here---
+[2020-05-23T14:47:13.885] [INFO] Logging:  - Method: POST
+[2020-05-23T14:47:13.885] [INFO] Logging:  - Path:   /auth/local/login
+[2020-05-23T14:47:13.887] [INFO] Logging:  - Body:   { email: 'xykdsffgfdfjz@gmail.com', password: 'Hello@123' }
+[2020-05-23T14:47:13.903] [INFO] Logging:  - ---Request ends here---
+[2020-05-23T14:47:14.336] [INFO] Logging:  - User exists! {
+  _id: 5ebf77d352574a399cd22e86,
+  passwordHash: '$2b$10$7WtVNc8Mf3MxdbiGW9BGuOIxcmYWzuHsLDsOupc14A4gl/0leiYuq'
+}
+[2020-05-23T14:47:14.530] [INFO] Logging:  - User xykdsffgfdfjz@gmail.com is signed in!
+[2020-05-23T14:47:46.940] [INFO] Logging:  - ---Request begins here---
+[2020-05-23T14:47:46.941] [INFO] Logging:  - Method: GET
+[2020-05-23T14:47:46.941] [INFO] Logging:  - Path:   /api/questions/today
+[2020-05-23T14:47:46.942] [INFO] Logging:  - Body:   {}
+[2020-05-23T14:47:46.973] [INFO] Logging:  - ---Request ends here---
+[2020-05-23T14:48:08.366] [INFO] Logging:  - ---Request begins here---
+[2020-05-23T14:48:08.366] [INFO] Logging:  - Method: GET
+[2020-05-23T14:48:08.367] [INFO] Logging:  - Path:   /api/questions/today
+[2020-05-23T14:48:08.369] [INFO] Logging:  - Body:   {}
+[2020-05-23T14:48:08.390] [INFO] Logging:  - ---Request ends here---
+[2020-05-23T14:49:35.858] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T14:49:40.177] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T14:49:42.880] [INFO] Logging:  - ---Request begins here---
+[2020-05-23T14:49:42.881] [INFO] Logging:  - Method: GET
+[2020-05-23T14:49:42.882] [INFO] Logging:  - Path:   /api/questions/today
+[2020-05-23T14:49:42.883] [INFO] Logging:  - Body:   {}
+[2020-05-23T14:49:42.914] [INFO] Logging:  - ---Request ends here---
+[2020-05-23T14:52:12.093] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T14:52:16.058] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T14:52:23.165] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T14:52:27.898] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T14:52:30.909] [INFO] Logging:  - ---Request begins here---
+[2020-05-23T14:52:30.910] [INFO] Logging:  - Method: GET
+[2020-05-23T14:52:30.911] [INFO] Logging:  - Path:   /api/questions/today
+[2020-05-23T14:52:30.912] [INFO] Logging:  - Body:   {}
+[2020-05-23T14:52:30.934] [INFO] Logging:  - ---Request ends here---
+[2020-05-23T14:52:30.937] [ERROR] Logging:  - TypeError: Cannot read property 'JWT_SECRET' of undefined
+    at Object.getDataFromJWT (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\utils\commonMethods.js:17:66)
+    at verifyAuthToken (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\utils\verifyToken.js:13:27)
+    at Layer.handle [as handle_request] (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\index.js:275:10)
+[2020-05-23T14:54:23.284] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T14:54:27.387] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T14:55:05.321] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T14:55:11.401] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T14:56:05.070] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T14:56:09.373] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T14:57:44.109] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T14:57:48.342] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T14:57:51.652] [INFO] Logging:  - ---Request begins here---
+[2020-05-23T14:57:51.654] [INFO] Logging:  - Method: GET
+[2020-05-23T14:57:51.655] [INFO] Logging:  - Path:   /api/questions/today
+[2020-05-23T14:57:51.656] [INFO] Logging:  - Body:   {}
+[2020-05-23T14:57:51.657] [INFO] Logging:  - ---Request ends here---
+[2020-05-23T14:57:51.659] [ERROR] Logging:  - TypeError: Cannot read property 'JWT_SECRET' of undefined
+    at Object.getDataFromJWT (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\utils\commonMethods.js:18:66)
+    at verifyAuthToken (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\utils\verifyToken.js:13:27)
+    at Layer.handle [as handle_request] (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\index.js:275:10)
+[2020-05-23T14:59:34.727] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T14:59:39.070] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T16:07:28.831] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T16:07:33.340] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T16:08:59.288] [INFO] Logging:  - ---Request begins here---
+[2020-05-23T16:08:59.294] [INFO] Logging:  - Method: POST
+[2020-05-23T16:08:59.298] [INFO] Logging:  - Path:   /auth/local/login
+[2020-05-23T16:08:59.336] [INFO] Logging:  - Body:   { email: 'xykdsffgfdfjz@gmail.com', password: 'Hello@123' }
+[2020-05-23T16:08:59.385] [INFO] Logging:  - ---Request ends here---
+[2020-05-23T16:09:00.033] [INFO] Logging:  - User exists! {
+  _id: 5ebf77d352574a399cd22e86,
+  passwordHash: '$2b$10$7WtVNc8Mf3MxdbiGW9BGuOIxcmYWzuHsLDsOupc14A4gl/0leiYuq'
+}
+[2020-05-23T16:09:00.258] [INFO] Logging:  - User xykdsffgfdfjz@gmail.com is signed in!
+[2020-05-23T16:10:48.082] [INFO] Logging:  - ---Request begins here---
+[2020-05-23T16:10:48.084] [INFO] Logging:  - Method: GET
+[2020-05-23T16:10:48.086] [INFO] Logging:  - Path:   /api/questions/today
+[2020-05-23T16:10:48.087] [INFO] Logging:  - Body:   {}
+[2020-05-23T16:10:48.088] [INFO] Logging:  - ---Request ends here---
+[2020-05-23T16:10:48.132] [ERROR] Logging:  - TypeError: Cannot read property 'JWT_SECRET' of undefined
+    at Object.getDataFromJWT (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\utils\commonMethods.js:18:66)
+    at verifyAuthToken (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\utils\verifyToken.js:13:27)
+    at Layer.handle [as handle_request] (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\index.js:275:10)
+[2020-05-23T16:20:43.638] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T16:20:48.783] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T16:20:55.007] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T16:20:59.251] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T16:22:19.915] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T16:22:26.081] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T16:22:59.436] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T16:23:04.019] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T16:23:19.439] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T16:23:23.829] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T16:44:26.313] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T16:44:31.247] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T16:44:45.688] [INFO] Logging:  - ---Request begins here---
+[2020-05-23T16:44:45.690] [INFO] Logging:  - Method: GET
+[2020-05-23T16:44:45.691] [INFO] Logging:  - Path:   /api/questions/today
+[2020-05-23T16:44:45.692] [INFO] Logging:  - Body:   {}
+[2020-05-23T16:44:45.692] [INFO] Logging:  - ---Request ends here---
+[2020-05-23T16:46:02.184] [INFO] Logging:  - ---Request begins here---
+[2020-05-23T16:46:02.184] [INFO] Logging:  - Method: POST
+[2020-05-23T16:46:02.186] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-23T16:46:02.187] [INFO] Logging:  - Body:   {
+  question: { _id: '5eaceca24df34e61e4ff8b60' },
+  usersAnswer: { a: true, b: true, c: false, d: false },
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWJmNzdkMzUyNTc0YTM5OWNkMjJlODYiLCJpYXQiOjE1OTAyMzAzNDB9.EHt4LRNQluWWxBtYkgPt7EGXTVMj3qeJioqf7XSK0jw'
+}
+[2020-05-23T16:46:02.208] [INFO] Logging:  - ---Request ends here---
+[2020-05-23T16:46:02.216] [ERROR] Logging:  - JsonWebTokenError: jwt must be provided
+    at Object.module.exports [as verify] (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\jsonwebtoken\verify.js:53:17)
+    at Object.getDataFromJWT (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\utils\commonMethods.js:18:39)
+    at verifyAuthToken (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\utils\verifyToken.js:13:27)
+    at Layer.handle [as handle_request] (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\node_modules\express\lib\router\index.js:335:12) {
+  name: 'JsonWebTokenError',
+  message: 'jwt must be provided'
+}
+[2020-05-23T16:46:29.023] [INFO] Logging:  - ---Request begins here---
+[2020-05-23T16:46:29.024] [INFO] Logging:  - Method: POST
+[2020-05-23T16:46:29.025] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-23T16:46:29.028] [INFO] Logging:  - Body:   {
+  question: { _id: '5eaceca24df34e61e4ff8b60' },
+  usersAnswer: { a: true, b: true, c: false, d: false },
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWJmNzdkMzUyNTc0YTM5OWNkMjJlODYiLCJpYXQiOjE1OTAyMzAzNDB9.EHt4LRNQluWWxBtYkgPt7EGXTVMj3qeJioqf7XSK0jw'
+}
+[2020-05-23T16:46:29.063] [INFO] Logging:  - ---Request ends here---
+[2020-05-23T16:52:35.680] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T16:52:40.050] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T16:57:55.062] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T16:57:59.610] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T16:58:16.520] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T16:58:20.723] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T16:58:37.980] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T16:58:42.227] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T16:58:55.607] [INFO] Logging:  - ---Request begins here---
+[2020-05-23T16:58:55.608] [INFO] Logging:  - Method: POST
+[2020-05-23T16:58:55.610] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-23T16:58:55.629] [INFO] Logging:  - Body:   {
+  question: { _id: '5eaceca24df34e61e4ff8b60' },
+  usersAnswer: { a: true, b: true, c: false, d: false },
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWJmNzdkMzUyNTc0YTM5OWNkMjJlODYiLCJpYXQiOjE1OTAyMzAzNDB9.EHt4LRNQluWWxBtYkgPt7EGXTVMj3qeJioqf7XSK0jw'
+}
+[2020-05-23T16:58:55.656] [INFO] Logging:  - ---Request ends here---
+[2020-05-23T17:00:05.918] [INFO] Logging:  - ---Request begins here---
+[2020-05-23T17:00:05.925] [INFO] Logging:  - Method: POST
+[2020-05-23T17:00:05.927] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-23T17:00:05.928] [INFO] Logging:  - Body:   {
+  question: { _id: '5eaceca24df34e61e4ff8b60' },
+  usersAnswer: { a: true, b: true, c: false, d: false },
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWJmNzdkMzUyNTc0YTM5OWNkMjJlODYiLCJpYXQiOjE1OTAyMzAzNDB9.EHt4LRNQluWWxBtYkgPt7EGXTVMj3qeJioqf7XSK0jw'
+}
+[2020-05-23T17:00:05.960] [INFO] Logging:  - ---Request ends here---
+[2020-05-23T17:00:39.048] [INFO] Logging:  - ---Request begins here---
+[2020-05-23T17:00:39.049] [INFO] Logging:  - Method: POST
+[2020-05-23T17:00:39.049] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-23T17:00:39.050] [INFO] Logging:  - Body:   {
+  question: { _id: '5eaceca24df34e61e4ff8b60' },
+  usersAnswer: { a: true, b: true, c: false, d: false },
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWJmNzdkMzUyNTc0YTM5OWNkMjJlODYiLCJpYXQiOjE1OTAyMzAzNDB9.EHt4LRNQluWWxBtYkgPt7EGXTVMj3qeJioqf7XSK0jw'
+}
+[2020-05-23T17:00:39.068] [INFO] Logging:  - ---Request ends here---
+[2020-05-23T17:01:04.428] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T17:01:08.508] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T17:02:13.359] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T17:02:17.775] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T17:02:22.538] [INFO] Logging:  - ---Request begins here---
+[2020-05-23T17:02:22.539] [INFO] Logging:  - Method: POST
+[2020-05-23T17:02:22.540] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-23T17:02:22.543] [INFO] Logging:  - Body:   {
+  question: { _id: '5eaceca24df34e61e4ff8b60' },
+  usersAnswer: { a: true, b: true, c: false, d: false },
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWJmNzdkMzUyNTc0YTM5OWNkMjJlODYiLCJpYXQiOjE1OTAyMzAzNDB9.EHt4LRNQluWWxBtYkgPt7EGXTVMj3qeJioqf7XSK0jw'
+}
+[2020-05-23T17:02:22.586] [INFO] Logging:  - ---Request ends here---
+[2020-05-23T17:03:40.300] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T17:03:44.776] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T17:03:48.211] [INFO] Logging:  - ---Request begins here---
+[2020-05-23T17:03:48.212] [INFO] Logging:  - Method: POST
+[2020-05-23T17:03:48.213] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-23T17:03:48.214] [INFO] Logging:  - Body:   {
+  question: { _id: '5eaceca24df34e61e4ff8b60' },
+  usersAnswer: { a: true, b: true, c: false, d: false },
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWJmNzdkMzUyNTc0YTM5OWNkMjJlODYiLCJpYXQiOjE1OTAyMzAzNDB9.EHt4LRNQluWWxBtYkgPt7EGXTVMj3qeJioqf7XSK0jw'
+}
+[2020-05-23T17:03:48.236] [INFO] Logging:  - ---Request ends here---
+[2020-05-23T17:03:49.833] [ERROR] Logging:  - ReferenceError: Cannot access 'questionsAttempted' before initialization
+    at C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\api\questions.js:64:41
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+[2020-05-23T17:04:01.736] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T17:04:06.341] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T17:04:08.041] [INFO] Logging:  - ---Request begins here---
+[2020-05-23T17:04:08.043] [INFO] Logging:  - Method: POST
+[2020-05-23T17:04:08.045] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-23T17:04:08.060] [INFO] Logging:  - Body:   {
+  question: { _id: '5eaceca24df34e61e4ff8b60' },
+  usersAnswer: { a: true, b: true, c: false, d: false },
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWJmNzdkMzUyNTc0YTM5OWNkMjJlODYiLCJpYXQiOjE1OTAyMzAzNDB9.EHt4LRNQluWWxBtYkgPt7EGXTVMj3qeJioqf7XSK0jw'
+}
+[2020-05-23T17:04:08.078] [INFO] Logging:  - ---Request ends here---
+[2020-05-23T17:04:47.129] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T17:04:51.294] [INFO] Logging:  - ---Request begins here---
+[2020-05-23T17:04:51.295] [INFO] Logging:  - Method: POST
+[2020-05-23T17:04:51.296] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-23T17:04:51.298] [INFO] Logging:  - Body:   {
+  question: { _id: '5eaceca24df34e61e4ff8b60' },
+  usersAnswer: { a: true, b: true, c: false, d: false },
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWJmNzdkMzUyNTc0YTM5OWNkMjJlODYiLCJpYXQiOjE1OTAyMzAzNDB9.EHt4LRNQluWWxBtYkgPt7EGXTVMj3qeJioqf7XSK0jw'
+}
+[2020-05-23T17:04:51.316] [INFO] Logging:  - ---Request ends here---
+[2020-05-23T17:04:54.152] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T17:07:30.393] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T17:07:36.415] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T17:07:41.637] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T17:07:43.359] [INFO] Logging:  - ---Request begins here---
+[2020-05-23T17:07:43.360] [INFO] Logging:  - Method: POST
+[2020-05-23T17:07:43.361] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-23T17:07:43.385] [INFO] Logging:  - Body:   {
+  question: { _id: '5eaceca24df34e61e4ff8b60' },
+  usersAnswer: { a: true, b: true, c: false, d: false },
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWJmNzdkMzUyNTc0YTM5OWNkMjJlODYiLCJpYXQiOjE1OTAyMzAzNDB9.EHt4LRNQluWWxBtYkgPt7EGXTVMj3qeJioqf7XSK0jw'
+}
+[2020-05-23T17:07:43.428] [INFO] Logging:  - ---Request ends here---
+[2020-05-23T17:08:09.888] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T17:08:14.909] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T17:08:16.952] [INFO] Logging:  - ---Request begins here---
+[2020-05-23T17:08:16.953] [INFO] Logging:  - Method: POST
+[2020-05-23T17:08:16.954] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-23T17:08:16.965] [INFO] Logging:  - Body:   {
+  question: { _id: '5eaceca24df34e61e4ff8b60' },
+  usersAnswer: { a: true, b: true, c: false, d: false },
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWJmNzdkMzUyNTc0YTM5OWNkMjJlODYiLCJpYXQiOjE1OTAyMzAzNDB9.EHt4LRNQluWWxBtYkgPt7EGXTVMj3qeJioqf7XSK0jw'
+}
+[2020-05-23T17:08:16.973] [INFO] Logging:  - ---Request ends here---
+[2020-05-23T17:09:10.794] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T17:09:15.160] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T17:09:16.655] [INFO] Logging:  - ---Request begins here---
+[2020-05-23T17:09:16.656] [INFO] Logging:  - Method: POST
+[2020-05-23T17:09:16.657] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-23T17:09:16.659] [INFO] Logging:  - Body:   {
+  question: { _id: '5eaceca24df34e61e4ff8b60' },
+  usersAnswer: { a: true, b: true, c: false, d: false },
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWJmNzdkMzUyNTc0YTM5OWNkMjJlODYiLCJpYXQiOjE1OTAyMzAzNDB9.EHt4LRNQluWWxBtYkgPt7EGXTVMj3qeJioqf7XSK0jw'
+}
+[2020-05-23T17:09:16.676] [INFO] Logging:  - ---Request ends here---
+[2020-05-23T17:11:28.099] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T17:11:31.799] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T17:11:59.878] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T17:12:04.150] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T17:12:15.187] [INFO] Logging:  - ---Request begins here---
+[2020-05-23T17:12:15.189] [INFO] Logging:  - Method: POST
+[2020-05-23T17:12:15.190] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-23T17:12:15.191] [INFO] Logging:  - Body:   {
+  question: { _id: '5eaceca24df34e61e4ff8b60' },
+  usersAnswer: { a: true, b: true, c: false, d: false },
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWJmNzdkMzUyNTc0YTM5OWNkMjJlODYiLCJpYXQiOjE1OTAyMzAzNDB9.EHt4LRNQluWWxBtYkgPt7EGXTVMj3qeJioqf7XSK0jw'
+}
+[2020-05-23T17:12:15.228] [INFO] Logging:  - ---Request ends here---
+[2020-05-23T17:13:12.392] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T17:13:16.643] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T17:13:21.121] [INFO] Logging:  - ---Request begins here---
+[2020-05-23T17:13:21.127] [INFO] Logging:  - Method: POST
+[2020-05-23T17:13:21.149] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-23T17:13:21.150] [INFO] Logging:  - Body:   {
+  question: { _id: '5eaceca24df34e61e4ff8b60' },
+  usersAnswer: { a: true, b: true, c: false, d: false },
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWJmNzdkMzUyNTc0YTM5OWNkMjJlODYiLCJpYXQiOjE1OTAyMzAzNDB9.EHt4LRNQluWWxBtYkgPt7EGXTVMj3qeJioqf7XSK0jw'
+}
+[2020-05-23T17:13:21.155] [INFO] Logging:  - ---Request ends here---
+[2020-05-23T17:14:02.378] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T17:14:05.124] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T17:14:09.963] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T17:15:29.955] [INFO] Logging:  - ---Request begins here---
+[2020-05-23T17:15:29.960] [INFO] Logging:  - Method: POST
+[2020-05-23T17:15:29.961] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-23T17:15:29.962] [INFO] Logging:  - Body:   {
+  question: { _id: '5eaceca24df34e61e4ff8b60' },
+  usersAnswer: { a: true, b: true, c: false, d: false },
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWJmNzdkMzUyNTc0YTM5OWNkMjJlODYiLCJpYXQiOjE1OTAyMzAzNDB9.EHt4LRNQluWWxBtYkgPt7EGXTVMj3qeJioqf7XSK0jw'
+}
+[2020-05-23T17:15:29.965] [INFO] Logging:  - ---Request ends here---
+[2020-05-23T17:15:53.528] [INFO] Logging:  - ---Request begins here---
+[2020-05-23T17:15:53.529] [INFO] Logging:  - Method: POST
+[2020-05-23T17:15:53.530] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-23T17:15:53.544] [INFO] Logging:  - Body:   {
+  question: { _id: '5eaceca24df34e61e4ff8b60' },
+  usersAnswer: { a: true, b: true, c: false, d: false },
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWJmNzdkMzUyNTc0YTM5OWNkMjJlODYiLCJpYXQiOjE1OTAyMzAzNDB9.EHt4LRNQluWWxBtYkgPt7EGXTVMj3qeJioqf7XSK0jw'
+}
+[2020-05-23T17:15:53.548] [INFO] Logging:  - ---Request ends here---
+[2020-05-23T17:16:11.881] [INFO] Logging:  - ---Request begins here---
+[2020-05-23T17:16:11.886] [INFO] Logging:  - Method: POST
+[2020-05-23T17:16:11.887] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-23T17:16:11.888] [INFO] Logging:  - Body:   {
+  question: { _id: '5eaceca24df34e61e4ff8b60' },
+  usersAnswer: { a: true, b: true, c: false, d: false },
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWJmNzdkMzUyNTc0YTM5OWNkMjJlODYiLCJpYXQiOjE1OTAyMzAzNDB9.EHt4LRNQluWWxBtYkgPt7EGXTVMj3qeJioqf7XSK0jw'
+}
+[2020-05-23T17:16:11.905] [INFO] Logging:  - ---Request ends here---
+[2020-05-23T17:16:40.796] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T17:16:46.455] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T17:17:12.049] [INFO] Logging:  - ---Request begins here---
+[2020-05-23T17:17:12.050] [INFO] Logging:  - Method: POST
+[2020-05-23T17:17:12.051] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-23T17:17:12.062] [INFO] Logging:  - Body:   {
+  question: { _id: '5eaceca24df34e61e4ff8b60' },
+  usersAnswer: { a: true, b: true, c: false, d: false },
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWJmNzdkMzUyNTc0YTM5OWNkMjJlODYiLCJpYXQiOjE1OTAyMzAzNDB9.EHt4LRNQluWWxBtYkgPt7EGXTVMj3qeJioqf7XSK0jw'
+}
+[2020-05-23T17:17:12.066] [INFO] Logging:  - ---Request ends here---
+[2020-05-23T17:17:13.835] [ERROR] Logging:  - Error: Sorry! You cannot try more than 3 times.
+    at C:\Users\I342082\Desktop\current-stuff\personal\jhakhaas-backend\api\questions.js:75:16
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+[2020-05-23T17:19:57.668] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T17:20:02.590] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T17:20:40.221] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T17:20:43.562] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T17:21:59.294] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T17:22:03.022] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T17:23:06.642] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T17:23:11.528] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T17:23:56.422] [INFO] Logging:  - Listening on http://127.0.0.1:3001
+[2020-05-23T17:24:01.821] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-23T17:24:02.258] [INFO] Logging:  - ---Request begins here---
+[2020-05-23T17:24:02.259] [INFO] Logging:  - Method: POST
+[2020-05-23T17:24:02.260] [INFO] Logging:  - Path:   /api/questions/submit
+[2020-05-23T17:24:02.270] [INFO] Logging:  - Body:   {
+  question: { _id: '5eaceca24df34e61e4ff8b60' },
+  usersAnswer: { a: true, b: true, c: false, d: false },
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWJmNzdkMzUyNTc0YTM5OWNkMjJlODYiLCJpYXQiOjE1OTAyMzAzNDB9.EHt4LRNQluWWxBtYkgPt7EGXTVMj3qeJioqf7XSK0jw'
+}
+[2020-05-23T17:24:02.276] [INFO] Logging:  - ---Request ends here---
+[2020-05-23T17:24:07.162] [INFO] Logging:  - Sorry! You cannot try more than 3 times.

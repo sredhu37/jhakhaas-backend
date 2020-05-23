@@ -1,16 +1,23 @@
-const jwt = require('jsonwebtoken');
-const config = require('./config');
+const logger = require('./logger');
+const utils = require('./commonMethods');
+const { UserModel } = require('../models/user');
 
-const verifyAuthToken = (req, res, next) => {
+const verifyAuthToken = async (req, res, next) => {
   const token = req.header('auth-token');
 
-  if (!token) {
+  if (!utils.exists(token)) {
     res.status(401).send('Access Denied');
   }
 
   try {
-    jwt.verify(token, config.other.JWT_SECRET);
+    const decoded = utils.getDataFromJWT(token);
+    const user = await UserModel.findById(decoded._id, '_id email');
+
+    if (!utils.exists(user)) {
+      throw new Error(`Cannot find user with id ${decoded._id} in DB!`);
+    }
   } catch (error) {
+    logger.error(error);
     res.status(400).send('Invalid Token!');
   }
 

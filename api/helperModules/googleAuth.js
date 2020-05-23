@@ -4,7 +4,7 @@ const config = require('../../utils/config');
 const logger = require('../../utils/logger');
 const { UserModel } = require('../../models/user');
 const { createNewUser } = require('./usersUtils');
-const { exists } = require('../../utils/commonMethods');
+const utils = require('../../utils/commonMethods');
 
 // Use the GoogleStrategy within Passport.
 //   Strategies in Passport require a `verify` function, which accept
@@ -20,7 +20,7 @@ passport.use(new GoogleStrategy({
 
   UserModel.findOne({ googleId: profile.id })
     .then((user) => {
-      if (exists(user)) {
+      if (utils.exists(user)) {
         return new Promise((resolve) => {
           logger.info('User already exists. Logging in. Please wait...');
           resolve(user);

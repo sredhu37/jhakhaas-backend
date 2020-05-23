@@ -6,7 +6,6 @@ const userSchema = new Schema({
   email: { type: String, unique: true },
   passwordHash: { type: String },
   score: { type: Number, required: true, default: 0 },
-  streak: { type: Number, required: true, default: 1 },
   role: { type: String, required: true, default: 'USER' },
   isEmailVerified: { type: Boolean, required: true, default: false },
   joinedOn: { type: Date, required: true, default: new Date() },
@@ -14,8 +13,9 @@ const userSchema = new Schema({
   questionsAttempted: {
     type: [
       {
-        __id: mongoose.Types.ObjectId,
-        optionsSelected: [String],
+        _id: mongoose.Types.ObjectId,
+        optionsSelected: String,
+        triesCount: { type: Number, required: true, default: 0 },
       },
     ],
     required: true,

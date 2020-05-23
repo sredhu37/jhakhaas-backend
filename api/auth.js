@@ -83,7 +83,7 @@ authRouter.post('/local/register', (req, res) => {
 
     user.save()
       .then((response) => {
-        const jwtToken = jwt.sign({ __id: response.__id }, config.other.JWT_SECRET);
+        const jwtToken = jwt.sign({ _id: response._id }, config.other.JWT_SECRET);
         res.header('auth-token', jwtToken).send(jwtToken);
       })
       .catch((error) => {
@@ -102,13 +102,13 @@ authRouter.post('/local/login', async (req, res) => {
   const { password } = req.body;
 
   try {
-    const user = await UserModel.findOne({ email, isActive: true }, '__id passwordHash');
+    const user = await UserModel.findOne({ email, isActive: true }, '_id passwordHash');
     logger.info('User exists!', user);
 
     const isPasswordMatching = await bcrypt.compare(password, user.passwordHash);
     if (isPasswordMatching) {
       logger.info(`User ${email} is signed in!`);
-      const jwtToken = jwt.sign({ __id: user.__id }, config.other.JWT_SECRET);
+      const jwtToken = jwt.sign({ _id: user._id }, config.other.JWT_SECRET);
       res.header('auth-token', jwtToken).send(jwtToken);
     } else {
       throw new Error('Incorrect password!');
@@ -134,7 +134,7 @@ authRouter.get('/google/callback',
     session: false,
   }),
   (req, res) => {
-    const jwtToken = jwt.sign({ __id: req.user.__id }, config.other.JWT_SECRET);
+    const jwtToken = jwt.sign({ _id: req.user._id }, config.other.JWT_SECRET);
     res.header('auth-token', jwtToken).send(jwtToken);
   });
 
