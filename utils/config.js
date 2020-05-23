@@ -1,15 +1,8 @@
-const logger = require('./logger');
 require('dotenv').config();
+const logger = require('./logger');
+const { exists } = require('./commonMethods');
 
 const resultObj = {};
-
-const exists = (value) => {
-  if (value && value !== 'undefined' && value.trim() !== '') {
-    return true;
-  }
-
-  return false;
-};
 
 if (exists(process.env.MONGO_URI)) {
   const mongoObj = { URI: process.env.MONGO_URI };

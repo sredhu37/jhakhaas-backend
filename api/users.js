@@ -1,40 +1,10 @@
 const express = require('express');
 
 const usersRouter = express.Router();
-const emailValidator = require('email-validator');
-const bcrypt = require('bcrypt');
 const logger = require('../utils/logger');
 const { UserModel } = require('../models/user');
 const { verifyAuthToken } = require('../utils/verifyToken');
-
-const validatePassword = (password) => {
-  const bcryptSaltRounds = 10;
-  return bcrypt.hash(password, bcryptSaltRounds);
-};
-
-const validateEmail = (emailId) => new Promise((resolve, reject) => {
-  const isValid = emailValidator.validate(emailId);
-  if (isValid) {
-    resolve(emailId);
-  } else {
-    reject(new Error('Invalid email'));
-  }
-});
-
-const createNewQueryObject = (body, email, passwordHash) => {
-  const obj = {
-    email,
-    passwordHash,
-  };
-
-  const keys = Object.keys(body);
-
-  keys.forEach((key) => {
-    obj[key] = body[key];
-  });
-
-  return obj;
-};
+const { validatePassword, validateEmail, createNewUser } = require('./helperModules/usersUtils');
 
 usersRouter.get('/', verifyAuthToken, (req, res) => {
   UserModel.find({})
@@ -75,7 +45,7 @@ usersRouter.post('/', verifyAuthToken, (req, res) => {
         logger.info(response);
         const [passwordHash, email] = response;
 
-        const userObject = createNewQueryObject(body, email, passwordHash);
+        const userObject = createNewUser({}, email, passwordHash);
 
         const user = new UserModel(userObject);
 

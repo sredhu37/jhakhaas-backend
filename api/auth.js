@@ -5,10 +5,11 @@ const emailValidator = require('email-validator');
 const PasswordValidator = require('password-validator');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const passport = require('passport');
 const logger = require('../utils/logger');
 const config = require('../utils/config');
 const { UserModel } = require('../models/user');
-
+require('./helperModules/googleAuth');
 
 const createUserObject = (body) => new Promise((resolve, reject) => {
   let isEmailVerified = false;
@@ -60,8 +61,12 @@ const validatePassword = (password) => {
   return schema.validate(password, { list: true });
 };
 
-// User registration: First time
-authRouter.post('/register', (req, res) => {
+authRouter.get('/', (req, res) => {
+  res.send('Auth home page!');
+});
+
+// Local Register
+authRouter.post('/local/register', (req, res) => {
   const isValidEmail = emailValidator.validate(req.body.email);
   const invalidPasswordRules = validatePassword(req.body.password);
 
@@ -91,8 +96,8 @@ authRouter.post('/register', (req, res) => {
   });
 });
 
-// When user is already registered.
-authRouter.post('/login', async (req, res) => {
+// Local Login
+authRouter.post('/local/login', async (req, res) => {
   const { email } = req.body;
   const { password } = req.body;
 
@@ -112,6 +117,29 @@ authRouter.post('/login', async (req, res) => {
     logger.error(error);
     res.status(401).send('Incorrect username or password!');
   }
+});
+
+authRouter.get(
+  '/google/login',
+  passport.authenticate(
+    'google',
+    { scope: ['profile', 'email'] },
+  ),
+);
+
+authRouter.get('/google/callback',
+  passport.authenticate('google', {
+    // successRedirect: '/auth/google/success',
+    failureRedirect: '/auth/google/error',
+    session: false,
+  }),
+  (req, res) => {
+    const jwtToken = jwt.sign({ __id: req.user.__id }, config.other.JWT_SECRET);
+    res.header('auth-token', jwtToken).send(jwtToken);
+  });
+
+authRouter.get('/google/error', (req, res) => {
+  res.send('Some error in google authentication! Contact Sunny!');
 });
 
 module.exports = {

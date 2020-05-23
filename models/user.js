@@ -4,7 +4,7 @@ const { Schema } = mongoose;
 
 const userSchema = new Schema({
   email: { type: String, unique: true },
-  passwordHash: { type: String, required: true },
+  passwordHash: { type: String },
   score: { type: Number, required: true, default: 0 },
   streak: { type: Number, required: true, default: 1 },
   role: { type: String, required: true, default: 'USER' },
@@ -23,10 +23,11 @@ const userSchema = new Schema({
   },
   loginSource: {
     type: String,
-    enum: ['local', 'google', 'facebook'],
+    enum: ['local', 'google'],
     required: true,
     default: 'local',
   },
+  googleId: String,
 });
 
 const UserModel = mongoose.model('User', userSchema);
