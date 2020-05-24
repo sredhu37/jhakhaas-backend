@@ -52,7 +52,7 @@ const isUsersAnswerCorrect = async (_id, usersAnswerString) => new Promise(async
 
 const updateUsersResponseInDB = async (isAnswerCorrect, userId, questionId, usersAnswerString) => new Promise(async (resolve, reject) => {
   try {
-    const user = await UserModel.findById(userId, '_id score questionsAttempted', { new: true });
+    const user = await UserModel.findById(userId, '_id questionsAttempted', { new: true });
     const valuesToUpdate = {};
 
     const { questionsAttempted } = user;
