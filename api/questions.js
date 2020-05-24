@@ -50,17 +50,10 @@ const isUsersAnswerCorrect = async (_id, usersAnswerString) => new Promise(async
   }
 });
 
-// resolve values
-// 
 const updateUsersResponseInDB = async (isAnswerCorrect, userId, questionId, usersAnswerString) => new Promise(async (resolve, reject) => {
   try {
     const user = await UserModel.findById(userId, '_id score questionsAttempted', { new: true });
     const valuesToUpdate = {};
-
-    // Increment score if answer is correct
-    if (isAnswerCorrect) {
-      valuesToUpdate.score = user.score + 1;
-    }
 
     const { questionsAttempted } = user;
     const questionToUpdate = questionsAttempted.find((ques) => (questionId.localeCompare(ques._id) === 0));
@@ -75,12 +68,13 @@ const updateUsersResponseInDB = async (isAnswerCorrect, userId, questionId, user
       if (questionToUpdate.triesCount >= 3) {
         logger.info('Sorry! You cannot try more than 3 times.');
         resolve(false);
+        return;
       }
       // Increment tries count
       questionToUpdate._id = questionId;
       questionToUpdate.optionsSelected = usersAnswerString;
       questionToUpdate.triesCount += 1;
-
+      questionToUpdate.score = isAnswerCorrect ? 1 : 0; // score for this question is 1 if answer is correct else 0
       questionsAttempted.splice(questionIndex, 1);
       questionsAttempted.push(questionToUpdate);
     } else {
@@ -127,6 +121,11 @@ questionsRouter.get('/today', verifyAuthToken, (req, res) => {
 });
 
 // Submit user's answer
+// Return status:
+// 200 => Correct Answer
+// 204 => Incorrect Answer
+// 208 => Number of tries > 3
+// 404 => Error
 questionsRouter.post('/submit', verifyAuthToken, async (req, res) => {
   const { body } = req;
   const questionId = body.question._id;

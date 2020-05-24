@@ -4,11 +4,10 @@ const authRouter = express.Router();
 const emailValidator = require('email-validator');
 const PasswordValidator = require('password-validator');
 const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
 const passport = require('passport');
 const logger = require('../utils/logger');
-const config = require('../utils/config');
 const { UserModel } = require('../models/user');
+const utils = require('../utils/commonMethods');
 require('./helperModules/googleAuth');
 
 const createUserObject = (body) => new Promise((resolve, reject) => {
@@ -83,7 +82,7 @@ authRouter.post('/local/register', (req, res) => {
 
     user.save()
       .then((response) => {
-        const jwtToken = jwt.sign({ _id: response._id }, config.other.JWT_SECRET);
+        const jwtToken = utils.getJWTFromData({ _id: response._id });
         res.header('auth-token', jwtToken).send(jwtToken);
       })
       .catch((error) => {
@@ -108,7 +107,7 @@ authRouter.post('/local/login', async (req, res) => {
     const isPasswordMatching = await bcrypt.compare(password, user.passwordHash);
     if (isPasswordMatching) {
       logger.info(`User ${email} is signed in!`);
-      const jwtToken = jwt.sign({ _id: user._id }, config.other.JWT_SECRET);
+      const jwtToken = utils.getJWTFromData({ _id: user._id });
       res.header('auth-token', jwtToken).send(jwtToken);
     } else {
       throw new Error('Incorrect password!');
@@ -134,7 +133,7 @@ authRouter.get('/google/callback',
     session: false,
   }),
   (req, res) => {
-    const jwtToken = jwt.sign({ _id: req.user._id }, config.other.JWT_SECRET);
+    const jwtToken = utils.getJWTFromData({ _id: req.user._id });
     res.header('auth-token', jwtToken).send(jwtToken);
   });
 

@@ -1,6 +1,8 @@
 const jwt = require('jsonwebtoken');
 const logger = require('./logger');
 
+const JWT_SECRET = 'jhakhaasjwtsecret';
+
 const exists = (value) => {
   switch (typeof value) {
     case 'string':
@@ -15,9 +17,12 @@ const exists = (value) => {
   }
 };
 
-const getDataFromJWT = (token) => jwt.verify(token, 'jhakhaasjwtsecret');
+const getDataFromJWT = (token) => jwt.verify(token, JWT_SECRET);
+
+const getJWTFromData = (data) => jwt.sign(data, JWT_SECRET);
 
 module.exports = {
   exists,
   getDataFromJWT,
+  getJWTFromData,
 };
