@@ -28,6 +28,7 @@ const userSchema = new Schema({
     default: 'local',
   },
   googleId: String,
+  otp: String,
 });
 
 const UserModel = mongoose.model('User', userSchema);
