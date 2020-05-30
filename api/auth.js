@@ -10,6 +10,7 @@ const { UserModel } = require('../models/user');
 const config = require('../utils/config');
 const utils = require('../utils/commonMethods');
 require('./helperModules/googleAuth');
+const { verifyAuthToken } = require('../utils/verifyToken');
 
 const createUserObject = (body) => new Promise((resolve, reject) => {
   let isEmailVerified = false;
@@ -61,64 +62,17 @@ const validatePassword = (password) => {
   return schema.validate(password, { list: true });
 };
 
-authRouter.get('/', (req, res) => {
-  res.send('Auth home page!');
+authRouter.get('/isLoggedIn', verifyAuthToken, (req, res) => {
+  res.status(200).send(`${req.user.email} is logged in!`);
 });
 
-// Local Register
-authRouter.post('/local/register', (req, res) => {
-  const isValidEmail = emailValidator.validate(req.body.email);
-  const invalidPasswordRules = validatePassword(req.body.password);
-
-  if (!isValidEmail) {
-    res.status(401).send('Invalid email!');
-  }
-
-  if (invalidPasswordRules.length > 0) {
-    res.status(401).send(`Invalid password: ${invalidPasswordRules}`);
-  }
-
-  createUserObject(req.body).then((userObj) => {
-    const user = new UserModel(userObj);
-
-    user.save()
-      .then((response) => {
-        const jwtToken = utils.getJWTFromData({ _id: response._id });
-        res.header('auth-token', jwtToken).send(jwtToken);
-      })
-      .catch((error) => {
-        const msg = `Couldn't add the user: ${error}`;
-        logger.error(msg);
-        res.status(401).send(msg);
-      });
-  }).catch((error) => {
-    res.status(500).send('Unknown error in createUserObject method!', error);
-  });
+authRouter.get('logout', (req, res) => {
+  req.session = null; // destroy session
+  req.logOut();   // logout from passport
+  res.redirect(config.other.CLIENT_URL_FAILURE);
 });
 
-// Local Login
-authRouter.post('/local/login', async (req, res) => {
-  const { email } = req.body;
-  const { password } = req.body;
-
-  try {
-    const user = await UserModel.findOne({ email, isActive: true }, '_id passwordHash');
-    logger.info('User exists!', user);
-
-    const isPasswordMatching = await bcrypt.compare(password, user.passwordHash);
-    if (isPasswordMatching) {
-      logger.info(`User ${email} is signed in!`);
-      const jwtToken = utils.getJWTFromData({ _id: user._id });
-      res.header('auth-token', jwtToken).send(jwtToken);
-    } else {
-      throw new Error('Incorrect password!');
-    }
-  } catch (error) {
-    logger.error(error);
-    res.status(401).send('Incorrect username or password!');
-  }
-});
-
+// Google Login and Register
 authRouter.get(
   '/google/login',
   passport.authenticate(
@@ -127,15 +81,12 @@ authRouter.get(
   ),
 );
 
+// Callback for Google Authentication
 authRouter.get('/google/callback',
   passport.authenticate('google', {
-    successRedirect: `${config.other.CLIENT_URL}/home`,
-    failureRedirect: `${config.other.CLIENT_URL}/login`,
+    successRedirect: config.other.CLIENT_URL_SUCCESS,
+    failureRedirect: config.other.CLIENT_URL_FAILURE,
   }));
-
-authRouter.get('/google/error', (req, res) => {
-  res.send('Some error in google authentication! Contact Sunny!');
-});
 
 module.exports = {
   authRouter,

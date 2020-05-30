@@ -26,6 +26,7 @@ const userSchema = new Schema({
     default: 'local',
   },
   googleId: String,
+  pictureUrl: String
 });
 
 const UserModel = mongoose.model('User', userSchema);

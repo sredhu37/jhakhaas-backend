@@ -28,11 +28,13 @@ passport.use(new GoogleStrategy({
       }
       logger.info('Registering the new user. Please wait...');
 
-      const userObject = createNewUser({
+      const userObject = {
         loginSource: 'google',
         googleId: profile.id,
         isEmailVerified: profile.emails[0].verified,
-      }, profile.emails[0].value, null);
+        email: profile.emails[0].value,
+        pictureUrl: profile.picture
+      };
 
       const usr = new UserModel(userObject);
 
@@ -54,7 +56,7 @@ passport.serializeUser((user, done) => {
 
 passport.deserializeUser(async (id, done) => {
   try {
-    const user = await UserModel.findOne({ googleId: id }, 'email');
+    const user = await UserModel.findById(id , 'email');
     done(null, user);
   } catch (error) {
     done(error, null);
