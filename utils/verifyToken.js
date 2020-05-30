@@ -1,6 +1,4 @@
-const logger = require('./logger');
 const utils = require('./commonMethods');
-const { UserModel } = require('../models/user');
 
 const verifyAuthToken = async (req, res, next) => {
   if (!utils.exists(req.user)) {

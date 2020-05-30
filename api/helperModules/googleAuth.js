@@ -3,7 +3,6 @@ const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 const config = require('../../utils/config');
 const logger = require('../../utils/logger');
 const { UserModel } = require('../../models/user');
-const { createNewUser } = require('./usersUtils');
 const utils = require('../../utils/commonMethods');
 
 // Use the GoogleStrategy within Passport.
@@ -33,7 +32,7 @@ passport.use(new GoogleStrategy({
         googleId: profile.id,
         isEmailVerified: profile.emails[0].verified,
         email: profile.emails[0].value,
-        pictureUrl: profile.picture
+        pictureUrl: profile.picture,
       };
 
       const usr = new UserModel(userObject);
@@ -56,7 +55,7 @@ passport.serializeUser((user, done) => {
 
 passport.deserializeUser(async (id, done) => {
   try {
-    const user = await UserModel.findById(id , 'email');
+    const user = await UserModel.findById(id, 'email');
     done(null, user);
   } catch (error) {
     done(error, null);
