@@ -7,6 +7,7 @@ const bcrypt = require('bcrypt');
 const passport = require('passport');
 const logger = require('../utils/logger');
 const { UserModel } = require('../models/user');
+const config = require('../utils/config');
 const utils = require('../utils/commonMethods');
 require('./helperModules/googleAuth');
 
@@ -128,14 +129,9 @@ authRouter.get(
 
 authRouter.get('/google/callback',
   passport.authenticate('google', {
-    // successRedirect: '/auth/google/success',
-    failureRedirect: '/auth/google/error',
-    session: false,
-  }),
-  (req, res) => {
-    const jwtToken = utils.getJWTFromData({ _id: req.user._id });
-    res.header('auth-token', jwtToken).send(jwtToken);
-  });
+    successRedirect: `${config.other.CLIENT_URL}/home`,
+    failureRedirect: `${config.other.CLIENT_URL}/login`,
+  }));
 
 authRouter.get('/google/error', (req, res) => {
   res.send('Some error in google authentication! Contact Sunny!');

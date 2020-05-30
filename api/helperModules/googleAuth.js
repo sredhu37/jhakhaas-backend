@@ -47,3 +47,16 @@ passport.use(new GoogleStrategy({
       done(error, null);
     });
 }));
+
+passport.serializeUser((user, done) => {
+  done(null, user.id);
+});
+
+passport.deserializeUser(async (id, done) => {
+  try {
+    const user = await UserModel.findOne({ googleId: id }, 'email');
+    done(null, user);
+  } catch (error) {
+    done(error, null);
+  }
+});

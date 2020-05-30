@@ -4,9 +4,7 @@ const { Schema } = mongoose;
 
 const userSchema = new Schema({
   email: { type: String, unique: true },
-  passwordHash: { type: String },
   role: { type: String, required: true, default: 'USER' },
-  isEmailVerified: { type: Boolean, required: true, default: false },
   joinedOn: { type: Date, required: true, default: new Date() },
   isActive: { type: Boolean, required: true, default: true },
   questionsAttempted: {
@@ -28,7 +26,6 @@ const userSchema = new Schema({
     default: 'local',
   },
   googleId: String,
-  otp: String,
 });
 
 const UserModel = mongoose.model('User', userSchema);

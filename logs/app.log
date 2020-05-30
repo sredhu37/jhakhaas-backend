@@ -1,0 +1,105 @@
+[2020-05-30T14:13:41.137] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-05-30T14:13:42.754] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-30T14:22:22.964] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-05-30T14:22:24.490] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-30T14:26:23.826] [INFO] Logging:  - ---Request begins here---
+[2020-05-30T14:26:23.831] [INFO] Logging:  - Method: GET
+[2020-05-30T14:26:23.833] [INFO] Logging:  - Path:   /auth/google/login
+[2020-05-30T14:26:23.834] [INFO] Logging:  - Body:   {}
+[2020-05-30T14:26:23.835] [INFO] Logging:  - ---Request ends here---
+[2020-05-30T14:28:36.005] [INFO] Logging:  - ---Request begins here---
+[2020-05-30T14:28:36.005] [INFO] Logging:  - Method: GET
+[2020-05-30T14:28:36.006] [INFO] Logging:  - Path:   /auth/google/login
+[2020-05-30T14:28:36.007] [INFO] Logging:  - Body:   {}
+[2020-05-30T14:28:36.010] [INFO] Logging:  - ---Request ends here---
+[2020-05-30T14:30:42.479] [INFO] Logging:  - ---Request begins here---
+[2020-05-30T14:30:42.480] [INFO] Logging:  - Method: GET
+[2020-05-30T14:30:42.481] [INFO] Logging:  - Path:   /auth/google/login
+[2020-05-30T14:30:42.483] [INFO] Logging:  - Body:   {}
+[2020-05-30T14:30:42.483] [INFO] Logging:  - ---Request ends here---
+[2020-05-30T14:32:17.141] [INFO] Logging:  - ---Request begins here---
+[2020-05-30T14:32:17.142] [INFO] Logging:  - Method: GET
+[2020-05-30T14:32:17.143] [INFO] Logging:  - Path:   /auth/google/login
+[2020-05-30T14:32:17.144] [INFO] Logging:  - Body:   {}
+[2020-05-30T14:32:17.147] [INFO] Logging:  - ---Request ends here---
+[2020-05-30T14:32:44.366] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-05-30T14:32:46.052] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-30T14:33:07.191] [INFO] Logging:  - ---Request begins here---
+[2020-05-30T14:33:07.193] [INFO] Logging:  - Method: GET
+[2020-05-30T14:33:07.194] [INFO] Logging:  - Path:   /auth/google/login
+[2020-05-30T14:33:07.195] [INFO] Logging:  - Body:   {}
+[2020-05-30T14:33:07.196] [INFO] Logging:  - ---Request ends here---
+[2020-05-30T14:33:24.348] [INFO] Logging:  - ---Request begins here---
+[2020-05-30T14:33:24.350] [INFO] Logging:  - Method: GET
+[2020-05-30T14:33:24.351] [INFO] Logging:  - Path:   /auth/google/login
+[2020-05-30T14:33:24.353] [INFO] Logging:  - Body:   {}
+[2020-05-30T14:33:24.357] [INFO] Logging:  - ---Request ends here---
+[2020-05-30T14:34:16.422] [INFO] Logging:  - ---Request begins here---
+[2020-05-30T14:34:16.423] [INFO] Logging:  - Method: GET
+[2020-05-30T14:34:16.424] [INFO] Logging:  - Path:   /auth/google/login
+[2020-05-30T14:34:16.427] [INFO] Logging:  - Body:   {}
+[2020-05-30T14:34:16.432] [INFO] Logging:  - ---Request ends here---
+[2020-05-30T14:34:35.608] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-05-30T14:34:37.338] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-30T14:34:55.762] [INFO] Logging:  - ---Request begins here---
+[2020-05-30T14:34:55.767] [INFO] Logging:  - Method: GET
+[2020-05-30T14:34:55.770] [INFO] Logging:  - Path:   /auth/google/login
+[2020-05-30T14:34:55.771] [INFO] Logging:  - Body:   {}
+[2020-05-30T14:34:55.772] [INFO] Logging:  - ---Request ends here---
+[2020-05-30T14:34:59.041] [INFO] Logging:  - ---Request begins here---
+[2020-05-30T14:34:59.042] [INFO] Logging:  - Method: GET
+[2020-05-30T14:34:59.044] [INFO] Logging:  - Path:   /auth/google/callback
+[2020-05-30T14:34:59.046] [INFO] Logging:  - Body:   {}
+[2020-05-30T14:34:59.048] [INFO] Logging:  - ---Request ends here---
+[2020-05-30T14:34:59.507] [INFO] Logging:  - Profile: {"id":"107414121620518369845","displayName":"Sunny Redhu","name":{"familyName":"Redhu","givenName":"Sunny"},"emails":[{"value":"redhusunny1994@gmail.com","verified":true}],"photos":[{"value":"https://lh3.googleusercontent.com/a-/AOh14GhXmO1tFFdPPSJBhdj25bSPrM4ei-fKExaPN_h7sQ"}],"provider":"google","_raw":"{\n  \"sub\": \"107414121620518369845\",\n  \"name\": \"Sunny Redhu\",\n  \"given_name\": \"Sunny\",\n  \"family_name\": \"Redhu\",\n  \"picture\": \"https://lh3.googleusercontent.com/a-/AOh14GhXmO1tFFdPPSJBhdj25bSPrM4ei-fKExaPN_h7sQ\",\n  \"email\": \"redhusunny1994@gmail.com\",\n  \"email_verified\": true,\n  \"locale\": \"en\"\n}","_json":{"sub":"107414121620518369845","name":"Sunny Redhu","given_name":"Sunny","family_name":"Redhu","picture":"https://lh3.googleusercontent.com/a-/AOh14GhXmO1tFFdPPSJBhdj25bSPrM4ei-fKExaPN_h7sQ","email":"redhusunny1994@gmail.com","email_verified":true,"locale":"en"}}
+[2020-05-30T14:34:59.748] [INFO] Logging:  - User already exists. Logging in. Please wait...
+[2020-05-30T14:35:50.080] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-05-30T14:35:51.951] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-30T14:36:15.000] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-05-30T14:36:16.481] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-30T14:37:17.570] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-05-30T14:37:19.240] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-30T14:38:56.203] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-05-30T14:38:58.590] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-30T14:39:08.907] [INFO] Logging:  - ---Request begins here---
+[2020-05-30T14:39:08.909] [INFO] Logging:  - Method: GET
+[2020-05-30T14:39:08.910] [INFO] Logging:  - Path:   /auth/google/login
+[2020-05-30T14:39:08.911] [INFO] Logging:  - Body:   {}
+[2020-05-30T14:39:08.921] [INFO] Logging:  - ---Request ends here---
+[2020-05-30T14:39:09.431] [INFO] Logging:  - ---Request begins here---
+[2020-05-30T14:39:09.431] [INFO] Logging:  - Method: GET
+[2020-05-30T14:39:09.432] [INFO] Logging:  - Path:   /auth/google/callback
+[2020-05-30T14:39:09.433] [INFO] Logging:  - Body:   {}
+[2020-05-30T14:39:09.441] [INFO] Logging:  - ---Request ends here---
+[2020-05-30T14:39:09.811] [INFO] Logging:  - Profile: {"id":"107414121620518369845","displayName":"Sunny Redhu","name":{"familyName":"Redhu","givenName":"Sunny"},"emails":[{"value":"redhusunny1994@gmail.com","verified":true}],"photos":[{"value":"https://lh3.googleusercontent.com/a-/AOh14GhXmO1tFFdPPSJBhdj25bSPrM4ei-fKExaPN_h7sQ"}],"provider":"google","_raw":"{\n  \"sub\": \"107414121620518369845\",\n  \"name\": \"Sunny Redhu\",\n  \"given_name\": \"Sunny\",\n  \"family_name\": \"Redhu\",\n  \"picture\": \"https://lh3.googleusercontent.com/a-/AOh14GhXmO1tFFdPPSJBhdj25bSPrM4ei-fKExaPN_h7sQ\",\n  \"email\": \"redhusunny1994@gmail.com\",\n  \"email_verified\": true,\n  \"locale\": \"en\"\n}","_json":{"sub":"107414121620518369845","name":"Sunny Redhu","given_name":"Sunny","family_name":"Redhu","picture":"https://lh3.googleusercontent.com/a-/AOh14GhXmO1tFFdPPSJBhdj25bSPrM4ei-fKExaPN_h7sQ","email":"redhusunny1994@gmail.com","email_verified":true,"locale":"en"}}
+[2020-05-30T14:39:10.059] [INFO] Logging:  - User already exists. Logging in. Please wait...
+[2020-05-30T14:41:14.321] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-05-30T14:41:16.031] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-30T15:12:06.933] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-05-30T15:12:29.596] [INFO] Logging:  - ---Request begins here---
+[2020-05-30T15:12:29.597] [INFO] Logging:  - Method: GET
+[2020-05-30T15:12:29.598] [INFO] Logging:  - Path:   /auth/google/login
+[2020-05-30T15:12:29.600] [INFO] Logging:  - Body:   {}
+[2020-05-30T15:12:29.621] [INFO] Logging:  - ---Request ends here---
+[2020-05-30T15:12:33.840] [INFO] Logging:  - ---Request begins here---
+[2020-05-30T15:12:33.841] [INFO] Logging:  - Method: GET
+[2020-05-30T15:12:33.842] [INFO] Logging:  - Path:   /auth/google/callback
+[2020-05-30T15:12:33.843] [INFO] Logging:  - Body:   {}
+[2020-05-30T15:12:33.857] [INFO] Logging:  - ---Request ends here---
+[2020-05-30T15:12:35.551] [INFO] Logging:  - Profile: {"id":"107414121620518369845","displayName":"Sunny Redhu","name":{"familyName":"Redhu","givenName":"Sunny"},"emails":[{"value":"redhusunny1994@gmail.com","verified":true}],"photos":[{"value":"https://lh3.googleusercontent.com/a-/AOh14GhXmO1tFFdPPSJBhdj25bSPrM4ei-fKExaPN_h7sQ"}],"provider":"google","_raw":"{\n  \"sub\": \"107414121620518369845\",\n  \"name\": \"Sunny Redhu\",\n  \"given_name\": \"Sunny\",\n  \"family_name\": \"Redhu\",\n  \"picture\": \"https://lh3.googleusercontent.com/a-/AOh14GhXmO1tFFdPPSJBhdj25bSPrM4ei-fKExaPN_h7sQ\",\n  \"email\": \"redhusunny1994@gmail.com\",\n  \"email_verified\": true,\n  \"locale\": \"en\"\n}","_json":{"sub":"107414121620518369845","name":"Sunny Redhu","given_name":"Sunny","family_name":"Redhu","picture":"https://lh3.googleusercontent.com/a-/AOh14GhXmO1tFFdPPSJBhdj25bSPrM4ei-fKExaPN_h7sQ","email":"redhusunny1994@gmail.com","email_verified":true,"locale":"en"}}
+[2020-05-30T15:12:36.074] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-05-30T15:12:40.680] [INFO] Logging:  - User already exists. Logging in. Please wait...
+[2020-05-30T15:13:16.050] [INFO] Logging:  - ---Request begins here---
+[2020-05-30T15:13:16.054] [INFO] Logging:  - Method: GET
+[2020-05-30T15:13:16.057] [INFO] Logging:  - Path:   /auth/google/login
+[2020-05-30T15:13:16.062] [INFO] Logging:  - Body:   {}
+[2020-05-30T15:13:16.063] [INFO] Logging:  - ---Request ends here---
+[2020-05-30T15:13:18.660] [INFO] Logging:  - ---Request begins here---
+[2020-05-30T15:13:18.661] [INFO] Logging:  - Method: GET
+[2020-05-30T15:13:18.663] [INFO] Logging:  - Path:   /auth/google/callback
+[2020-05-30T15:13:18.685] [INFO] Logging:  - Body:   {}
+[2020-05-30T15:13:18.686] [INFO] Logging:  - ---Request ends here---
+[2020-05-30T15:13:29.064] [INFO] Logging:  - Profile: {"id":"107414121620518369845","displayName":"Sunny Redhu","name":{"familyName":"Redhu","givenName":"Sunny"},"emails":[{"value":"redhusunny1994@gmail.com","verified":true}],"photos":[{"value":"https://lh3.googleusercontent.com/a-/AOh14GhXmO1tFFdPPSJBhdj25bSPrM4ei-fKExaPN_h7sQ"}],"provider":"google","_raw":"{\n  \"sub\": \"107414121620518369845\",\n  \"name\": \"Sunny Redhu\",\n  \"given_name\": \"Sunny\",\n  \"family_name\": \"Redhu\",\n  \"picture\": \"https://lh3.googleusercontent.com/a-/AOh14GhXmO1tFFdPPSJBhdj25bSPrM4ei-fKExaPN_h7sQ\",\n  \"email\": \"redhusunny1994@gmail.com\",\n  \"email_verified\": true,\n  \"locale\": \"en\"\n}","_json":{"sub":"107414121620518369845","name":"Sunny Redhu","given_name":"Sunny","family_name":"Redhu","picture":"https://lh3.googleusercontent.com/a-/AOh14GhXmO1tFFdPPSJBhdj25bSPrM4ei-fKExaPN_h7sQ","email":"redhusunny1994@gmail.com","email_verified":true,"locale":"en"}}
+[2020-05-30T15:13:29.309] [INFO] Logging:  - User already exists. Logging in. Please wait...
+[2020-05-30T15:16:09.315] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-05-30T15:16:10.951] [INFO] Logging:  - Successfully connected to MongoDB!
