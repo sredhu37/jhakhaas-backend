@@ -21,11 +21,11 @@ passport.use(new GoogleStrategy({
     .then((user) => {
       if (utils.exists(user)) {
         return new Promise((resolve) => {
-          logger.info('User already exists. Logging in. Please wait...');
+          logger.info(`User ${user.email} already exists. Logging in.`);
           resolve(user);
         });
       }
-      logger.info('Registering the new user. Please wait...');
+      logger.info('Registering the new user.');
 
       const userObject = {
         loginSource: 'google',

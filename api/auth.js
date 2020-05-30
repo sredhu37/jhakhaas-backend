@@ -10,7 +10,7 @@ authRouter.get('/isLoggedIn', verifyAuthToken, (req, res) => {
   res.status(200).send(`${req.user.email} is logged in!`);
 });
 
-authRouter.get('logout', (req, res) => {
+authRouter.get('/logout', (req, res) => {
   req.session = null; // destroy session
   req.logOut(); // logout from passport
   res.redirect(config.other.CLIENT_URL_FAILURE);
