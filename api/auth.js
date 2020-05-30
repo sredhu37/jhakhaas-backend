@@ -13,7 +13,7 @@ authRouter.get('/isLoggedIn', verifyAuthToken, (req, res) => {
 authRouter.get('/logout', (req, res) => {
   req.session = null; // destroy session
   req.logOut(); // logout from passport
-  res.redirect(config.other.CLIENT_URL_FAILURE);
+  res.redirect(config.other.CLIENT_URL);
 });
 
 // Google Login and Register
@@ -28,8 +28,8 @@ authRouter.get(
 // Callback for Google Authentication
 authRouter.get('/google/callback',
   passport.authenticate('google', {
-    successRedirect: config.other.CLIENT_URL_SUCCESS,
-    failureRedirect: config.other.CLIENT_URL_FAILURE,
+    successRedirect: config.other.CLIENT_URL,
+    failureRedirect: config.other.CLIENT_URL,
   }));
 
 module.exports = {

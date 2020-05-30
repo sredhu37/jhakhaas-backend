@@ -13,7 +13,7 @@ const questionsController = require('./api/questions');
 const auth = require('./api/auth');
 
 const app = express();
-app.use(cors());
+app.use(cors({ credentials: true, origin: config.other.CLIENT_URL }));
 app.use(express.json());
 app.use(middleware.logRequest);
 app.use(cookieSession({ name: 'jhakhaas-session', keys: ['jhakhaas-key1', 'jhakhaas-key2'] }));
