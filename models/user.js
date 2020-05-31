@@ -7,6 +7,7 @@ const userSchema = new Schema({
   role: { type: String, required: true, default: 'USER' },
   joinedOn: { type: Date, required: true, default: new Date() },
   isActive: { type: Boolean, required: true, default: true },
+  totalScore: { type: Number, required: true, default: 0 },
   questionsAttempted: {
     type: [
       {

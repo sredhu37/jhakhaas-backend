@@ -32,7 +32,7 @@ passport.use(new GoogleStrategy({
         googleId: profile.id,
         isEmailVerified: profile.emails[0].verified,
         email: profile.emails[0].value,
-        pictureUrl: profile.picture,
+        pictureUrl: profile.photos[0].value,
       };
 
       const usr = new UserModel(userObject);

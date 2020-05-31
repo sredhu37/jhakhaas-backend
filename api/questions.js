@@ -52,10 +52,10 @@ const isUsersAnswerCorrect = async (_id, usersAnswerString) => new Promise(async
 
 const updateUsersResponseInDB = async (isAnswerCorrect, userId, questionId, usersAnswerString) => new Promise(async (resolve, reject) => {
   try {
-    const user = await UserModel.findById(userId, '_id questionsAttempted', { new: true });
+    const user = await UserModel.findById(userId, '_id questionsAttempted totalScore', { new: true });
     const valuesToUpdate = {};
 
-    const { questionsAttempted } = user;
+    let { questionsAttempted, totalScore } = user;
     const questionToUpdate = questionsAttempted.find((ques) => (questionId.localeCompare(ques._id) === 0));
 
     // update questionsAttempted
@@ -70,11 +70,16 @@ const updateUsersResponseInDB = async (isAnswerCorrect, userId, questionId, user
         resolve(false);
         return;
       }
-      // Increment tries count
+      // Increment tries count and score
       questionToUpdate._id = questionId;
       questionToUpdate.optionsSelected = usersAnswerString;
       questionToUpdate.triesCount += 1;
-      questionToUpdate.score = isAnswerCorrect ? 1 : 0; // score for this question is 1 if answer is correct else 0
+
+      if(questionToUpdate.score === 0 && isAnswerCorrect) {
+        questionToUpdate.score = 1;
+        totalScore++;
+      }
+
       questionsAttempted.splice(questionIndex, 1);
       questionsAttempted.push(questionToUpdate);
     } else {
@@ -83,10 +88,16 @@ const updateUsersResponseInDB = async (isAnswerCorrect, userId, questionId, user
       questionToAdd.optionsSelected = usersAnswerString;
       questionToAdd.triesCount = 1;
 
+      if(isAnswerCorrect) {
+        questionToAdd.score = 1;
+        totalScore++;
+      }
+
       questionsAttempted.push(questionToAdd);
     }
 
     valuesToUpdate.questionsAttempted = questionsAttempted;
+    valuesToUpdate.totalScore = totalScore;
 
     await UserModel.findOneAndUpdate({ _id: userId }, valuesToUpdate, { new: true });
 
@@ -154,24 +165,6 @@ questionsRouter.post('/submit', verifyAuthToken, async (req, res) => {
   }
 });
 
-// Get all questions of a particular difficultyLevel
-questionsRouter.get('/:difficulty', verifyAuthToken, (req, res) => {
-  const difficultyLevel = req.params.difficulty;
-
-  if (utils.exists(difficultyLevel)) {
-    QuestionModel.find({ difficultyLevel, isAlreadyAsked: false })
-      .then((response) => {
-        res.send(response);
-      })
-      .catch((error) => {
-        res.send(error);
-      });
-  } else {
-    const message = 'Difficulty missing from the body. Incorrect request body!';
-    res.status(400).send(message);
-    logger.error(message);
-  }
-});
 
 // Add a new question
 questionsRouter.post('/', verifyAuthToken, (req, res) => {
