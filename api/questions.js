@@ -55,7 +55,8 @@ const updateUsersResponseInDB = async (isAnswerCorrect, userId, questionId, user
     const user = await UserModel.findById(userId, '_id questionsAttempted totalScore', { new: true });
     const valuesToUpdate = {};
 
-    let { questionsAttempted, totalScore } = user;
+    const { questionsAttempted } = user;
+    let { totalScore } = user;
     const questionToUpdate = questionsAttempted.find((ques) => (questionId.localeCompare(ques._id) === 0));
 
     // update questionsAttempted
@@ -75,9 +76,9 @@ const updateUsersResponseInDB = async (isAnswerCorrect, userId, questionId, user
       questionToUpdate.optionsSelected = usersAnswerString;
       questionToUpdate.triesCount += 1;
 
-      if(questionToUpdate.score === 0 && isAnswerCorrect) {
+      if (questionToUpdate.score === 0 && isAnswerCorrect) {
         questionToUpdate.score = 1;
-        totalScore++;
+        totalScore += 1;
       }
 
       questionsAttempted.splice(questionIndex, 1);
@@ -88,9 +89,9 @@ const updateUsersResponseInDB = async (isAnswerCorrect, userId, questionId, user
       questionToAdd.optionsSelected = usersAnswerString;
       questionToAdd.triesCount = 1;
 
-      if(isAnswerCorrect) {
+      if (isAnswerCorrect) {
         questionToAdd.score = 1;
-        totalScore++;
+        totalScore += 1;
       }
 
       questionsAttempted.push(questionToAdd);

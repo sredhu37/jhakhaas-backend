@@ -17,8 +17,8 @@ usersRouter.get('/profile', verifyAuthToken, async (req, res) => {
       const result = {
         email,
         totalScore,
-        pictureUrl
-      }
+        pictureUrl,
+      };
 
       res.send(result);
     } else {
