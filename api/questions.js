@@ -130,8 +130,7 @@ questionsRouter.post('/submit', verifyAuthToken, async (req, res) => {
   const { body } = req;
   const questionId = body.question._id;
   const { usersAnswer } = body;
-  const jwtToken = body.token;
-  const userId = utils.getDataFromJWT(jwtToken)._id;
+  const userId = req.user.id;
 
   const usersAnswerString = getUsersAnswerString(usersAnswer);
 

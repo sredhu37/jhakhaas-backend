@@ -40,7 +40,6 @@ passport.use(new GoogleStrategy({
       return usr.save();
     })
     .then((user) => {
-      // Implement the JWT token here
       done(null, user);
     })
     .catch((error) => {
