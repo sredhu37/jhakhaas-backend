@@ -30,6 +30,24 @@ usersRouter.get('/profile', verifyAuthToken, async (req, res) => {
   }
 });
 
+usersRouter.get('/leaders', verifyAuthToken, async (req, res) => {
+  try {
+    const top10 = await UserModel
+      .find({}, 'email totalScore pictureUrl')
+      .sort({ totalScore: 'desc' })
+      .limit(10);
+
+    if (utils.exists(top10) && top10.length > 0) {
+      res.send(top10);
+    } else {
+      throw new Error("Couldn't get top scorers from DB!");
+    }
+  } catch (error) {
+    logger.error(`Error: ${error}`);
+    res.status(500).send(`Issue in getting top 10 profiles. Please inform Sunny immediately. Error: ${error}`);
+  }
+});
+
 module.exports = {
   usersRouter,
 };
