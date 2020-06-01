@@ -14,13 +14,15 @@ usersRouter.get('/profile', verifyAuthToken, async (req, res) => {
 
     const numOfPeopleAheadOfMe = await UserModel
       .find({})
-      .sort({totalScore: 'desc'})
+      .sort({ totalScore: 'desc' })
       .where('totalScore').gt(myInfo.totalScore)
       .countDocuments();
     const rank = numOfPeopleAheadOfMe + 1;
 
     if (utils.exists(myInfo)) {
-      const { totalScore, email, pictureUrl, _id } = myInfo;
+      const {
+        totalScore, email, pictureUrl, _id,
+      } = myInfo;
 
       const result = {
         _id,
