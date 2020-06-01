@@ -10,11 +10,21 @@ usersRouter.get('/profile', verifyAuthToken, async (req, res) => {
   const myId = req.user.id;
   try {
     console.log(`Searching for user with id: ${myId}`);
-    const myInfo = await UserModel.findById(myId, 'email totalScore pictureUrl');
+    const myInfo = await UserModel.findById(myId, '_id email totalScore pictureUrl');
+
+    const numOfPeopleAheadOfMe = await UserModel
+      .find({})
+      .sort({totalScore: 'desc'})
+      .where('totalScore').gt(myInfo.totalScore)
+      .countDocuments();
+    const rank = numOfPeopleAheadOfMe + 1;
+
     if (utils.exists(myInfo)) {
-      const { totalScore, email, pictureUrl } = myInfo;
+      const { totalScore, email, pictureUrl, _id } = myInfo;
 
       const result = {
+        _id,
+        rank,
         email,
         totalScore,
         pictureUrl,
