@@ -33,6 +33,7 @@ passport.use(new GoogleStrategy({
         isEmailVerified: profile.emails[0].verified,
         email: profile.emails[0].value,
         pictureUrl: profile.photos[0].value,
+        name: profile.displayName,
       };
 
       const usr = new UserModel(userObject);

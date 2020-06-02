@@ -8,6 +8,7 @@ const userSchema = new Schema({
   joinedOn: { type: Date, required: true, default: new Date() },
   isActive: { type: Boolean, required: true, default: true },
   totalScore: { type: Number, required: true, default: 0 },
+  name: { type: String, required: true, default: "" },
   questionsAttempted: {
     type: [
       {

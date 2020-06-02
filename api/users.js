@@ -10,7 +10,7 @@ usersRouter.get('/profile', verifyAuthToken, async (req, res) => {
   const myId = req.user.id;
   try {
     console.log(`Searching for user with id: ${myId}`);
-    const myInfo = await UserModel.findById(myId, '_id email totalScore pictureUrl');
+    const myInfo = await UserModel.findById(myId, '_id email totalScore pictureUrl name');
 
     const numOfPeopleAheadOfMe = await UserModel
       .find({})
@@ -21,7 +21,7 @@ usersRouter.get('/profile', verifyAuthToken, async (req, res) => {
 
     if (utils.exists(myInfo)) {
       const {
-        totalScore, email, pictureUrl, _id,
+        totalScore, email, pictureUrl, _id, name,
       } = myInfo;
 
       const result = {
@@ -30,6 +30,7 @@ usersRouter.get('/profile', verifyAuthToken, async (req, res) => {
         email,
         totalScore,
         pictureUrl,
+        name,
       };
 
       res.send(result);
