@@ -3,8 +3,7 @@ const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 const config = require('../../utils/config');
 const logger = require('../../utils/logger');
 const { UserModel } = require('../../models/user');
-const { createNewUser } = require('./usersUtils');
-const { exists } = require('../../utils/commonMethods');
+const utils = require('../../utils/commonMethods');
 
 // Use the GoogleStrategy within Passport.
 //   Strategies in Passport require a `verify` function, which accept
@@ -20,26 +19,27 @@ passport.use(new GoogleStrategy({
 
   UserModel.findOne({ googleId: profile.id })
     .then((user) => {
-      if (exists(user)) {
+      if (utils.exists(user)) {
         return new Promise((resolve) => {
-          logger.info('User already exists. Logging in. Please wait...');
+          logger.info(`User ${user.email} already exists. Logging in.`);
           resolve(user);
         });
       }
-      logger.info('Registering the new user. Please wait...');
+      logger.info('Registering the new user.');
 
-      const userObject = createNewUser({
+      const userObject = {
         loginSource: 'google',
         googleId: profile.id,
         isEmailVerified: profile.emails[0].verified,
-      }, profile.emails[0].value, null);
+        email: profile.emails[0].value,
+        pictureUrl: profile.photos[0].value,
+      };
 
       const usr = new UserModel(userObject);
 
       return usr.save();
     })
     .then((user) => {
-      // Implement the JWT token here
       done(null, user);
     })
     .catch((error) => {
@@ -47,3 +47,16 @@ passport.use(new GoogleStrategy({
       done(error, null);
     });
 }));
+
+passport.serializeUser((user, done) => {
+  done(null, user.id);
+});
+
+passport.deserializeUser(async (id, done) => {
+  try {
+    const user = await UserModel.findById(id, 'email');
+    done(null, user);
+  } catch (error) {
+    done(error, null);
+  }
+});

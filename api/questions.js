@@ -4,8 +4,9 @@ const questionsRouter = express.Router();
 const mongoose = require('mongoose');
 const logger = require('../utils/logger');
 const { QuestionModel } = require('../models/question');
+const { UserModel } = require('../models/user');
 const { verifyAuthToken } = require('../utils/verifyToken');
-const { exists } = require('../utils/commonMethods');
+const utils = require('../utils/commonMethods');
 
 const getCurrentFormattedDate = () => {
   const todaysDate = new Date();
@@ -26,6 +27,86 @@ const createNewQueryObject = (body) => {
 
   return obj;
 };
+
+const getUsersAnswerString = (usersAnswer) => {
+  const usersAns = Object.keys(usersAnswer).map((key) => (usersAnswer[key] ? key : ''));
+  const usersSolution = usersAns.sort().join('');
+
+  return usersSolution;
+};
+
+const isUsersAnswerCorrect = async (_id, usersAnswerString) => new Promise(async (resolve, reject) => {
+  try {
+    const question = await QuestionModel.findById(_id, '_id solution');
+    const actualAnswerString = question.solution.split('').sort().join('');
+
+    if (actualAnswerString === usersAnswerString) {
+      resolve(true);
+    } else {
+      resolve(false);
+    }
+  } catch (error) {
+    reject(error);
+  }
+});
+
+const updateUsersResponseInDB = async (isAnswerCorrect, userId, questionId, usersAnswerString) => new Promise(async (resolve, reject) => {
+  try {
+    const user = await UserModel.findById(userId, '_id questionsAttempted totalScore', { new: true });
+    const valuesToUpdate = {};
+
+    const { questionsAttempted } = user;
+    let { totalScore } = user;
+    const questionToUpdate = questionsAttempted.find((ques) => (questionId.localeCompare(ques._id) === 0));
+
+    // update questionsAttempted
+    if (utils.exists(questionToUpdate)) {
+      // this question is already attempted
+      // first attempt to this question
+      const questionIndex = questionsAttempted.findIndex((ques) => ques._id === questionId);
+
+      // No more than 3 tries allowed
+      if (questionToUpdate.triesCount >= 3) {
+        logger.info('Sorry! You cannot try more than 3 times.');
+        resolve(false);
+        return;
+      }
+      // Increment tries count and score
+      questionToUpdate._id = questionId;
+      questionToUpdate.optionsSelected = usersAnswerString;
+      questionToUpdate.triesCount += 1;
+
+      if (questionToUpdate.score === 0 && isAnswerCorrect) {
+        questionToUpdate.score = 1;
+        totalScore += 1;
+      }
+
+      questionsAttempted.splice(questionIndex, 1);
+      questionsAttempted.push(questionToUpdate);
+    } else {
+      const questionToAdd = {};
+      questionToAdd._id = questionId;
+      questionToAdd.optionsSelected = usersAnswerString;
+      questionToAdd.triesCount = 1;
+
+      if (isAnswerCorrect) {
+        questionToAdd.score = 1;
+        totalScore += 1;
+      }
+
+      questionsAttempted.push(questionToAdd);
+    }
+
+    valuesToUpdate.questionsAttempted = questionsAttempted;
+    valuesToUpdate.totalScore = totalScore;
+
+    await UserModel.findOneAndUpdate({ _id: userId }, valuesToUpdate, { new: true });
+
+    resolve(true);
+  } catch (error) {
+    reject(error);
+  }
+});
 
 // Get all questions
 questionsRouter.get('/', verifyAuthToken, (req, res) => {
@@ -51,54 +132,40 @@ questionsRouter.get('/today', verifyAuthToken, (req, res) => {
     });
 });
 
-// Check if answer is correct
-questionsRouter.post('/submit', verifyAuthToken, (req, res) => {
+// Submit user's answer
+// Return status:
+// 200 => Correct Answer
+// 204 => Incorrect Answer
+// 208 => Number of tries > 3
+// 404 => Error
+questionsRouter.post('/submit', verifyAuthToken, async (req, res) => {
   const { body } = req;
-  const { _id } = body.question;
+  const questionId = body.question._id;
   const { usersAnswer } = body;
-  console.log(body);
+  const userId = req.user.id;
 
-  QuestionModel.findById(_id, '_id solution')
-    .then((response) => {
-      console.log('Response: ', response);
-      const usersAns = Object.keys(usersAnswer).map((key) => (usersAnswer[key] ? key : ''));
-      console.log('usersAns: ', usersAns);
+  const usersAnswerString = getUsersAnswerString(usersAnswer);
 
-      const actualSolution = response.solution.split('').sort().join('');
-      const usersSolution = usersAns.sort().join('');
+  try {
+    const isAnswerCorrect = await isUsersAnswerCorrect(questionId, usersAnswerString);
 
-      console.log('actualSolution: ', actualSolution);
-      console.log('usersSolution: ', usersSolution);
+    const updateDbResult = await updateUsersResponseInDB(isAnswerCorrect, userId, questionId, usersAnswerString);
 
-      if (actualSolution === usersSolution) {
-        res.status(200).send('Correct Answer');
+    if (updateDbResult) {
+      if (isAnswerCorrect) {
+        res.status(200).send('Correct answer');
       } else {
-        res.status(204).send('Incorrect Answer');
+        res.status(204).send('Incorrect answer');
       }
-    })
-    .catch((error) => {
-      res.status(400).send(error);
-    });
-});
-
-// Get all questions of a particular difficultyLevel
-questionsRouter.get('/:difficulty', verifyAuthToken, (req, res) => {
-  const difficultyLevel = req.params.difficulty;
-
-  if (exists(difficultyLevel)) {
-    QuestionModel.find({ difficultyLevel, isAlreadyAsked: false })
-      .then((response) => {
-        res.send(response);
-      })
-      .catch((error) => {
-        res.send(error);
-      });
-  } else {
-    const message = 'Difficulty missing from the body. Incorrect request body!';
-    res.status(400).send(message);
-    logger.error(message);
+    } else {
+      res.status(208).send('Sorry! You cannot try more than 3 times.');
+    }
+  } catch (error) {
+    logger.error(error);
+    res.status(404).send(error);
   }
 });
+
 
 // Add a new question
 questionsRouter.post('/', verifyAuthToken, (req, res) => {

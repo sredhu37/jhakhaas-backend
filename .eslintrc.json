@@ -15,7 +15,9 @@
         "ecmaVersion": 2018
     },
     "rules": {
+        "max-len": "off",
         "no-console": "off",
-        "no-underscore-dangle": [2, { "allow": ["__id"] }]
+        "no-async-promise-executor": "off",
+        "no-underscore-dangle": [2, { "allow": ["_id"] }]
     }
 }

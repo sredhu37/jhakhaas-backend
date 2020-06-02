@@ -1,20 +1,11 @@
-const jwt = require('jsonwebtoken');
-const config = require('./config');
+const utils = require('./commonMethods');
 
-const verifyAuthToken = (req, res, next) => {
-  const token = req.header('auth-token');
-
-  if (!token) {
+const verifyAuthToken = async (req, res, next) => {
+  if (!utils.exists(req.user)) {
     res.status(401).send('Access Denied');
+  } else {
+    next();
   }
-
-  try {
-    jwt.verify(token, config.other.JWT_SECRET);
-  } catch (error) {
-    res.status(400).send('Invalid Token!');
-  }
-
-  next();
 };
 
 module.exports = {

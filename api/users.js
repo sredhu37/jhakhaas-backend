@@ -1,68 +1,62 @@
 const express = require('express');
 
 const usersRouter = express.Router();
-const logger = require('../utils/logger');
 const { UserModel } = require('../models/user');
 const { verifyAuthToken } = require('../utils/verifyToken');
-const { validatePassword, validateEmail, createNewUser } = require('./helperModules/usersUtils');
+const utils = require('../utils/commonMethods');
+const logger = require('../utils/logger');
 
-usersRouter.get('/', verifyAuthToken, (req, res) => {
-  UserModel.find({})
-    .then((response) => {
-      res.send(response);
-    })
-    .catch((error) => {
-      res.send(error);
-    });
-});
+usersRouter.get('/profile', verifyAuthToken, async (req, res) => {
+  const myId = req.user.id;
+  try {
+    console.log(`Searching for user with id: ${myId}`);
+    const myInfo = await UserModel.findById(myId, '_id email totalScore pictureUrl');
 
-usersRouter.get('/:id', verifyAuthToken, (req, res) => {
-  const { id } = req.params;
+    const numOfPeopleAheadOfMe = await UserModel
+      .find({})
+      .sort({ totalScore: 'desc' })
+      .where('totalScore').gt(myInfo.totalScore)
+      .countDocuments();
+    const rank = numOfPeopleAheadOfMe + 1;
 
-  if (id && id !== 'undefined') {
-    UserModel.find({ __id: id })
-      .then((response) => {
-        res.send(response);
-      })
-      .catch((error) => {
-        res.send(error);
-      });
-  } else {
-    const message = 'ID missing from the body. Incorrect request body!';
-    res.status(400).send(message);
-    logger.error(message);
+    if (utils.exists(myInfo)) {
+      const {
+        totalScore, email, pictureUrl, _id,
+      } = myInfo;
+
+      const result = {
+        _id,
+        rank,
+        email,
+        totalScore,
+        pictureUrl,
+      };
+
+      res.send(result);
+    } else {
+      throw new Error('User not found in DB!');
+    }
+  } catch (error) {
+    logger.error(`Error: ${error}`);
+    res.status(500).send(`Issue in getting user profile: ${error}`);
   }
 });
 
-usersRouter.post('/', verifyAuthToken, (req, res) => {
-  const { body } = req;
-  if (body.email && body.password) {
-    Promise.all([
-      validatePassword(body.password),
-      validateEmail(body.email),
-    ])
-      .then((response) => {
-        logger.info(response);
-        const [passwordHash, email] = response;
+usersRouter.get('/leaders', verifyAuthToken, async (req, res) => {
+  try {
+    const top10 = await UserModel
+      .find({}, 'email totalScore pictureUrl')
+      .sort({ totalScore: 'desc' })
+      .limit(10);
 
-        const userObject = createNewUser({}, email, passwordHash);
-
-        const user = new UserModel(userObject);
-
-        return user.save();
-      })
-      .then((response) => {
-        logger.info(response);
-        res.status(200).send(response);
-      })
-      .catch((error) => {
-        logger.error(error);
-        res.status(401).send(`Couldn't add the user: ${error}`);
-      });
-  } else {
-    const message = 'Unable to add new user. Incorrect request body!';
-    logger.error(message);
-    res.status(400).send(message);
+    if (utils.exists(top10) && top10.length > 0) {
+      res.send(top10);
+    } else {
+      throw new Error("Couldn't get top scorers from DB!");
+    }
+  } catch (error) {
+    logger.error(`Error: ${error}`);
+    res.status(500).send(`Issue in getting top 10 profiles. Please inform Sunny immediately. Error: ${error}`);
   }
 });
 

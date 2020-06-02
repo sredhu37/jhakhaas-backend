@@ -15,30 +15,7 @@ const validateEmail = (emailId) => new Promise((resolve, reject) => {
   }
 });
 
-const createNewUser = (body, email, passwordHash) => {
-  let obj = {};
-  if (body.loginSource === 'google') { // Registered via Google
-    obj = {
-      email,
-    };
-  } else { // Registered Locally via Username and Password
-    obj = {
-      email,
-      passwordHash,
-    };
-  }
-
-  const keys = Object.keys(body);
-
-  keys.forEach((key) => {
-    obj[key] = body[key];
-  });
-
-  return obj;
-};
-
 module.exports = {
   validatePassword,
   validateEmail,
-  createNewUser,
 };

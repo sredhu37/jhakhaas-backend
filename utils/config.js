@@ -29,17 +29,13 @@ if (
   process.exit(1);
 }
 
-if (exists(process.env.JWT_SECRET)) {
-  const otherObj = {
-    JWT_SECRET: process.env.JWT_SECRET,
-    HOST: process.env.HOST || 'http://127.0.0.1',
-    PORT: process.env.PORT || 3000,
-  };
 
-  resultObj.other = otherObj;
-} else {
-  logger.error('Issue with OTHER env var! Please inform Sunny immediately!');
-  process.exit(1);
-}
+const otherObj = {
+  HOST: process.env.HOST || 'http://127.0.0.1',
+  PORT: process.env.PORT || 3000,
+  CLIENT_URL: process.env.CLIENT_URL,
+};
+
+resultObj.other = otherObj;
 
 module.exports = resultObj;
