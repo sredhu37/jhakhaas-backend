@@ -119,7 +119,7 @@ questionsRouter.get('/', verifyAuthToken, (req, res) => {
     });
 });
 
-// Get today's question
+// Get today's questions
 questionsRouter.get('/today', verifyAuthToken, (req, res) => {
   const todaysDate = getCurrentFormattedDate();
 
@@ -191,24 +191,6 @@ questionsRouter.post('/', verifyAuthToken, (req, res) => {
   }
 });
 
-// Update a single question using objectId
-questionsRouter.put('/:objectId', verifyAuthToken, (req, res) => {
-  const { body } = req;
-  const objectIdStr = req.params.objectId;
-  const objectId = mongoose.Types.ObjectId(objectIdStr);
-
-  const questionObject = createNewQueryObject(body);
-
-  QuestionModel.findByIdAndUpdate(objectId, questionObject, { returnOriginal: false })
-    .then((response) => {
-    // logger.info(response);
-      res.status(200).send(response);
-    })
-    .catch((error) => {
-    // logger.error(error);
-      res.send(error);
-    });
-});
 
 module.exports = {
   questionsRouter,
