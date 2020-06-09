@@ -1,7 +1,6 @@
 const express = require('express');
 
 const questionsRouter = express.Router();
-const mongoose = require('mongoose');
 const logger = require('../utils/logger');
 const { QuestionModel } = require('../models/question');
 const { UserModel } = require('../models/user');
