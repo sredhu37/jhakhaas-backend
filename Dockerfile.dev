@@ -6,8 +6,8 @@ WORKDIR /usr/src/app
 # Install app dependencies
 COPY package*.json ./
 
-# For prod environment
-RUN npm ci --only=production
+# For dev environment
+RUN npm install
 
 # Bundle source code
 COPY . .
