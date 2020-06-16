@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const passport = require('passport');
 const cookieSession = require('cookie-session');
-const helmet = require("helmet");
+const helmet = require('helmet');
 const config = require('./utils/config');
 const logger = require('./utils/logger');
 const middleware = require('./utils/middleware');
@@ -14,7 +14,7 @@ const questionsController = require('./api/questions');
 const auth = require('./api/auth');
 
 const app = express();
-app.use(helmet());  // good for security
+app.use(helmet()); // good for security
 app.use(cors({ credentials: true, origin: config.other.CLIENT_URL }));
 app.use(express.json());
 app.use(middleware.logRequest);
