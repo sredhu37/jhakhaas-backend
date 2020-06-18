@@ -1,0 +1,168 @@
+[2020-06-18T13:11:48.923] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-18T13:11:50.980] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-18T13:13:41.049] [INFO] Logging:  - ---Request begins here---
+[2020-06-18T13:13:41.050] [INFO] Logging:  - Method: GET
+[2020-06-18T13:13:41.051] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-18T13:13:41.053] [INFO] Logging:  - Body:   {}
+[2020-06-18T13:13:41.055] [INFO] Logging:  - ---Request ends here---
+[2020-06-18T13:14:00.714] [INFO] Logging:  - ---Request begins here---
+[2020-06-18T13:14:00.714] [INFO] Logging:  - Method: GET
+[2020-06-18T13:14:00.717] [INFO] Logging:  - Path:   /auth/google/login
+[2020-06-18T13:14:00.721] [INFO] Logging:  - Body:   {}
+[2020-06-18T13:14:00.723] [INFO] Logging:  - ---Request ends here---
+[2020-06-18T13:14:05.705] [INFO] Logging:  - ---Request begins here---
+[2020-06-18T13:14:05.706] [INFO] Logging:  - Method: GET
+[2020-06-18T13:14:05.707] [INFO] Logging:  - Path:   /auth/google/callback
+[2020-06-18T13:14:05.708] [INFO] Logging:  - Body:   {}
+[2020-06-18T13:14:05.710] [INFO] Logging:  - ---Request ends here---
+[2020-06-18T13:14:07.679] [INFO] Logging:  - Profile: {"id":"107414121620518369845","displayName":"Sunny Redhu","name":{"familyName":"Redhu","givenName":"Sunny"},"emails":[{"value":"redhusunny1994@gmail.com","verified":true}],"photos":[{"value":"https://lh3.googleusercontent.com/a-/AOh14GhXmO1tFFdPPSJBhdj25bSPrM4ei-fKExaPN_h7sQ"}],"provider":"google","_raw":"{\n  \"sub\": \"107414121620518369845\",\n  \"name\": \"Sunny Redhu\",\n  \"given_name\": \"Sunny\",\n  \"family_name\": \"Redhu\",\n  \"picture\": \"https://lh3.googleusercontent.com/a-/AOh14GhXmO1tFFdPPSJBhdj25bSPrM4ei-fKExaPN_h7sQ\",\n  \"email\": \"redhusunny1994@gmail.com\",\n  \"email_verified\": true,\n  \"locale\": \"en\"\n}","_json":{"sub":"107414121620518369845","name":"Sunny Redhu","given_name":"Sunny","family_name":"Redhu","picture":"https://lh3.googleusercontent.com/a-/AOh14GhXmO1tFFdPPSJBhdj25bSPrM4ei-fKExaPN_h7sQ","email":"redhusunny1994@gmail.com","email_verified":true,"locale":"en"}}
+[2020-06-18T13:14:07.978] [INFO] Logging:  - User redhusunny1994@gmail.com already exists. Logging in.
+[2020-06-18T13:14:08.949] [INFO] Logging:  - ---Request begins here---
+[2020-06-18T13:14:08.954] [INFO] Logging:  - Method: GET
+[2020-06-18T13:14:08.955] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-18T13:14:08.959] [INFO] Logging:  - Body:   {}
+[2020-06-18T13:14:08.960] [INFO] Logging:  - ---Request ends here---
+[2020-06-18T13:14:09.670] [INFO] Logging:  - ---Request begins here---
+[2020-06-18T13:14:09.671] [INFO] Logging:  - Method: GET
+[2020-06-18T13:14:09.673] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-18T13:14:09.674] [INFO] Logging:  - Body:   {}
+[2020-06-18T13:14:09.677] [INFO] Logging:  - ---Request ends here---
+[2020-06-18T13:14:09.683] [INFO] Logging:  - ---Request begins here---
+[2020-06-18T13:14:09.685] [INFO] Logging:  - Method: GET
+[2020-06-18T13:14:09.686] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-18T13:14:09.687] [INFO] Logging:  - Body:   {}
+[2020-06-18T13:14:09.688] [INFO] Logging:  - ---Request ends here---
+[2020-06-18T13:19:28.785] [INFO] Logging:  - ---Request begins here---
+[2020-06-18T13:19:28.791] [INFO] Logging:  - Method: GET
+[2020-06-18T13:19:28.792] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-18T13:19:28.799] [INFO] Logging:  - Body:   {}
+[2020-06-18T13:19:28.800] [INFO] Logging:  - ---Request ends here---
+[2020-06-18T13:19:31.034] [INFO] Logging:  - ---Request begins here---
+[2020-06-18T13:19:31.037] [INFO] Logging:  - Method: GET
+[2020-06-18T13:19:31.038] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-18T13:19:31.038] [INFO] Logging:  - Body:   {}
+[2020-06-18T13:19:31.041] [INFO] Logging:  - ---Request ends here---
+[2020-06-18T13:20:38.100] [INFO] Logging:  - ---Request begins here---
+[2020-06-18T13:20:38.102] [INFO] Logging:  - Method: GET
+[2020-06-18T13:20:38.104] [INFO] Logging:  - Path:   /auth/logout
+[2020-06-18T13:20:38.106] [INFO] Logging:  - Body:   {}
+[2020-06-18T13:20:38.107] [INFO] Logging:  - ---Request ends here---
+[2020-06-18T13:20:38.181] [INFO] Logging:  - ---Request begins here---
+[2020-06-18T13:20:38.182] [INFO] Logging:  - Method: GET
+[2020-06-18T13:20:38.183] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-18T13:20:38.184] [INFO] Logging:  - Body:   {}
+[2020-06-18T13:20:38.188] [INFO] Logging:  - ---Request ends here---
+[2020-06-18T13:20:38.847] [INFO] Logging:  - ---Request begins here---
+[2020-06-18T13:20:38.848] [INFO] Logging:  - Method: GET
+[2020-06-18T13:20:38.848] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-18T13:20:38.849] [INFO] Logging:  - Body:   {}
+[2020-06-18T13:20:38.850] [INFO] Logging:  - ---Request ends here---
+[2020-06-18T13:20:40.676] [INFO] Logging:  - ---Request begins here---
+[2020-06-18T13:20:40.679] [INFO] Logging:  - Method: GET
+[2020-06-18T13:20:40.681] [INFO] Logging:  - Path:   /auth/google/login
+[2020-06-18T13:20:40.684] [INFO] Logging:  - Body:   {}
+[2020-06-18T13:20:40.687] [INFO] Logging:  - ---Request ends here---
+[2020-06-18T13:20:44.493] [INFO] Logging:  - ---Request begins here---
+[2020-06-18T13:20:44.494] [INFO] Logging:  - Method: GET
+[2020-06-18T13:20:44.495] [INFO] Logging:  - Path:   /auth/google/callback
+[2020-06-18T13:20:44.496] [INFO] Logging:  - Body:   {}
+[2020-06-18T13:20:44.497] [INFO] Logging:  - ---Request ends here---
+[2020-06-18T13:20:46.609] [INFO] Logging:  - Profile: {"id":"107414121620518369845","displayName":"Sunny Redhu","name":{"familyName":"Redhu","givenName":"Sunny"},"emails":[{"value":"redhusunny1994@gmail.com","verified":true}],"photos":[{"value":"https://lh3.googleusercontent.com/a-/AOh14GhXmO1tFFdPPSJBhdj25bSPrM4ei-fKExaPN_h7sQ"}],"provider":"google","_raw":"{\n  \"sub\": \"107414121620518369845\",\n  \"name\": \"Sunny Redhu\",\n  \"given_name\": \"Sunny\",\n  \"family_name\": \"Redhu\",\n  \"picture\": \"https://lh3.googleusercontent.com/a-/AOh14GhXmO1tFFdPPSJBhdj25bSPrM4ei-fKExaPN_h7sQ\",\n  \"email\": \"redhusunny1994@gmail.com\",\n  \"email_verified\": true,\n  \"locale\": \"en\"\n}","_json":{"sub":"107414121620518369845","name":"Sunny Redhu","given_name":"Sunny","family_name":"Redhu","picture":"https://lh3.googleusercontent.com/a-/AOh14GhXmO1tFFdPPSJBhdj25bSPrM4ei-fKExaPN_h7sQ","email":"redhusunny1994@gmail.com","email_verified":true,"locale":"en"}}
+[2020-06-18T13:20:46.875] [INFO] Logging:  - User redhusunny1994@gmail.com already exists. Logging in.
+[2020-06-18T13:20:47.333] [INFO] Logging:  - ---Request begins here---
+[2020-06-18T13:20:47.334] [INFO] Logging:  - Method: GET
+[2020-06-18T13:20:47.335] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-18T13:20:47.336] [INFO] Logging:  - Body:   {}
+[2020-06-18T13:20:47.338] [INFO] Logging:  - ---Request ends here---
+[2020-06-18T13:20:47.914] [INFO] Logging:  - ---Request begins here---
+[2020-06-18T13:20:47.915] [INFO] Logging:  - Method: GET
+[2020-06-18T13:20:47.916] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-18T13:20:47.917] [INFO] Logging:  - Body:   {}
+[2020-06-18T13:20:47.918] [INFO] Logging:  - ---Request ends here---
+[2020-06-18T13:20:47.926] [INFO] Logging:  - ---Request begins here---
+[2020-06-18T13:20:47.927] [INFO] Logging:  - Method: GET
+[2020-06-18T13:20:47.928] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-18T13:20:47.928] [INFO] Logging:  - Body:   {}
+[2020-06-18T13:20:47.929] [INFO] Logging:  - ---Request ends here---
+[2020-06-18T13:25:45.765] [INFO] Logging:  - ---Request begins here---
+[2020-06-18T13:25:45.766] [INFO] Logging:  - Method: GET
+[2020-06-18T13:25:45.766] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-18T13:25:45.767] [INFO] Logging:  - Body:   {}
+[2020-06-18T13:25:45.767] [INFO] Logging:  - ---Request ends here---
+[2020-06-18T13:25:50.685] [INFO] Logging:  - ---Request begins here---
+[2020-06-18T13:25:50.686] [INFO] Logging:  - Method: GET
+[2020-06-18T13:25:50.687] [INFO] Logging:  - Path:   /auth/google/login
+[2020-06-18T13:25:50.687] [INFO] Logging:  - Body:   {}
+[2020-06-18T13:25:50.688] [INFO] Logging:  - ---Request ends here---
+[2020-06-18T13:25:55.084] [INFO] Logging:  - ---Request begins here---
+[2020-06-18T13:25:55.086] [INFO] Logging:  - Method: GET
+[2020-06-18T13:25:55.091] [INFO] Logging:  - Path:   /auth/google/callback
+[2020-06-18T13:25:55.099] [INFO] Logging:  - Body:   {}
+[2020-06-18T13:25:55.105] [INFO] Logging:  - ---Request ends here---
+[2020-06-18T13:25:58.451] [INFO] Logging:  - Profile: {"id":"107414121620518369845","displayName":"Sunny Redhu","name":{"familyName":"Redhu","givenName":"Sunny"},"emails":[{"value":"redhusunny1994@gmail.com","verified":true}],"photos":[{"value":"https://lh3.googleusercontent.com/a-/AOh14GhXmO1tFFdPPSJBhdj25bSPrM4ei-fKExaPN_h7sQ"}],"provider":"google","_raw":"{\n  \"sub\": \"107414121620518369845\",\n  \"name\": \"Sunny Redhu\",\n  \"given_name\": \"Sunny\",\n  \"family_name\": \"Redhu\",\n  \"picture\": \"https://lh3.googleusercontent.com/a-/AOh14GhXmO1tFFdPPSJBhdj25bSPrM4ei-fKExaPN_h7sQ\",\n  \"email\": \"redhusunny1994@gmail.com\",\n  \"email_verified\": true,\n  \"locale\": \"en\"\n}","_json":{"sub":"107414121620518369845","name":"Sunny Redhu","given_name":"Sunny","family_name":"Redhu","picture":"https://lh3.googleusercontent.com/a-/AOh14GhXmO1tFFdPPSJBhdj25bSPrM4ei-fKExaPN_h7sQ","email":"redhusunny1994@gmail.com","email_verified":true,"locale":"en"}}
+[2020-06-18T13:25:58.734] [INFO] Logging:  - User redhusunny1994@gmail.com already exists. Logging in.
+[2020-06-18T13:25:59.295] [INFO] Logging:  - ---Request begins here---
+[2020-06-18T13:25:59.296] [INFO] Logging:  - Method: GET
+[2020-06-18T13:25:59.296] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-18T13:25:59.298] [INFO] Logging:  - Body:   {}
+[2020-06-18T13:25:59.299] [INFO] Logging:  - ---Request ends here---
+[2020-06-18T13:25:59.910] [INFO] Logging:  - ---Request begins here---
+[2020-06-18T13:25:59.911] [INFO] Logging:  - Method: GET
+[2020-06-18T13:25:59.913] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-18T13:25:59.914] [INFO] Logging:  - Body:   {}
+[2020-06-18T13:25:59.917] [INFO] Logging:  - ---Request ends here---
+[2020-06-18T13:25:59.923] [INFO] Logging:  - ---Request begins here---
+[2020-06-18T13:25:59.924] [INFO] Logging:  - Method: GET
+[2020-06-18T13:25:59.926] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-18T13:25:59.927] [INFO] Logging:  - Body:   {}
+[2020-06-18T13:25:59.928] [INFO] Logging:  - ---Request ends here---
+[2020-06-18T13:26:42.267] [INFO] Logging:  - ---Request begins here---
+[2020-06-18T13:26:42.268] [INFO] Logging:  - Method: GET
+[2020-06-18T13:26:42.269] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-18T13:26:42.270] [INFO] Logging:  - Body:   {}
+[2020-06-18T13:26:42.271] [INFO] Logging:  - ---Request ends here---
+[2020-06-18T13:26:42.887] [INFO] Logging:  - ---Request begins here---
+[2020-06-18T13:26:42.894] [INFO] Logging:  - Method: GET
+[2020-06-18T13:26:42.895] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-18T13:26:42.898] [INFO] Logging:  - Body:   {}
+[2020-06-18T13:26:42.902] [INFO] Logging:  - ---Request ends here---
+[2020-06-18T13:26:42.918] [INFO] Logging:  - ---Request begins here---
+[2020-06-18T13:26:42.920] [INFO] Logging:  - Method: GET
+[2020-06-18T13:26:42.921] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-18T13:26:42.922] [INFO] Logging:  - Body:   {}
+[2020-06-18T13:26:42.923] [INFO] Logging:  - ---Request ends here---
+[2020-06-18T13:29:17.439] [INFO] Logging:  - ---Request begins here---
+[2020-06-18T13:29:17.440] [INFO] Logging:  - Method: GET
+[2020-06-18T13:29:17.441] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-18T13:29:17.442] [INFO] Logging:  - Body:   {}
+[2020-06-18T13:29:17.443] [INFO] Logging:  - ---Request ends here---
+[2020-06-18T13:29:17.985] [INFO] Logging:  - ---Request begins here---
+[2020-06-18T13:29:17.987] [INFO] Logging:  - Method: GET
+[2020-06-18T13:29:17.988] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-18T13:29:17.989] [INFO] Logging:  - Body:   {}
+[2020-06-18T13:29:17.992] [INFO] Logging:  - ---Request ends here---
+[2020-06-18T13:29:18.025] [INFO] Logging:  - ---Request begins here---
+[2020-06-18T13:29:18.025] [INFO] Logging:  - Method: GET
+[2020-06-18T13:29:18.026] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-18T13:29:18.031] [INFO] Logging:  - Body:   {}
+[2020-06-18T13:29:18.032] [INFO] Logging:  - ---Request ends here---
+[2020-06-18T13:31:54.696] [INFO] Logging:  - ---Request begins here---
+[2020-06-18T13:31:54.697] [INFO] Logging:  - Method: GET
+[2020-06-18T13:31:54.698] [INFO] Logging:  - Path:   /api/questions/today
+[2020-06-18T13:31:54.699] [INFO] Logging:  - Body:   {}
+[2020-06-18T13:31:54.701] [INFO] Logging:  - ---Request ends here---
+[2020-06-18T13:32:32.940] [INFO] Logging:  - ---Request begins here---
+[2020-06-18T13:32:32.941] [INFO] Logging:  - Method: GET
+[2020-06-18T13:32:32.942] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-18T13:32:32.943] [INFO] Logging:  - Body:   {}
+[2020-06-18T13:32:32.944] [INFO] Logging:  - ---Request ends here---
+[2020-06-18T13:32:33.507] [INFO] Logging:  - ---Request begins here---
+[2020-06-18T13:32:33.509] [INFO] Logging:  - Method: GET
+[2020-06-18T13:32:33.510] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-18T13:32:33.511] [INFO] Logging:  - Body:   {}
+[2020-06-18T13:32:33.512] [INFO] Logging:  - ---Request ends here---
+[2020-06-18T13:32:33.524] [INFO] Logging:  - ---Request begins here---
+[2020-06-18T13:32:33.528] [INFO] Logging:  - Method: GET
+[2020-06-18T13:32:33.530] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-18T13:32:33.534] [INFO] Logging:  - Body:   {}
+[2020-06-18T13:32:33.535] [INFO] Logging:  - ---Request ends here---
