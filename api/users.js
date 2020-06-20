@@ -58,7 +58,7 @@ usersRouter.get('/leaders', verifyAuthToken, async (req, res) => {
     }
   } catch (error) {
     logger.error(`Error: ${error}`);
-    res.status(500).send(`Issue in getting top 10 profiles. Please inform Sunny immediately. Error: ${error}`);
+    res.status(500).send(`Issue in getting top 10 profiles. Please inform Administrator immediately. Error: ${error}`);
   }
 });
 

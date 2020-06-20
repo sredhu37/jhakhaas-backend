@@ -11,7 +11,7 @@ if (NODE_ENV === 'DEV') {
     const mongoObj = { URI: process.env.MONGO_URI_DEV };
     resultObj.mongo = mongoObj;
   } else {
-    logger.error('Issue with MONGO env vars! Please inform Sunny immediately!');
+    logger.error('Issue with MONGO env vars! Please inform Administrator immediately!');
     process.exit(1);
   }
 
@@ -28,7 +28,7 @@ if (NODE_ENV === 'DEV') {
 
     resultObj.google = googleObj;
   } else {
-    logger.error('Issue with GOOGLE env vars! Please inform Sunny immediately!');
+    logger.error('Issue with GOOGLE env vars! Please inform Administrator immediately!');
     process.exit(1);
   }
 
@@ -44,7 +44,7 @@ if (NODE_ENV === 'DEV') {
     const mongoObj = { URI: process.env.MONGO_URI_PROD };
     resultObj.mongo = mongoObj;
   } else {
-    logger.error('Issue with MONGO env vars! Please inform Sunny immediately!');
+    logger.error('Issue with MONGO env vars! Please inform Administrator immediately!');
     process.exit(1);
   }
 
@@ -61,7 +61,7 @@ if (NODE_ENV === 'DEV') {
 
     resultObj.google = googleObj;
   } else {
-    logger.error('Issue with GOOGLE env vars! Please inform Sunny immediately!');
+    logger.error('Issue with GOOGLE env vars! Please inform Administrator immediately!');
     process.exit(1);
   }
 

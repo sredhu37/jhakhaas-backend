@@ -190,6 +190,21 @@ questionsRouter.post('/', verifyAuthToken, (req, res) => {
   }
 });
 
+// Add 5 new questions
+// questionsRouter.post('/five', verifyAuthToken, (req, res) => {
+//   const { body } = req;
+
+//   if (body.questions && body.questions.length) {
+//     body.questions.map((que) => {
+//       que.problemStatement;
+//     });
+//   } else {
+//     const message = 'Unable to add new questions. Incorrect request body!';
+//     res.status(400).send(message);
+//     logger.error(message);
+//   }
+// });
+
 
 module.exports = {
   questionsRouter,
