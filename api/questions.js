@@ -1,4 +1,5 @@
 const express = require('express');
+const moment = require('moment');
 
 const questionsRouter = express.Router();
 const logger = require('../utils/logger');
@@ -7,13 +8,11 @@ const { UserModel } = require('../models/user');
 const { verifyAuthToken } = require('../utils/verifyToken');
 const utils = require('../utils/commonMethods');
 
-const getCurrentFormattedDate = () => {
-  const todaysDate = new Date();
-  // year-month-date
-  const formattedDate = `${todaysDate.getFullYear()}-${(todaysDate.getMonth()) + 1}-${todaysDate.getDate()}`;
+const DATE_FORMAT = 'YYYY-MM-DD';
 
-  return formattedDate;
-};
+const getDateInCorrectFormat = (date) => {
+  return 
+}
 
 const createNewQueryObject = (body) => {
   const obj = {};
@@ -27,7 +26,7 @@ const createNewQueryObject = (body) => {
   return obj;
 };
 
-const getUsersAnswerString = (usersAnswer) => {
+const getAnswerString = (usersAnswer) => {
   const usersAns = Object.keys(usersAnswer).map((key) => (usersAnswer[key] ? key : ''));
   const usersSolution = usersAns.sort().join('');
 
@@ -107,6 +106,71 @@ const updateUsersResponseInDB = async (isAnswerCorrect, userId, questionId, user
   }
 });
 
+/* check if there are five questions
+ * check that each question has a problem statement
+ * check that each question has 4 options
+ * check that each question's answer has a value
+ * check that a date is selected which is not in past
+ * check that a class is selected
+ * Returns:
+ * {
+ *    status: <true or false>,
+ *    msg: <Err msg if status is false>
+ * }
+*/
+const isPostFiveQuestionsBodyValid = (body) => {
+  const result = { status: true, msg: 'Body looks good' };
+
+  // check if there are five questions
+  if (body.questions && body.questions.length === 5) {
+    body.questions.forEach((que) => {
+      // check that each question has a problem statement
+      if (que.problemStatement.trim() === '') {
+        result.status = false;
+        result.msg = 'Question is missing the problem statement!';
+      }
+
+      // check that each question has 4 options
+      if (
+        que.options.a.trim() === ''
+        || que.options.b.trim() === ''
+        || que.options.c.trim() === ''
+        || que.options.d.trim() === '') {
+        result.status = false;
+        result.msg = 'Question is missing some of the options!';
+      }
+
+      // check that each question's answer has a value
+      if (!(que.answer.a || que.answer.b || que.answer.c || que.answer.d)) {
+        result.status = false;
+        result.message = 'Question is missing the correct answer!';
+      }
+    });
+
+    // check that a date is selected which is not in past
+    if (body.date) {
+      const currentDate = moment().format(DATE_FORMAT);;
+      const selectedDate = moment(body.date).format(DATE_FORMAT);
+
+      if (currentDate >= selectedDate) {
+        result.status = false;
+        result.msg = 'Make sure that you are selecting a date in the future!';
+      }
+    }
+
+    // check that a class is selected
+    if (body.class.trim() === '') {
+      result.status = false;
+      result.msg = 'There needs to be some value for class!';
+    }
+  } else {
+    result.status = false;
+    result.msg = 'Unable to add new questions. Incorrect request body! Also, make sure to add exactly 5 questions!';
+  }
+
+  return result;
+};
+
 // Get all questions
 questionsRouter.get('/', verifyAuthToken, (req, res) => {
   QuestionModel.find({})
@@ -120,9 +184,9 @@ questionsRouter.get('/', verifyAuthToken, (req, res) => {
 
 // Get today's questions
 questionsRouter.get('/today', verifyAuthToken, (req, res) => {
-  const todaysDate = getCurrentFormattedDate();
+  const todaysDate = moment().format(DATE_FORMAT);
 
-  QuestionModel.find({ dateAsked: todaysDate }, '_id problemStatement options difficultyLevel')
+  QuestionModel.find({ date: todaysDate }, '_id problemStatement options difficultyLevel')
     .then((response) => {
       res.send(response);
     })
@@ -131,19 +195,20 @@ questionsRouter.get('/today', verifyAuthToken, (req, res) => {
     });
 });
 
-// Submit user's answer
-// Return status:
-// 200 => Correct Answer
-// 204 => Incorrect Answer
-// 208 => Number of tries > 3
-// 404 => Error
+/* Submit user's answer
+ * Return status:
+ * 200 => Correct Answer
+ * 204 => Incorrect Answer
+ * 208 => Number of tries > 3
+ * 404 => Error
+*/
 questionsRouter.post('/submit', verifyAuthToken, async (req, res) => {
   const { body } = req;
   const questionId = body.question._id;
   const { usersAnswer } = body;
   const userId = req.user.id;
 
-  const usersAnswerString = getUsersAnswerString(usersAnswer);
+  const usersAnswerString = getAnswerString(usersAnswer);
 
   try {
     const isAnswerCorrect = await isUsersAnswerCorrect(questionId, usersAnswerString);
@@ -164,7 +229,6 @@ questionsRouter.post('/submit', verifyAuthToken, async (req, res) => {
     res.status(404).send(error);
   }
 });
-
 
 // Add a new question
 questionsRouter.post('/', verifyAuthToken, (req, res) => {
@@ -190,20 +254,60 @@ questionsRouter.post('/', verifyAuthToken, (req, res) => {
   }
 });
 
-// Add 5 new questions
-// questionsRouter.post('/five', verifyAuthToken, (req, res) => {
-//   const { body } = req;
+/* Add 5 new questions
+ * Acceptable Body format:
+ * {
+ *    questions: [
+ *      {
+ *        problemStatement: String,
+ *        options: {
+ *          a: String,
+ *          b: String,
+ *          c: String,
+ *          d: String,
+ *        },
+ *        answer: {
+ *          a: String,
+ *          b: String,
+ *          c: String,
+ *          d: String,
+ *        },
+ *      }
+ *    ],
+ *    date: Date,
+ *    class: String
+ * }
+*/
+questionsRouter.post('/five', async (req, res) => {
+  const { body } = req;
+  const questionsArr = [];
 
-//   if (body.questions && body.questions.length) {
-//     body.questions.map((que) => {
-//       que.problemStatement;
-//     });
-//   } else {
-//     const message = 'Unable to add new questions. Incorrect request body!';
-//     res.status(400).send(message);
-//     logger.error(message);
-//   }
-// });
+  try {
+    const { status, msg } = isPostFiveQuestionsBodyValid(body);
+
+    if (status) {
+      body.questions.forEach((que) => {
+        const questionObject = createNewQueryObject(que);
+        questionObject.date = body.date;
+        questionObject.class = body.class;
+
+        questionsArr.push(questionObject);
+      });
+
+      console.log('sunny: ', questionsArr);
+      await QuestionModel.insertMany(questionsArr);
+      // Questions created successfully
+      const successMsg = 'Questions added successfully';
+      logger.info(successMsg);
+      res.status(201).send(successMsg);
+    } else {
+      throw new Error(msg);
+    }
+  } catch (err) {
+    res.status(400).send(err.toString());
+    logger.error(err.toString());
+  }
+});
 
 
 module.exports = {

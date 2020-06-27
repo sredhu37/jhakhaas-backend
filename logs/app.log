@@ -1,0 +1,1084 @@
+[2020-06-21T10:41:03.941] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-21T10:41:05.452] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-21T10:42:19.756] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T10:42:19.757] [INFO] Logging:  - Method: GET
+[2020-06-21T10:42:19.758] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T10:42:19.760] [INFO] Logging:  - Body:   {}
+[2020-06-21T10:42:19.761] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T10:43:06.513] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T10:43:06.514] [INFO] Logging:  - Method: GET
+[2020-06-21T10:43:06.514] [INFO] Logging:  - Path:   /auth/google/login
+[2020-06-21T10:43:06.515] [INFO] Logging:  - Body:   {}
+[2020-06-21T10:43:06.517] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T10:43:11.374] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T10:43:11.375] [INFO] Logging:  - Method: GET
+[2020-06-21T10:43:11.376] [INFO] Logging:  - Path:   /auth/google/callback
+[2020-06-21T10:43:11.378] [INFO] Logging:  - Body:   {}
+[2020-06-21T10:43:11.380] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T10:43:11.835] [INFO] Logging:  - Profile: {"id":"107414121620518369845","displayName":"Sunny Redhu","name":{"familyName":"Redhu","givenName":"Sunny"},"emails":[{"value":"redhusunny1994@gmail.com","verified":true}],"photos":[{"value":"https://lh3.googleusercontent.com/a-/AOh14GhXmO1tFFdPPSJBhdj25bSPrM4ei-fKExaPN_h7sQ"}],"provider":"google","_raw":"{\n  \"sub\": \"107414121620518369845\",\n  \"name\": \"Sunny Redhu\",\n  \"given_name\": \"Sunny\",\n  \"family_name\": \"Redhu\",\n  \"picture\": \"https://lh3.googleusercontent.com/a-/AOh14GhXmO1tFFdPPSJBhdj25bSPrM4ei-fKExaPN_h7sQ\",\n  \"email\": \"redhusunny1994@gmail.com\",\n  \"email_verified\": true,\n  \"locale\": \"en\"\n}","_json":{"sub":"107414121620518369845","name":"Sunny Redhu","given_name":"Sunny","family_name":"Redhu","picture":"https://lh3.googleusercontent.com/a-/AOh14GhXmO1tFFdPPSJBhdj25bSPrM4ei-fKExaPN_h7sQ","email":"redhusunny1994@gmail.com","email_verified":true,"locale":"en"}}
+[2020-06-21T10:43:12.096] [INFO] Logging:  - User redhusunny1994@gmail.com already exists. Logging in.
+[2020-06-21T10:43:12.557] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T10:43:12.557] [INFO] Logging:  - Method: GET
+[2020-06-21T10:43:12.558] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T10:43:12.559] [INFO] Logging:  - Body:   {}
+[2020-06-21T10:43:12.560] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T10:43:13.147] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T10:43:13.149] [INFO] Logging:  - Method: GET
+[2020-06-21T10:43:13.150] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T10:43:13.151] [INFO] Logging:  - Body:   {}
+[2020-06-21T10:43:13.152] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T10:43:13.164] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T10:43:13.165] [INFO] Logging:  - Method: GET
+[2020-06-21T10:43:13.166] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-21T10:43:13.167] [INFO] Logging:  - Body:   {}
+[2020-06-21T10:43:13.168] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T10:53:59.014] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T10:53:59.058] [INFO] Logging:  - Method: GET
+[2020-06-21T10:53:59.059] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T10:53:59.061] [INFO] Logging:  - Body:   {}
+[2020-06-21T10:53:59.062] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T10:54:00.919] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T10:54:00.921] [INFO] Logging:  - Method: GET
+[2020-06-21T10:54:00.923] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T10:54:00.924] [INFO] Logging:  - Body:   {}
+[2020-06-21T10:54:00.930] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T10:54:01.037] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T10:54:01.038] [INFO] Logging:  - Method: GET
+[2020-06-21T10:54:01.040] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-21T10:54:01.044] [INFO] Logging:  - Body:   {}
+[2020-06-21T10:54:01.049] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T10:54:58.402] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T10:54:58.403] [INFO] Logging:  - Method: GET
+[2020-06-21T10:54:58.403] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T10:54:58.405] [INFO] Logging:  - Body:   {}
+[2020-06-21T10:54:58.407] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T10:54:59.531] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T10:54:59.532] [INFO] Logging:  - Method: GET
+[2020-06-21T10:54:59.533] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T10:54:59.534] [INFO] Logging:  - Body:   {}
+[2020-06-21T10:54:59.536] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T10:54:59.577] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T10:54:59.578] [INFO] Logging:  - Method: GET
+[2020-06-21T10:54:59.578] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-21T10:54:59.579] [INFO] Logging:  - Body:   {}
+[2020-06-21T10:54:59.580] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T10:55:49.074] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T10:55:49.076] [INFO] Logging:  - Method: GET
+[2020-06-21T10:55:49.077] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T10:55:49.081] [INFO] Logging:  - Body:   {}
+[2020-06-21T10:55:49.081] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T10:55:49.787] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T10:55:49.788] [INFO] Logging:  - Method: GET
+[2020-06-21T10:55:49.789] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T10:55:49.793] [INFO] Logging:  - Body:   {}
+[2020-06-21T10:55:49.797] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T10:55:49.891] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T10:55:49.896] [INFO] Logging:  - Method: GET
+[2020-06-21T10:55:49.897] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-21T10:55:49.898] [INFO] Logging:  - Body:   {}
+[2020-06-21T10:55:49.900] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T10:56:51.132] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T10:56:51.133] [INFO] Logging:  - Method: GET
+[2020-06-21T10:56:51.134] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T10:56:51.135] [INFO] Logging:  - Body:   {}
+[2020-06-21T10:56:51.135] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T10:56:51.871] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T10:56:51.873] [INFO] Logging:  - Method: GET
+[2020-06-21T10:56:51.874] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T10:56:51.876] [INFO] Logging:  - Body:   {}
+[2020-06-21T10:56:51.877] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T10:56:51.890] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T10:56:51.890] [INFO] Logging:  - Method: GET
+[2020-06-21T10:56:51.891] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-21T10:56:51.892] [INFO] Logging:  - Body:   {}
+[2020-06-21T10:56:51.893] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T10:59:08.808] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T10:59:08.810] [INFO] Logging:  - Method: GET
+[2020-06-21T10:59:08.811] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-21T10:59:08.811] [INFO] Logging:  - Body:   {}
+[2020-06-21T10:59:08.812] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T10:59:08.884] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T10:59:08.885] [INFO] Logging:  - Method: GET
+[2020-06-21T10:59:08.887] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T10:59:08.889] [INFO] Logging:  - Body:   {}
+[2020-06-21T10:59:08.889] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T10:59:09.961] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T10:59:09.961] [INFO] Logging:  - Method: GET
+[2020-06-21T10:59:09.962] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T10:59:09.962] [INFO] Logging:  - Body:   {}
+[2020-06-21T10:59:09.964] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T10:59:10.017] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T10:59:10.018] [INFO] Logging:  - Method: GET
+[2020-06-21T10:59:10.019] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-21T10:59:10.021] [INFO] Logging:  - Body:   {}
+[2020-06-21T10:59:10.023] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T10:59:41.581] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T10:59:41.581] [INFO] Logging:  - Method: GET
+[2020-06-21T10:59:41.582] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-21T10:59:41.583] [INFO] Logging:  - Body:   {}
+[2020-06-21T10:59:41.584] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T10:59:41.718] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T10:59:41.725] [INFO] Logging:  - Method: GET
+[2020-06-21T10:59:41.726] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T10:59:41.727] [INFO] Logging:  - Body:   {}
+[2020-06-21T10:59:41.728] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T10:59:42.461] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T10:59:42.471] [INFO] Logging:  - Method: GET
+[2020-06-21T10:59:42.472] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T10:59:42.473] [INFO] Logging:  - Body:   {}
+[2020-06-21T10:59:42.475] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T10:59:42.503] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T10:59:42.504] [INFO] Logging:  - Method: GET
+[2020-06-21T10:59:42.505] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-21T10:59:42.506] [INFO] Logging:  - Body:   {}
+[2020-06-21T10:59:42.507] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T11:17:32.492] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T11:17:32.493] [INFO] Logging:  - Method: GET
+[2020-06-21T11:17:32.493] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-21T11:17:32.495] [INFO] Logging:  - Body:   {}
+[2020-06-21T11:17:32.496] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T11:17:32.606] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T11:17:32.607] [INFO] Logging:  - Method: GET
+[2020-06-21T11:17:32.607] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T11:17:32.608] [INFO] Logging:  - Body:   {}
+[2020-06-21T11:17:32.609] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T11:17:34.278] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T11:17:34.279] [INFO] Logging:  - Method: GET
+[2020-06-21T11:17:34.282] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T11:17:34.284] [INFO] Logging:  - Body:   {}
+[2020-06-21T11:17:34.285] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T11:17:34.294] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T11:17:34.295] [INFO] Logging:  - Method: GET
+[2020-06-21T11:17:34.296] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-21T11:17:34.296] [INFO] Logging:  - Body:   {}
+[2020-06-21T11:17:34.297] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T11:17:58.181] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T11:17:58.182] [INFO] Logging:  - Method: GET
+[2020-06-21T11:17:58.182] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-21T11:17:58.183] [INFO] Logging:  - Body:   {}
+[2020-06-21T11:17:58.185] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T11:17:58.219] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T11:17:58.219] [INFO] Logging:  - Method: GET
+[2020-06-21T11:17:58.220] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T11:17:58.221] [INFO] Logging:  - Body:   {}
+[2020-06-21T11:17:58.221] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T11:17:58.576] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T11:17:58.577] [INFO] Logging:  - Method: GET
+[2020-06-21T11:17:58.578] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T11:17:58.579] [INFO] Logging:  - Body:   {}
+[2020-06-21T11:17:58.580] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T11:17:58.666] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T11:17:58.666] [INFO] Logging:  - Method: GET
+[2020-06-21T11:17:58.667] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-21T11:17:58.668] [INFO] Logging:  - Body:   {}
+[2020-06-21T11:17:58.669] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T11:19:19.214] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T11:19:19.214] [INFO] Logging:  - Method: GET
+[2020-06-21T11:19:19.215] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-21T11:19:19.216] [INFO] Logging:  - Body:   {}
+[2020-06-21T11:19:19.217] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T11:19:19.257] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T11:19:19.258] [INFO] Logging:  - Method: GET
+[2020-06-21T11:19:19.259] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T11:19:19.259] [INFO] Logging:  - Body:   {}
+[2020-06-21T11:19:19.260] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T11:19:19.564] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T11:19:19.565] [INFO] Logging:  - Method: GET
+[2020-06-21T11:19:19.565] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T11:19:19.566] [INFO] Logging:  - Body:   {}
+[2020-06-21T11:19:19.567] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T11:19:19.582] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T11:19:19.582] [INFO] Logging:  - Method: GET
+[2020-06-21T11:19:19.583] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-21T11:19:19.584] [INFO] Logging:  - Body:   {}
+[2020-06-21T11:19:19.585] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T11:20:18.363] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T11:20:18.364] [INFO] Logging:  - Method: GET
+[2020-06-21T11:20:18.365] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-21T11:20:18.366] [INFO] Logging:  - Body:   {}
+[2020-06-21T11:20:18.367] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T11:20:18.441] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T11:20:18.444] [INFO] Logging:  - Method: GET
+[2020-06-21T11:20:18.444] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T11:20:18.446] [INFO] Logging:  - Body:   {}
+[2020-06-21T11:20:18.446] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T11:20:18.748] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T11:20:18.749] [INFO] Logging:  - Method: GET
+[2020-06-21T11:20:18.750] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T11:20:18.751] [INFO] Logging:  - Body:   {}
+[2020-06-21T11:20:18.753] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T11:20:18.766] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T11:20:18.767] [INFO] Logging:  - Method: GET
+[2020-06-21T11:20:18.768] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-21T11:20:18.769] [INFO] Logging:  - Body:   {}
+[2020-06-21T11:20:18.770] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T11:22:03.759] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T11:22:03.764] [INFO] Logging:  - Method: GET
+[2020-06-21T11:22:03.767] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-21T11:22:03.767] [INFO] Logging:  - Body:   {}
+[2020-06-21T11:22:03.768] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T11:22:04.507] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T11:22:04.530] [INFO] Logging:  - Method: GET
+[2020-06-21T11:22:04.531] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T11:22:04.556] [INFO] Logging:  - Body:   {}
+[2020-06-21T11:22:04.559] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T11:22:05.847] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T11:22:05.848] [INFO] Logging:  - Method: GET
+[2020-06-21T11:22:05.849] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T11:22:05.850] [INFO] Logging:  - Body:   {}
+[2020-06-21T11:22:05.851] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T11:22:06.454] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T11:22:06.455] [INFO] Logging:  - Method: GET
+[2020-06-21T11:22:06.455] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-21T11:22:06.457] [INFO] Logging:  - Body:   {}
+[2020-06-21T11:22:06.459] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T11:55:33.963] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-21T11:55:35.548] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-21T11:57:54.325] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-21T11:57:55.940] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-21T12:13:24.414] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-21T12:13:26.031] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-21T12:13:32.437] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-21T12:13:33.929] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-21T12:13:47.396] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-21T12:13:48.940] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-21T12:14:08.549] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-21T12:14:10.069] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-21T12:14:18.205] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-21T12:14:19.696] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-21T12:15:30.871] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-21T12:15:32.431] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-21T12:16:06.244] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-21T12:16:07.718] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-21T12:51:11.668] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-21T12:51:13.727] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-21T12:58:57.056] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-21T12:58:59.028] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-21T12:59:16.165] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-21T12:59:18.934] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-21T12:59:20.860] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-21T12:59:44.752] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-21T12:59:47.371] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-21T13:00:06.291] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-21T13:00:08.191] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-21T13:00:41.083] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-21T13:00:42.930] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-21T13:01:22.106] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-21T13:01:23.827] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-21T13:01:27.602] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-21T13:01:29.566] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-21T13:01:31.498] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-21T13:01:37.559] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-21T13:01:39.386] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-21T13:07:34.600] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-21T13:07:36.540] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-21T13:08:02.489] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-21T13:08:04.388] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-21T13:08:26.830] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-21T13:08:28.680] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-21T13:08:32.836] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-21T13:08:34.826] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-21T13:09:01.253] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-21T13:09:03.196] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-21T13:10:20.871] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-21T13:10:23.623] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-21T13:10:25.739] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-21T13:10:38.036] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-21T13:10:39.865] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-21T13:11:40.991] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T13:11:40.992] [INFO] Logging:  - Method: GET
+[2020-06-21T13:11:40.993] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T13:11:40.995] [INFO] Logging:  - Body:   {}
+[2020-06-21T13:11:40.996] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T13:11:41.697] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T13:11:41.698] [INFO] Logging:  - Method: GET
+[2020-06-21T13:11:41.699] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T13:11:41.700] [INFO] Logging:  - Body:   {}
+[2020-06-21T13:11:41.701] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T13:11:41.719] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T13:11:41.719] [INFO] Logging:  - Method: GET
+[2020-06-21T13:11:41.720] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-21T13:11:41.721] [INFO] Logging:  - Body:   {}
+[2020-06-21T13:11:41.722] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T13:12:55.076] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T13:12:55.076] [INFO] Logging:  - Method: GET
+[2020-06-21T13:12:55.077] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-21T13:12:55.078] [INFO] Logging:  - Body:   {}
+[2020-06-21T13:12:55.079] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T13:12:55.166] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T13:12:55.167] [INFO] Logging:  - Method: GET
+[2020-06-21T13:12:55.167] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T13:12:55.168] [INFO] Logging:  - Body:   {}
+[2020-06-21T13:12:55.169] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T13:12:55.615] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T13:12:55.616] [INFO] Logging:  - Method: GET
+[2020-06-21T13:12:55.617] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T13:12:55.617] [INFO] Logging:  - Body:   {}
+[2020-06-21T13:12:55.619] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T13:12:55.634] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T13:12:55.635] [INFO] Logging:  - Method: GET
+[2020-06-21T13:12:55.636] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-21T13:12:55.637] [INFO] Logging:  - Body:   {}
+[2020-06-21T13:12:55.637] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T13:13:26.407] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T13:13:26.408] [INFO] Logging:  - Method: GET
+[2020-06-21T13:13:26.408] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-21T13:13:26.410] [INFO] Logging:  - Body:   {}
+[2020-06-21T13:13:26.412] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T13:13:27.061] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T13:13:27.061] [INFO] Logging:  - Method: GET
+[2020-06-21T13:13:27.062] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T13:13:27.063] [INFO] Logging:  - Body:   {}
+[2020-06-21T13:13:27.064] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T13:13:27.387] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T13:13:27.388] [INFO] Logging:  - Method: GET
+[2020-06-21T13:13:27.388] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T13:13:27.389] [INFO] Logging:  - Body:   {}
+[2020-06-21T13:13:27.390] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T13:13:27.396] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T13:13:27.398] [INFO] Logging:  - Method: GET
+[2020-06-21T13:13:27.399] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-21T13:13:27.400] [INFO] Logging:  - Body:   {}
+[2020-06-21T13:13:27.401] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T13:13:39.745] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T13:13:39.746] [INFO] Logging:  - Method: GET
+[2020-06-21T13:13:39.747] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-21T13:13:39.748] [INFO] Logging:  - Body:   {}
+[2020-06-21T13:13:39.749] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T13:13:39.773] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T13:13:39.773] [INFO] Logging:  - Method: GET
+[2020-06-21T13:13:39.775] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T13:13:39.776] [INFO] Logging:  - Body:   {}
+[2020-06-21T13:13:39.778] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T13:13:40.860] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T13:13:40.860] [INFO] Logging:  - Method: GET
+[2020-06-21T13:13:40.861] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T13:13:40.862] [INFO] Logging:  - Body:   {}
+[2020-06-21T13:13:40.863] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T13:13:40.882] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T13:13:40.882] [INFO] Logging:  - Method: GET
+[2020-06-21T13:13:40.883] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-21T13:13:40.884] [INFO] Logging:  - Body:   {}
+[2020-06-21T13:13:40.885] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T13:14:26.755] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T13:14:26.756] [INFO] Logging:  - Method: GET
+[2020-06-21T13:14:26.758] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-21T13:14:26.759] [INFO] Logging:  - Body:   {}
+[2020-06-21T13:14:26.760] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T13:14:26.811] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T13:14:26.811] [INFO] Logging:  - Method: GET
+[2020-06-21T13:14:26.812] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T13:14:26.813] [INFO] Logging:  - Body:   {}
+[2020-06-21T13:14:26.814] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T13:14:27.762] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T13:14:27.763] [INFO] Logging:  - Method: GET
+[2020-06-21T13:14:27.764] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T13:14:27.765] [INFO] Logging:  - Body:   {}
+[2020-06-21T13:14:27.767] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T13:14:27.786] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T13:14:27.786] [INFO] Logging:  - Method: GET
+[2020-06-21T13:14:27.787] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-21T13:14:27.788] [INFO] Logging:  - Body:   {}
+[2020-06-21T13:14:27.789] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T13:15:33.188] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T13:15:33.189] [INFO] Logging:  - Method: GET
+[2020-06-21T13:15:33.189] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-21T13:15:33.190] [INFO] Logging:  - Body:   {}
+[2020-06-21T13:15:33.191] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T13:15:33.583] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T13:15:33.584] [INFO] Logging:  - Method: GET
+[2020-06-21T13:15:33.585] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T13:15:33.586] [INFO] Logging:  - Body:   {}
+[2020-06-21T13:15:33.587] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T13:15:34.024] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T13:15:34.025] [INFO] Logging:  - Method: GET
+[2020-06-21T13:15:34.026] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-21T13:15:34.028] [INFO] Logging:  - Body:   {}
+[2020-06-21T13:15:34.030] [INFO] Logging:  - ---Request ends here---
+[2020-06-21T13:15:34.048] [INFO] Logging:  - ---Request begins here---
+[2020-06-21T13:15:34.049] [INFO] Logging:  - Method: GET
+[2020-06-21T13:15:34.050] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-21T13:15:34.052] [INFO] Logging:  - Body:   {}
+[2020-06-21T13:15:34.053] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T11:21:18.245] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:21:19.965] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:21:47.933] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T11:21:47.935] [INFO] Logging:  - Method: GET
+[2020-06-27T11:21:47.935] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-27T11:21:47.936] [INFO] Logging:  - Body:   {}
+[2020-06-27T11:21:47.937] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T11:22:43.847] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T11:22:43.848] [INFO] Logging:  - Method: GET
+[2020-06-27T11:22:43.849] [INFO] Logging:  - Path:   /auth/google/login
+[2020-06-27T11:22:43.850] [INFO] Logging:  - Body:   {}
+[2020-06-27T11:22:43.852] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T11:22:53.084] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T11:22:53.086] [INFO] Logging:  - Method: GET
+[2020-06-27T11:22:53.090] [INFO] Logging:  - Path:   /auth/google/callback
+[2020-06-27T11:22:53.148] [INFO] Logging:  - Body:   {}
+[2020-06-27T11:22:53.157] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T11:22:53.734] [INFO] Logging:  - Profile: {"id":"107414121620518369845","displayName":"Sunny Redhu","name":{"familyName":"Redhu","givenName":"Sunny"},"emails":[{"value":"redhusunny1994@gmail.com","verified":true}],"photos":[{"value":"https://lh3.googleusercontent.com/a-/AOh14GhXmO1tFFdPPSJBhdj25bSPrM4ei-fKExaPN_h7sQ"}],"provider":"google","_raw":"{\n  \"sub\": \"107414121620518369845\",\n  \"name\": \"Sunny Redhu\",\n  \"given_name\": \"Sunny\",\n  \"family_name\": \"Redhu\",\n  \"picture\": \"https://lh3.googleusercontent.com/a-/AOh14GhXmO1tFFdPPSJBhdj25bSPrM4ei-fKExaPN_h7sQ\",\n  \"email\": \"redhusunny1994@gmail.com\",\n  \"email_verified\": true,\n  \"locale\": \"en\"\n}","_json":{"sub":"107414121620518369845","name":"Sunny Redhu","given_name":"Sunny","family_name":"Redhu","picture":"https://lh3.googleusercontent.com/a-/AOh14GhXmO1tFFdPPSJBhdj25bSPrM4ei-fKExaPN_h7sQ","email":"redhusunny1994@gmail.com","email_verified":true,"locale":"en"}}
+[2020-06-27T11:22:54.177] [INFO] Logging:  - User redhusunny1994@gmail.com already exists. Logging in.
+[2020-06-27T11:22:54.711] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T11:22:54.712] [INFO] Logging:  - Method: GET
+[2020-06-27T11:22:54.713] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-27T11:22:54.713] [INFO] Logging:  - Body:   {}
+[2020-06-27T11:22:54.714] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T11:22:55.285] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T11:22:55.286] [INFO] Logging:  - Method: GET
+[2020-06-27T11:22:55.288] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-06-27T11:22:55.289] [INFO] Logging:  - Body:   {}
+[2020-06-27T11:22:55.290] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T11:22:55.315] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T11:22:55.316] [INFO] Logging:  - Method: GET
+[2020-06-27T11:22:55.317] [INFO] Logging:  - Path:   /api/users/profile
+[2020-06-27T11:22:55.319] [INFO] Logging:  - Body:   {}
+[2020-06-27T11:22:55.320] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T11:28:43.792] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T11:28:43.793] [INFO] Logging:  - Method: POST
+[2020-06-27T11:28:43.795] [INFO] Logging:  - Path:   /api/questions/five
+[2020-06-27T11:28:43.816] [INFO] Logging:  - Body:   {
+  questions: [
+    { problemStatement: 'String', options: [Object], answer: [Object] }
+  ],
+  date: 'Date',
+  class: 'String'
+}
+[2020-06-27T11:28:43.839] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T11:28:43.863] [ERROR] Logging:  - Error
+[2020-06-27T11:30:45.484] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:30:47.236] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:30:56.952] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T11:30:56.954] [INFO] Logging:  - Method: POST
+[2020-06-27T11:30:56.974] [INFO] Logging:  - Path:   /api/questions/five
+[2020-06-27T11:30:56.978] [INFO] Logging:  - Body:   {
+  questions: [
+    { problemStatement: 'String', options: [Object], answer: [Object] }
+  ],
+  date: 'Date',
+  class: 'String'
+}
+[2020-06-27T11:30:56.999] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T11:30:57.061] [ERROR] Logging:  - Error
+[2020-06-27T11:31:54.617] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:31:56.356] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:32:33.135] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:32:34.774] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:32:37.143] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T11:32:37.144] [INFO] Logging:  - Method: POST
+[2020-06-27T11:32:37.146] [INFO] Logging:  - Path:   /api/questions/five
+[2020-06-27T11:32:37.177] [INFO] Logging:  - Body:   {
+  questions: [
+    { problemStatement: 'String', options: [Object], answer: [Object] }
+  ],
+  date: 'Date',
+  class: 'String'
+}
+[2020-06-27T11:32:37.210] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T11:32:37.229] [ERROR] Logging:  - Error
+[2020-06-27T11:32:56.418] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:32:58.146] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:33:08.898] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:33:10.537] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:33:13.320] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T11:33:13.322] [INFO] Logging:  - Method: POST
+[2020-06-27T11:33:13.326] [INFO] Logging:  - Path:   /api/questions/five
+[2020-06-27T11:33:13.409] [INFO] Logging:  - Body:   {
+  questions: [
+    { problemStatement: 'String', options: [Object], answer: [Object] }
+  ],
+  date: 'Date',
+  class: 'String'
+}
+[2020-06-27T11:33:13.424] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T11:33:13.465] [ERROR] Logging:  - ReferenceError: status is not defined
+[2020-06-27T11:33:23.681] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:33:25.327] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:33:35.021] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:33:36.661] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:33:39.018] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T11:33:39.019] [INFO] Logging:  - Method: POST
+[2020-06-27T11:33:39.020] [INFO] Logging:  - Path:   /api/questions/five
+[2020-06-27T11:33:39.021] [INFO] Logging:  - Body:   {
+  questions: [
+    { problemStatement: 'String', options: [Object], answer: [Object] }
+  ],
+  date: 'Date',
+  class: 'String'
+}
+[2020-06-27T11:33:39.039] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T11:33:39.090] [ERROR] Logging:  - ReferenceError: status is not defined
+[2020-06-27T11:34:09.643] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:34:11.386] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:34:14.032] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T11:34:14.035] [INFO] Logging:  - Method: POST
+[2020-06-27T11:34:14.037] [INFO] Logging:  - Path:   /api/questions/five
+[2020-06-27T11:34:14.062] [INFO] Logging:  - Body:   {
+  questions: [
+    { problemStatement: 'String', options: [Object], answer: [Object] }
+  ],
+  date: 'Date',
+  class: 'String'
+}
+[2020-06-27T11:34:14.127] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T11:34:14.158] [ERROR] Logging:  - ReferenceError: status is not defined
+[2020-06-27T11:34:39.666] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:34:41.312] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:34:43.078] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:34:46.299] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:34:47.851] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:34:53.235] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T11:34:53.236] [INFO] Logging:  - Method: POST
+[2020-06-27T11:34:53.237] [INFO] Logging:  - Path:   /api/questions/five
+[2020-06-27T11:34:53.238] [INFO] Logging:  - Body:   {
+  questions: [
+    { problemStatement: 'String', options: [Object], answer: [Object] }
+  ],
+  date: 'Date',
+  class: 'String'
+}
+[2020-06-27T11:34:53.265] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T11:34:53.298] [ERROR] Logging:  - ReferenceError: result is not defined
+[2020-06-27T11:35:10.507] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:35:12.245] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:35:14.679] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T11:35:14.681] [INFO] Logging:  - Method: POST
+[2020-06-27T11:35:14.683] [INFO] Logging:  - Path:   /api/questions/five
+[2020-06-27T11:35:14.706] [INFO] Logging:  - Body:   {
+  questions: [
+    { problemStatement: 'String', options: [Object], answer: [Object] }
+  ],
+  date: 'Date',
+  class: 'String'
+}
+[2020-06-27T11:35:14.720] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T11:35:14.736] [ERROR] Logging:  - Error: Unable to add new questions. Incorrect request body! Also, make sure to add exactly 5 questions!
+[2020-06-27T11:36:35.944] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:36:37.794] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:36:59.365] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T11:36:59.367] [INFO] Logging:  - Method: POST
+[2020-06-27T11:36:59.368] [INFO] Logging:  - Path:   /api/questions/five
+[2020-06-27T11:36:59.389] [INFO] Logging:  - Body:   {
+  questions: [
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] }
+  ],
+  date: 'Date',
+  class: 'String'
+}
+[2020-06-27T11:36:59.404] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T11:36:59.425] [ERROR] Logging:  - TypeError: selectedDate.getTime is not a function
+[2020-06-27T11:39:52.912] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:39:54.997] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:42:19.598] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:42:21.344] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:42:28.472] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:42:30.130] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:42:36.905] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:42:38.483] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:42:45.292] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:42:47.049] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:42:49.781] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:42:51.441] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:43:11.089] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:43:12.654] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:44:07.526] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:44:09.315] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:44:13.391] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T11:44:13.392] [INFO] Logging:  - Method: POST
+[2020-06-27T11:44:13.393] [INFO] Logging:  - Path:   /api/questions/five
+[2020-06-27T11:44:13.394] [INFO] Logging:  - Body:   {
+  questions: [
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] }
+  ],
+  date: 'Date',
+  class: 'String'
+}
+[2020-06-27T11:44:13.463] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T11:44:47.859] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:44:49.536] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:44:53.011] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T11:44:53.012] [INFO] Logging:  - Method: POST
+[2020-06-27T11:44:53.013] [INFO] Logging:  - Path:   /api/questions/five
+[2020-06-27T11:44:53.037] [INFO] Logging:  - Body:   {
+  questions: [
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] }
+  ],
+  date: 'Date',
+  class: 'String'
+}
+[2020-06-27T11:44:53.064] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T11:44:53.130] [ERROR] Logging:  - TypeError: selectedDate.getTime is not a function
+[2020-06-27T11:45:43.035] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:45:44.785] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:46:23.278] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:46:24.949] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:47:42.526] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T11:47:42.527] [INFO] Logging:  - Method: POST
+[2020-06-27T11:47:42.528] [INFO] Logging:  - Path:   /api/questions/five
+[2020-06-27T11:47:42.558] [INFO] Logging:  - Body:   {
+  questions: [
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] }
+  ],
+  date: 'Sat Jun 27 2020 11:47:17 GMT+0530 (India Standard Time)',
+  class: 'String'
+}
+[2020-06-27T11:47:42.627] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T11:47:42.736] [ERROR] Logging:  - TypeError: selectedDate.getTime is not a function
+[2020-06-27T11:48:00.364] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T11:48:00.365] [INFO] Logging:  - Method: POST
+[2020-06-27T11:48:00.366] [INFO] Logging:  - Path:   /api/questions/five
+[2020-06-27T11:48:00.367] [INFO] Logging:  - Body:   {
+  questions: [
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] }
+  ],
+  date: 'Sat Jun 25 2020 11:47:17 GMT+0530 (India Standard Time)',
+  class: 'String'
+}
+[2020-06-27T11:48:00.401] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T11:48:00.405] [ERROR] Logging:  - TypeError: selectedDate.getTime is not a function
+[2020-06-27T11:48:52.579] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:48:54.356] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:49:22.253] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:49:23.842] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:50:40.993] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:50:42.713] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:51:14.562] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:51:16.209] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:51:19.363] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T11:51:19.365] [INFO] Logging:  - Method: POST
+[2020-06-27T11:51:19.382] [INFO] Logging:  - Path:   /api/questions/five
+[2020-06-27T11:51:19.388] [INFO] Logging:  - Body:   {
+  questions: [
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] }
+  ],
+  date: 'Sat Jun 25 2020 11:47:17 GMT+0530 (India Standard Time)',
+  class: 'String'
+}
+[2020-06-27T11:51:19.448] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T11:51:19.574] [ERROR] Logging:  - ValidationError: dateAsked: Path `dateAsked` is required., solution: Path `solution` is required.
+[2020-06-27T11:52:18.498] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:52:20.230] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:52:56.961] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T11:52:56.963] [INFO] Logging:  - Method: POST
+[2020-06-27T11:52:56.981] [INFO] Logging:  - Path:   /api/questions/five
+[2020-06-27T11:52:56.982] [INFO] Logging:  - Body:   {
+  questions: [
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] }
+  ],
+  date: 'Sat Jun 25 2020 11:47:17 GMT+0530 (India Standard Time)',
+  class: 'String'
+}
+[2020-06-27T11:52:56.991] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T11:52:57.264] [ERROR] Logging:  - ValidationError: dateAsked: Path `dateAsked` is required., solution: Path `solution` is required.
+[2020-06-27T11:53:29.183] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:53:30.924] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:53:56.992] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:53:58.694] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:54:01.242] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T11:54:01.243] [INFO] Logging:  - Method: POST
+[2020-06-27T11:54:01.243] [INFO] Logging:  - Path:   /api/questions/five
+[2020-06-27T11:54:01.244] [INFO] Logging:  - Body:   {
+  questions: [
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] }
+  ],
+  date: 'Sat Jun 25 2020 11:47:17 GMT+0530 (India Standard Time)',
+  class: 'String'
+}
+[2020-06-27T11:54:01.328] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T11:54:01.513] [ERROR] Logging:  - ValidationError: dateAsked: Path `dateAsked` is required., solution: Path `solution` is required.
+[2020-06-27T11:54:30.081] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:54:31.741] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:54:45.593] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:54:47.191] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:54:49.028] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T11:54:49.029] [INFO] Logging:  - Method: POST
+[2020-06-27T11:54:49.030] [INFO] Logging:  - Path:   /api/questions/five
+[2020-06-27T11:54:49.062] [INFO] Logging:  - Body:   {
+  questions: [
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] }
+  ],
+  date: 'Sat Jun 25 2020 11:47:17 GMT+0530 (India Standard Time)',
+  class: 'String'
+}
+[2020-06-27T11:54:49.163] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T11:54:49.479] [ERROR] Logging:  - ValidationError: dateAsked: Path `dateAsked` is required., solution: Path `solution` is required.
+[2020-06-27T11:55:03.342] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:55:04.949] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:55:06.374] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T11:55:06.375] [INFO] Logging:  - Method: POST
+[2020-06-27T11:55:06.376] [INFO] Logging:  - Path:   /api/questions/five
+[2020-06-27T11:55:06.378] [INFO] Logging:  - Body:   {
+  questions: [
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] }
+  ],
+  date: 'Sat Jun 25 2020 11:47:17 GMT+0530 (India Standard Time)',
+  class: 'String'
+}
+[2020-06-27T11:55:06.447] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T11:55:06.699] [ERROR] Logging:  - ValidationError: dateAsked: Path `dateAsked` is required., solution: Path `solution` is required.
+[2020-06-27T11:55:47.823] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T11:55:47.823] [INFO] Logging:  - Method: POST
+[2020-06-27T11:55:47.824] [INFO] Logging:  - Path:   /api/questions/five
+[2020-06-27T11:55:47.825] [INFO] Logging:  - Body:   {
+  questions: [
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] }
+  ],
+  date: '2020-06-25',
+  class: 'String'
+}
+[2020-06-27T11:55:47.848] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T11:55:47.894] [ERROR] Logging:  - ValidationError: dateAsked: Path `dateAsked` is required., solution: Path `solution` is required.
+[2020-06-27T11:55:56.088] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:55:57.778] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:56:01.194] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T11:56:01.198] [INFO] Logging:  - Method: POST
+[2020-06-27T11:56:01.201] [INFO] Logging:  - Path:   /api/questions/five
+[2020-06-27T11:56:01.202] [INFO] Logging:  - Body:   {
+  questions: [
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] }
+  ],
+  date: '2020-06-25',
+  class: 'String'
+}
+[2020-06-27T11:56:01.419] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T11:56:01.553] [ERROR] Logging:  - ValidationError: dateAsked: Path `dateAsked` is required., solution: Path `solution` is required.
+[2020-06-27T11:56:31.470] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:56:33.042] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:57:15.097] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:57:16.870] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:57:22.610] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:57:24.211] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:57:36.607] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:57:38.262] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:57:41.681] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T11:57:41.683] [INFO] Logging:  - Method: POST
+[2020-06-27T11:57:41.684] [INFO] Logging:  - Path:   /api/questions/five
+[2020-06-27T11:57:41.685] [INFO] Logging:  - Body:   {
+  questions: [
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] }
+  ],
+  date: '2020-06-25',
+  class: 'String'
+}
+[2020-06-27T11:57:41.690] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T11:57:41.802] [ERROR] Logging:  - ValidationError: dateAsked: Path `dateAsked` is required., solution: Path `solution` is required.
+[2020-06-27T11:57:59.632] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:58:01.187] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:58:07.779] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T11:58:07.780] [INFO] Logging:  - Method: POST
+[2020-06-27T11:58:07.782] [INFO] Logging:  - Path:   /api/questions/five
+[2020-06-27T11:58:07.785] [INFO] Logging:  - Body:   {
+  questions: [
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] }
+  ],
+  date: '2020-06-25',
+  class: 'String'
+}
+[2020-06-27T11:58:08.047] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T11:58:08.114] [ERROR] Logging:  - Error: Body looks good
+[2020-06-27T11:58:54.905] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:58:56.636] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T11:59:02.080] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T11:59:03.757] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T12:08:13.168] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T12:08:16.873] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T12:08:19.053] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T12:08:19.054] [INFO] Logging:  - Method: POST
+[2020-06-27T12:08:19.056] [INFO] Logging:  - Path:   /api/questions/five
+[2020-06-27T12:08:19.088] [INFO] Logging:  - Body:   {
+  questions: [
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] }
+  ],
+  date: '2020-06-25',
+  class: 'String'
+}
+[2020-06-27T12:08:19.223] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T12:08:19.291] [ERROR] Logging:  - Error: Body looks good
+[2020-06-27T12:10:24.450] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T12:10:27.937] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T12:10:45.522] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T12:10:48.407] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T12:10:51.228] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T12:10:51.229] [INFO] Logging:  - Method: POST
+[2020-06-27T12:10:51.230] [INFO] Logging:  - Path:   /api/questions/five
+[2020-06-27T12:10:51.230] [INFO] Logging:  - Body:   {
+  questions: [
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] }
+  ],
+  date: '2020-06-25',
+  class: 'String'
+}
+[2020-06-27T12:10:51.237] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T12:10:51.266] [ERROR] Logging:  - Error: Body looks good
+[2020-06-27T12:11:04.964] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T12:11:07.849] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T12:11:14.318] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T12:11:17.222] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T12:11:45.870] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T12:11:49.076] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T12:11:51.864] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T12:11:51.865] [INFO] Logging:  - Method: POST
+[2020-06-27T12:11:51.866] [INFO] Logging:  - Path:   /api/questions/five
+[2020-06-27T12:11:51.867] [INFO] Logging:  - Body:   {
+  questions: [
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] }
+  ],
+  date: '2020-06-25',
+  class: 'String'
+}
+[2020-06-27T12:11:51.874] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T12:11:51.891] [ERROR] Logging:  - Error: Make sure you are not selecting a date in the past!
+[2020-06-27T12:12:14.470] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T12:12:17.361] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T12:12:20.356] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T12:12:20.357] [INFO] Logging:  - Method: POST
+[2020-06-27T12:12:20.358] [INFO] Logging:  - Path:   /api/questions/five
+[2020-06-27T12:12:20.389] [INFO] Logging:  - Body:   {
+  questions: [
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] }
+  ],
+  date: '2020-06-27',
+  class: 'String'
+}
+[2020-06-27T12:12:20.467] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T12:12:20.543] [ERROR] Logging:  - Error: Make sure you are not selecting a date in the past!
+[2020-06-27T12:12:42.215] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T12:12:45.050] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T12:12:49.879] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T12:12:49.917] [INFO] Logging:  - Method: POST
+[2020-06-27T12:12:49.977] [INFO] Logging:  - Path:   /api/questions/five
+[2020-06-27T12:12:50.008] [INFO] Logging:  - Body:   {
+  questions: [
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] }
+  ],
+  date: '2020-06-28',
+  class: 'String'
+}
+[2020-06-27T12:12:50.033] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T12:12:50.162] [ERROR] Logging:  - ValidationError: dateAsked: Path `dateAsked` is required., solution: Path `solution` is required.
+[2020-06-27T12:13:10.333] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T12:13:13.493] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T12:14:09.987] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T12:14:13.166] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T12:14:18.975] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T12:14:22.136] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T12:14:51.526] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T12:14:54.412] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T12:15:04.032] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T12:15:07.006] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T12:15:08.932] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T12:15:08.937] [INFO] Logging:  - Method: POST
+[2020-06-27T12:15:08.981] [INFO] Logging:  - Path:   /api/questions/five
+[2020-06-27T12:15:08.984] [INFO] Logging:  - Body:   {
+  questions: [
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] }
+  ],
+  date: '2020-06-28',
+  class: 'String'
+}
+[2020-06-27T12:15:09.003] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T12:15:09.052] [ERROR] Logging:  - ValidationError: date: Path `date` is required.
+[2020-06-27T12:16:27.169] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T12:16:30.402] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T12:16:45.945] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T12:16:48.910] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T12:16:51.200] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T12:16:51.201] [INFO] Logging:  - Method: POST
+[2020-06-27T12:16:51.234] [INFO] Logging:  - Path:   /api/questions/five
+[2020-06-27T12:16:51.234] [INFO] Logging:  - Body:   {
+  questions: [
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] }
+  ],
+  date: '2020-06-28',
+  class: 'String'
+}
+[2020-06-27T12:16:51.401] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T12:16:51.500] [ERROR] Logging:  - ValidationError: date: Path `date` is required.
+[2020-06-27T12:17:33.220] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T12:17:36.908] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T12:17:39.334] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T12:17:39.335] [INFO] Logging:  - Method: POST
+[2020-06-27T12:17:39.336] [INFO] Logging:  - Path:   /api/questions/five
+[2020-06-27T12:17:39.364] [INFO] Logging:  - Body:   {
+  questions: [
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] }
+  ],
+  date: '2020-06-28',
+  class: 'String'
+}
+[2020-06-27T12:17:39.450] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T12:17:39.469] [INFO] Logging:  - Questions added successfully
+[2020-06-27T12:18:06.393] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T12:18:09.287] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T12:18:11.002] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T12:18:11.004] [INFO] Logging:  - Method: POST
+[2020-06-27T12:18:11.005] [INFO] Logging:  - Path:   /api/questions/five
+[2020-06-27T12:18:11.006] [INFO] Logging:  - Body:   {
+  questions: [
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] }
+  ],
+  date: '2020-06-28',
+  class: 'String'
+}
+[2020-06-27T12:18:11.272] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T12:18:11.468] [INFO] Logging:  - Questions added successfully
+[2020-06-27T12:18:44.575] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T12:18:48.179] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T12:18:50.708] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T12:18:50.745] [INFO] Logging:  - Method: POST
+[2020-06-27T12:18:50.748] [INFO] Logging:  - Path:   /api/questions/five
+[2020-06-27T12:18:50.753] [INFO] Logging:  - Body:   {
+  questions: [
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] }
+  ],
+  date: '2020-06-28',
+  class: 'String'
+}
+[2020-06-27T12:18:50.761] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T12:18:50.876] [INFO] Logging:  - Questions added successfully
+[2020-06-27T12:18:59.994] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-06-27T12:19:02.849] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-06-27T12:19:07.685] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T12:19:07.686] [INFO] Logging:  - Method: POST
+[2020-06-27T12:19:07.686] [INFO] Logging:  - Path:   /api/questions/five
+[2020-06-27T12:19:07.687] [INFO] Logging:  - Body:   {
+  questions: [
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] }
+  ],
+  date: '2020-06-28',
+  class: 'String'
+}
+[2020-06-27T12:19:07.691] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T12:19:08.235] [ERROR] Logging:  - BulkWriteError: E11000 duplicate key error collection: jhakhaas.questions index: dateAsked_1 dup key: { dateAsked: null }
+[2020-06-27T12:21:47.088] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T12:21:47.089] [INFO] Logging:  - Method: POST
+[2020-06-27T12:21:47.090] [INFO] Logging:  - Path:   /api/questions/five
+[2020-06-27T12:21:47.091] [INFO] Logging:  - Body:   {
+  questions: [
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] }
+  ],
+  date: '2020-06-28',
+  class: 'String'
+}
+[2020-06-27T12:21:47.105] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T12:21:47.581] [INFO] Logging:  - Questions added successfully
+[2020-06-27T12:26:46.671] [INFO] Logging:  - ---Request begins here---
+[2020-06-27T12:26:46.671] [INFO] Logging:  - Method: POST
+[2020-06-27T12:26:46.672] [INFO] Logging:  - Path:   /api/questions/five
+[2020-06-27T12:26:46.672] [INFO] Logging:  - Body:   {
+  questions: [
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] },
+    { problemStatement: 'String', options: [Object], answer: [Object] }
+  ],
+  date: '2020-06-29',
+  class: 'String'
+}
+[2020-06-27T12:26:46.683] [INFO] Logging:  - ---Request ends here---
+[2020-06-27T12:26:47.117] [INFO] Logging:  - Questions added successfully

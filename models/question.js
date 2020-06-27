@@ -13,8 +13,17 @@ const questionSchema = new Schema({
     },
     required: true,
   },
-  solution: { type: String, required: true },
-  dateAsked: { type: String, required: true, unique: true },
+  answer: {
+    type: {
+      a: { type: Boolean, required: true, default: false },
+      b: { type: Boolean, required: true, default: false },
+      c: { type: Boolean, required: true, default: false },
+      d: { type: Boolean, required: true, default: false },
+    },
+    required: true,
+  },
+  solution: { type: String, default: '' },
+  date: { type: String, required: true },
   isAlreadyAsked: { type: Boolean, required: true, default: false },
   class: { type: 'String', required: true, default: 'OTHER' },
   difficultyLevel: {
