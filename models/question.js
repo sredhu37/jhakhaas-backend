@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const questionSchema = new Schema({
+  number: { type: Number, required: true },
   problemStatement: { type: String, required: true },
   options: {
     type: {

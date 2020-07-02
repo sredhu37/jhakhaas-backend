@@ -10,10 +10,6 @@ const utils = require('../utils/commonMethods');
 
 const DATE_FORMAT = 'YYYY-MM-DD';
 
-const getDateInCorrectFormat = (date) => {
-  return 
-}
-
 const createNewQueryObject = (body) => {
   const obj = {};
 
@@ -107,6 +103,7 @@ const updateUsersResponseInDB = async (isAnswerCorrect, userId, questionId, user
 });
 
 /* check if there are five questions
+ * check that each question has a number
  * check that each question has a problem statement
  * check that each question has 4 options
  * check that each question's answer has a value
@@ -124,6 +121,12 @@ const isPostFiveQuestionsBodyValid = (body) => {
   // check if there are five questions
   if (body.questions && body.questions.length === 5) {
     body.questions.forEach((que) => {
+      // check that each question has a number
+      if (!(que.number) || que.number < 1 || que.number > 5) {
+        result.status = false;
+        result.msg = 'Question is missing the question number!';
+      }
+
       // check that each question has a problem statement
       if (que.problemStatement.trim() === '') {
         result.status = false;
@@ -149,7 +152,7 @@ const isPostFiveQuestionsBodyValid = (body) => {
 
     // check that a date is selected which is not in past
     if (body.date) {
-      const currentDate = moment().format(DATE_FORMAT);;
+      const currentDate = moment().format(DATE_FORMAT);
       const selectedDate = moment(body.date).format(DATE_FORMAT);
 
       if (currentDate >= selectedDate) {
@@ -259,6 +262,7 @@ questionsRouter.post('/', verifyAuthToken, (req, res) => {
  * {
  *    questions: [
  *      {
+ *        number: Number,
  *        problemStatement: String,
  *        options: {
  *          a: String,
@@ -267,14 +271,14 @@ questionsRouter.post('/', verifyAuthToken, (req, res) => {
  *          d: String,
  *        },
  *        answer: {
- *          a: String,
- *          b: String,
- *          c: String,
- *          d: String,
+ *          a: Boolean,
+ *          b: Boolean,
+ *          c: Boolean,
+ *          d: Boolean,
  *        },
  *      }
  *    ],
- *    date: Date,
+ *    date: String,
  *    class: String
  * }
 */
@@ -294,7 +298,12 @@ questionsRouter.post('/five', async (req, res) => {
         questionsArr.push(questionObject);
       });
 
-      console.log('sunny: ', questionsArr);
+      const questionsForSpecifiedDateAndClass = await QuestionModel.find({ date: body.date, class: body.class });
+
+      if (questionsForSpecifiedDateAndClass.length) {
+        throw new Error(`Questions for date: ${body.date} and class: ${body.class} already exist. Please choose some other date!`);
+      }
+
       await QuestionModel.insertMany(questionsArr);
       // Questions created successfully
       const successMsg = 'Questions added successfully';
