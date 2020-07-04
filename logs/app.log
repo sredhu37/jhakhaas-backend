@@ -811,3 +811,122 @@
 [2020-07-04T11:35:47.377] [ERROR] Logging:  - Error: Questions for date: 2020-07-04T18:30:00.000Z, class: 5 and subject: Mathematics already exist. Please choose some other date!
 [2020-07-04T11:36:24.004] [INFO] Logging:  - Listening on http://127.0.0.1:4000
 [2020-07-04T11:36:25.733] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-07-04T11:37:17.009] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-07-04T11:37:18.612] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-07-04T11:37:29.593] [INFO] Logging:  - ---Request begins here---
+[2020-07-04T11:37:29.594] [INFO] Logging:  - Method: GET
+[2020-07-04T11:37:29.595] [INFO] Logging:  - Path:   /api/questions/today
+[2020-07-04T11:37:29.596] [INFO] Logging:  - Body:   {}
+[2020-07-04T11:37:29.612] [INFO] Logging:  - ---Request ends here---
+[2020-07-04T11:37:30.569] [INFO] Logging:  - ---Request begins here---
+[2020-07-04T11:37:30.570] [INFO] Logging:  - Method: GET
+[2020-07-04T11:37:30.571] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-07-04T11:37:30.572] [INFO] Logging:  - Body:   {}
+[2020-07-04T11:37:30.590] [INFO] Logging:  - ---Request ends here---
+[2020-07-04T11:38:29.346] [INFO] Logging:  - ---Request begins here---
+[2020-07-04T11:38:29.347] [INFO] Logging:  - Method: GET
+[2020-07-04T11:38:29.348] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-07-04T11:38:29.351] [INFO] Logging:  - Body:   {}
+[2020-07-04T11:38:29.368] [INFO] Logging:  - ---Request ends here---
+[2020-07-04T11:43:19.550] [INFO] Logging:  - ---Request begins here---
+[2020-07-04T11:43:19.551] [INFO] Logging:  - Method: GET
+[2020-07-04T11:43:19.552] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-07-04T11:43:19.555] [INFO] Logging:  - Body:   {}
+[2020-07-04T11:43:19.573] [INFO] Logging:  - ---Request ends here---
+[2020-07-04T11:44:32.964] [INFO] Logging:  - ---Request begins here---
+[2020-07-04T11:44:32.965] [INFO] Logging:  - Method: POST
+[2020-07-04T11:44:32.966] [INFO] Logging:  - Path:   /api/questions/five
+[2020-07-04T11:44:32.967] [INFO] Logging:  - Body:   {
+  questions: [
+    {
+      number: 1,
+      problemStatement: 'sdkf',
+      options: [Object],
+      answer: [Object]
+    },
+    {
+      number: 2,
+      problemStatement: 'klf',
+      options: [Object],
+      answer: [Object],
+      finalAnswersString: ''
+    },
+    {
+      number: 3,
+      problemStatement: 'kjf',
+      options: [Object],
+      answer: [Object],
+      finalAnswersString: ''
+    },
+    {
+      number: 4,
+      problemStatement: 'sf',
+      options: [Object],
+      answer: [Object],
+      finalAnswersString: ''
+    },
+    {
+      number: 5,
+      problemStatement: 'sf',
+      options: [Object],
+      answer: [Object],
+      finalAnswersString: ''
+    }
+  ],
+  date: '2020-07-04T18:30:00.000Z',
+  class: 5,
+  subject: 'Mathematics'
+}
+[2020-07-04T11:44:33.030] [INFO] Logging:  - ---Request ends here---
+[2020-07-04T11:44:33.611] [ERROR] Logging:  - Error: Questions for date: 2020-07-04T18:30:00.000Z, class: 5 and subject: Mathematics already exist. Please choose some other date, class or subject!
+[2020-07-04T11:44:49.254] [INFO] Logging:  - ---Request begins here---
+[2020-07-04T11:44:49.255] [INFO] Logging:  - Method: POST
+[2020-07-04T11:44:49.256] [INFO] Logging:  - Path:   /api/questions/five
+[2020-07-04T11:44:49.257] [INFO] Logging:  - Body:   {
+  questions: [
+    {
+      number: 1,
+      problemStatement: 'sdkf',
+      options: [Object],
+      answer: [Object]
+    },
+    {
+      number: 2,
+      problemStatement: 'klf',
+      options: [Object],
+      answer: [Object],
+      finalAnswersString: ''
+    },
+    {
+      number: 3,
+      problemStatement: 'kjf',
+      options: [Object],
+      answer: [Object],
+      finalAnswersString: ''
+    },
+    {
+      number: 4,
+      problemStatement: 'sf',
+      options: [Object],
+      answer: [Object],
+      finalAnswersString: ''
+    },
+    {
+      number: 5,
+      problemStatement: 'sf',
+      options: [Object],
+      answer: [Object],
+      finalAnswersString: ''
+    }
+  ],
+  date: '2020-07-04T18:30:00.000Z',
+  class: 5,
+  subject: 'Physics'
+}
+[2020-07-04T11:44:49.291] [INFO] Logging:  - ---Request ends here---
+[2020-07-04T11:44:50.065] [INFO] Logging:  - Questions added successfully
+[2020-07-04T11:45:55.577] [INFO] Logging:  - ---Request begins here---
+[2020-07-04T11:45:55.578] [INFO] Logging:  - Method: GET
+[2020-07-04T11:45:55.578] [INFO] Logging:  - Path:   /auth/isLoggedIn
+[2020-07-04T11:45:55.581] [INFO] Logging:  - Body:   {}
+[2020-07-04T11:45:55.594] [INFO] Logging:  - ---Request ends here---
