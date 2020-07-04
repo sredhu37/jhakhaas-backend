@@ -109,6 +109,7 @@ const updateUsersResponseInDB = async (isAnswerCorrect, userId, questionId, user
  * check that each question's answer has a value
  * check that a date is selected which is not in past
  * check that a class is selected
+ * check that a subject is selected
  * Returns:
  * {
  *    status: <true or false>,
@@ -162,9 +163,14 @@ const isPostFiveQuestionsBodyValid = (body) => {
     }
 
     // check that a class is selected
-    if (body.class.trim() === '') {
+    if (!body.class) {
       result.status = false;
       result.msg = 'There needs to be some value for class!';
+    }
+
+    if (body.subject.trim() === '') {
+      result.status = false;
+      result.msg = 'There needs to be some value for subject!';
     }
   } else {
     result.status = false;
@@ -294,14 +300,15 @@ questionsRouter.post('/five', async (req, res) => {
         const questionObject = createNewQueryObject(que);
         questionObject.date = body.date;
         questionObject.class = body.class;
+        questionObject.subject = body.subject;
 
         questionsArr.push(questionObject);
       });
 
-      const questionsForSpecifiedDateAndClass = await QuestionModel.find({ date: body.date, class: body.class });
+      const questionsForSpecifiedDateAndClass = await QuestionModel.find({ date: body.date, class: body.class, subject: body.subject });
 
       if (questionsForSpecifiedDateAndClass.length) {
-        throw new Error(`Questions for date: ${body.date} and class: ${body.class} already exist. Please choose some other date!`);
+        throw new Error(`Questions for date: ${body.date}, class: ${body.class} and subject: ${body.subject} already exist. Please choose some other date, class or subject!`);
       }
 
       await QuestionModel.insertMany(questionsArr);

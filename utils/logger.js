@@ -15,23 +15,4 @@ log4js.configure({
 const logger = log4js.getLogger('Logging: ');
 logger.level = 'debug';
 
-
-// Public functions begin here-----------------
-const info = (...msg) => {
-  logger.info(...msg);
-};
-
-const warn = (...msg) => {
-  logger.warn(...msg);
-};
-
-const error = (...msg) => {
-  logger.error(...msg);
-};
-// Public functions end here-------------------
-
-module.exports = {
-  info,
-  warn,
-  error,
-};
+module.exports = logger;
