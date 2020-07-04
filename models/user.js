@@ -14,7 +14,14 @@ const userSchema = new Schema({
     type: [
       {
         _id: mongoose.Types.ObjectId,
-        optionsSelected: String,
+        optionsSelected: {
+          type: {
+            a: { type: Boolean, default: false },
+            b: { type: Boolean, default: false },
+            c: { type: Boolean, default: false },
+            d: { type: Boolean, default: false },
+          },
+        },
         triesCount: { type: Number, required: true, default: 0 },
         score: { type: Number, required: true, default: 0 },
       },

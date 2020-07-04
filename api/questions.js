@@ -22,19 +22,16 @@ const createNewQueryObject = (body) => {
   return obj;
 };
 
-const getAnswerString = (usersAnswer) => {
-  const usersAns = Object.keys(usersAnswer).map((key) => (usersAnswer[key] ? key : ''));
-  const usersSolution = usersAns.sort().join('');
-
-  return usersSolution;
-};
-
-const isUsersAnswerCorrect = async (_id, usersAnswerString) => new Promise(async (resolve, reject) => {
+const isUsersAnswerCorrect = async (_id, usersAnswer) => new Promise(async (resolve, reject) => {
   try {
-    const question = await QuestionModel.findById(_id, '_id solution');
-    const actualAnswerString = question.solution.split('').sort().join('');
+    const question = await QuestionModel.findById(_id, '_id answer');
 
-    if (actualAnswerString === usersAnswerString) {
+    if (
+      question.answer.a === usersAnswer.a
+      && question.answer.b === usersAnswer.b
+      && question.answer.c === usersAnswer.c
+      && question.answer.d === usersAnswer.d
+    ) {
       resolve(true);
     } else {
       resolve(false);
@@ -44,7 +41,7 @@ const isUsersAnswerCorrect = async (_id, usersAnswerString) => new Promise(async
   }
 });
 
-const updateUsersResponseInDB = async (isAnswerCorrect, userId, questionId, usersAnswerString) => new Promise(async (resolve, reject) => {
+const updateUsersResponseInDB = async (isAnswerCorrect, userId, questionId, usersAnswer) => new Promise(async (resolve, reject) => {
   try {
     const user = await UserModel.findById(userId, '_id questionsAttempted totalScore', { new: true });
     const valuesToUpdate = {};
@@ -67,7 +64,7 @@ const updateUsersResponseInDB = async (isAnswerCorrect, userId, questionId, user
       }
       // Increment tries count and score
       questionToUpdate._id = questionId;
-      questionToUpdate.optionsSelected = usersAnswerString;
+      questionToUpdate.optionsSelected = usersAnswer;
       questionToUpdate.triesCount += 1;
 
       if (questionToUpdate.score === 0 && isAnswerCorrect) {
@@ -80,7 +77,7 @@ const updateUsersResponseInDB = async (isAnswerCorrect, userId, questionId, user
     } else {
       const questionToAdd = {};
       questionToAdd._id = questionId;
-      questionToAdd.optionsSelected = usersAnswerString;
+      questionToAdd.optionsSelected = usersAnswer;
       questionToAdd.triesCount = 1;
 
       if (isAnswerCorrect) {
@@ -156,7 +153,7 @@ const isPostFiveQuestionsBodyValid = (body) => {
       const currentDate = moment().format(DATE_FORMAT);
       const selectedDate = moment(body.date).format(DATE_FORMAT);
 
-      if (currentDate >= selectedDate) {
+      if (currentDate > selectedDate) {
         result.status = false;
         result.msg = 'Make sure that you are selecting a date in the future!';
       }
@@ -192,16 +189,29 @@ questionsRouter.get('/', verifyAuthToken, (req, res) => {
 });
 
 // Get today's questions
-questionsRouter.get('/today', verifyAuthToken, (req, res) => {
-  const todaysDate = moment().format(DATE_FORMAT);
+questionsRouter.get('/today', verifyAuthToken, async (req, res) => {
+  try {
+    const todaysDate = moment().format(DATE_FORMAT);
 
-  QuestionModel.find({ date: todaysDate }, '_id problemStatement options difficultyLevel')
-    .then((response) => {
-      res.send(response);
-    })
-    .catch((error) => {
-      res.send(error);
-    });
+    if (req.query && req.query.selectedClass && req.query.selectedSubject) {
+      const { selectedClass, selectedSubject } = req.query;
+
+      const response = await QuestionModel.find({ date: todaysDate, class: selectedClass, subject: selectedSubject }, '_id number problemStatement options difficultyLevel');
+
+      if (response.length) {
+        res.send(response);
+      } else {
+        throw new Error(`No question available for class: ${selectedClass} subject: ${selectedSubject} date: ${todaysDate}. Please select some other class or subject! Or contact the administrator!`);
+      }
+    } else {
+      const msg = 'Please send class and subject as parameters!';
+      logger.error(msg);
+      throw new Error(msg);
+    }
+  } catch (error) {
+    logger.error(error.toString());
+    res.status(400).send(error.toString());
+  }
 });
 
 /* Submit user's answer
@@ -217,12 +227,10 @@ questionsRouter.post('/submit', verifyAuthToken, async (req, res) => {
   const { usersAnswer } = body;
   const userId = req.user.id;
 
-  const usersAnswerString = getAnswerString(usersAnswer);
-
   try {
-    const isAnswerCorrect = await isUsersAnswerCorrect(questionId, usersAnswerString);
+    const isAnswerCorrect = await isUsersAnswerCorrect(questionId, usersAnswer);
 
-    const updateDbResult = await updateUsersResponseInDB(isAnswerCorrect, userId, questionId, usersAnswerString);
+    const updateDbResult = await updateUsersResponseInDB(isAnswerCorrect, userId, questionId, usersAnswer);
 
     if (updateDbResult) {
       if (isAnswerCorrect) {
@@ -234,32 +242,7 @@ questionsRouter.post('/submit', verifyAuthToken, async (req, res) => {
       res.status(208).send('Sorry! You cannot try more than 3 times.');
     }
   } catch (error) {
-    logger.error(error);
-    res.status(404).send(error);
-  }
-});
-
-// Add a new question
-questionsRouter.post('/', verifyAuthToken, (req, res) => {
-  const { body } = req;
-  if (body.problemStatement && body.options && body.solution) {
-    const questionObject = createNewQueryObject(body);
-
-    const question = new QuestionModel(questionObject);
-
-    question.save()
-      .then((response) => {
-        logger.info(response);
-        res.status(200).send(response);
-      })
-      .catch((error) => {
-        logger.error(error);
-        res.send(error);
-      });
-  } else {
-    const message = 'Unable to add new question. Incorrect request body!';
-    res.status(400).send(message);
-    logger.error(message);
+    res.status(404).send(error.toString());
   }
 });
 
@@ -298,7 +281,7 @@ questionsRouter.post('/five', async (req, res) => {
     if (status) {
       body.questions.forEach((que) => {
         const questionObject = createNewQueryObject(que);
-        questionObject.date = body.date;
+        questionObject.date = moment(body.date).format(DATE_FORMAT);
         questionObject.class = body.class;
         questionObject.subject = body.subject;
 

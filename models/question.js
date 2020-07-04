@@ -25,7 +25,6 @@ const questionSchema = new Schema({
   },
   solution: { type: String, default: '' },
   date: { type: String, required: true },
-  isAlreadyAsked: { type: Boolean, required: true, default: false },
   class: { type: Number, required: true },
   subject: { type: String, required: true, default: 'general' },
   difficultyLevel: {
