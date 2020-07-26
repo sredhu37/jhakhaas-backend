@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const questionSchema = new Schema({
-  number: { type: Number, required: true },
   problemStatement: { type: String, required: true },
   options: {
     type: {
@@ -24,15 +23,17 @@ const questionSchema = new Schema({
     required: true,
   },
   solution: { type: String, default: '' },
-  date: { type: String, required: true },
+  dateAsked: { type: String, default: '' },
   class: { type: Number, required: true },
   subject: { type: String, required: true, default: 'general' },
+  chapter: { type: String, required: true, default: 'general' },
   difficultyLevel: {
     type: Number, required: true, default: 1, min: 1, max: 5,
   },
   questionRating: {
-    type: Number, required: true, default: 4, min: 1, max: 5,
+    type: Number, required: true, default: 5, min: 1, max: 5,
   },
+  uploader: { type: String, required: true },
 });
 
 const QuestionModel = mongoose.model('Question', questionSchema);
