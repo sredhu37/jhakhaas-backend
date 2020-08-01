@@ -23,15 +23,11 @@ const questionSchema = new Schema({
     required: true,
   },
   solution: { type: String, default: '' },
-  dateAsked: { type: String, default: '' },
   class: { type: Number, required: true },
   subject: { type: String, required: true, default: 'general' },
   chapter: { type: String, required: true, default: 'general' },
   difficultyLevel: {
     type: Number, required: true, default: 1, min: 1, max: 5,
-  },
-  questionRating: {
-    type: Number, required: true, default: 5, min: 1, max: 5,
   },
   uploader: { type: String, required: true },
 });

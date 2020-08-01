@@ -1,23 +1,58 @@
+'use strict';
+
 const express = require('express');
-// const moment = require('moment');
+const moment = require('moment');
 
 const questionsRouter = express.Router();
 const logger = require('../utils/logger');
 const { QuestionModel } = require('../models/question');
-const { UserModel } = require('../models/user');
 const { verifyAuthToken } = require('../utils/verifyToken');
-// const utils = require('../utils/commonMethods');
+const { UserModel } = require('../models/user');
+const utils = require('../utils/commonMethods');
 
-// const DATE_FORMAT = 'YYYY-MM-DD';
-const GENERAL = 'general';
+const DATE_FORMAT = 'YYYY-MM-DD';
+
+// If no date is passed, then return today's date
+const getDate = (date = '') => (utils.exists(date)
+  ? moment(date).format(DATE_FORMAT)
+  : moment().format(DATE_FORMAT));
 
 const createNewQuestionsArr = (body) => body.questions.map((que) => ({
   ...que,
   class: body.class,
   subject: body.subject,
   chapter: body.chapter,
-  uploader: body.uploader
+  uploader: body.uploader,
 }));
+
+const isAnswerCorrect = (usersAnswer, question) => (usersAnswer.a === question.answer.a
+  && usersAnswer.b === question.answer.b
+  && usersAnswer.c === question.answer.c
+  && usersAnswer.d === question.answer.d);
+
+const getUpdatedQuestionObject = (question, usersAnswer) => {
+  let state = 'INCORRECT';
+
+  if (
+    !usersAnswer.a
+    && !usersAnswer.b
+    && !usersAnswer.c
+    && !usersAnswer.d
+  ) {
+    state = 'UNATTEMPTED';
+  } else if (isAnswerCorrect(usersAnswer, question)) {
+    state = 'CORRECT';
+  }
+
+  return {
+    _id: question._id,
+    optionsSelected: usersAnswer,
+    state,
+    dateAsked: getDate(),
+  };
+};
+
+const getUpdatedArray = (arr, indexToUpdate, updatedValue) => arr.map((oldValue, index) => ((index === indexToUpdate) ? updatedValue : oldValue));
 
 /*
  * check that each question has a problem statement
@@ -92,34 +127,101 @@ const isUploadQuestionsBodyValid = (body) => {
   return result;
 };
 
-// Get all questions
-questionsRouter.get('/', verifyAuthToken, (req, res) => {
-  QuestionModel.find({})
-    .then((response) => {
-      res.send(response);
-    })
-    .catch((error) => {
-      res.send(error);
-    });
+/**
+ *  Get ONE question
+ *
+ *  Acceptable body: {
+ *    userId: String,
+ *    className: String,
+ *    subject: String,
+ *    chapter: String,
+ *    latestQueId: String, (optional)
+ *  }
+ *
+ *  Return status:
+ *  200 => OK
+ *  400 => Bad request
+ *  500 => Error
+*/
+questionsRouter.get('/', async (req, res) => {
+  const {
+    userId, className, subject, chapter,
+  } = req.body;
+
+  try {
+    if (utils.exists(userId) && utils.exists(className) && utils.exists(subject) && utils.exists(chapter)) {
+      const user = await UserModel.findById(userId).populate('questionsAttempted');
+
+      res.send(user);
+    } else {
+      res.sendStatus(400); // Bad request
+    }
+  } catch (err) {
+    res.status(500).send(err.toString());
+  }
 });
 
-/* Submit user's answer
+/**
+ * Submit user's answer
+ * Acceptable body
+ * {
+ *    userId: String,
+ *    questionId: String,
+ *    usersAnswer: {
+ *      a: Boolean,
+ *      b: Boolean,
+ *      c: Boolean,
+ *      d: Boolean
+ *    }
+ * }
+ *
  * Return status:
  * 200 => Correct Answer
  * 204 => Incorrect Answer
- * 404 => Error
-*/
-questionsRouter.post('/submit', verifyAuthToken, async (req, res) => {
-  // const { body } = req;
-  // const questionId = body.question._id;
-  // const { usersAnswer } = body;
-  // const userId = req.user.id;
+ * 400 => Bad request
+ * 500 => Error
+ * */
+questionsRouter.post('/submit', async (req, res) => {
+  const { body } = req;
+  const { userId, questionId, usersAnswer } = body;
 
   try {
-    // Will implement later
-    res.send('OK');
+    if (utils.exists(userId) && utils.exists(questionId) && utils.exists(usersAnswer)) {
+      // Get user object from DB
+      const user = await UserModel.findById(userId);
+      const question = await QuestionModel.findById(questionId);
+
+      const newQuestionObject = getUpdatedQuestionObject(question, usersAnswer);
+
+      const isAlreadyAttempted = user.questionsAttempted
+        .map((que) => que._id.toString().trim())
+        .includes(questionId.toString().trim());
+
+      if (isAlreadyAttempted) {
+        const indexToUpdate = user.questionsAttempted.findIndex((que) => que._id.toString().trim() === questionId.toString().trim());
+
+        await UserModel.findByIdAndUpdate({ _id: userId }, {
+          questionsAttempted: getUpdatedArray(user.questionsAttempted, indexToUpdate, newQuestionObject),
+        });
+      } else {
+        await UserModel.findByIdAndUpdate({ _id: userId }, {
+          questionsAttempted: [
+            ...user.questionsAttempted,
+            newQuestionObject,
+          ],
+        });
+      }
+
+      if (isAnswerCorrect(usersAnswer, question)) {
+        res.sendStatus(200);
+      } else {
+        res.sendStatus(204);
+      }
+    } else {
+      res.sendStatus(400); // Bad request
+    }
   } catch (error) {
-    res.status(404).send(error.toString());
+    res.status(500).send(error.toString());
   }
 });
 

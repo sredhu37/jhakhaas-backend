@@ -3,9 +3,9 @@ const logger = require('./logger');
 const exists = (value) => {
   switch (typeof value) {
     case 'string':
-      return !!((value && value !== 'undefined' && value.trim() !== ''));
+      return value && value !== 'undefined' && value.trim() !== '';
     case 'object':
-      return !!((value && value !== 'undefined'));
+      return value && value !== 'undefined';
     case 'undefined':
       return false;
     default:

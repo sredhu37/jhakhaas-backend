@@ -7,13 +7,12 @@ const userSchema = new Schema({
   role: { type: String, required: true, default: 'USER' },
   joinedOn: { type: Date, required: true, default: new Date() },
   isActive: { type: Boolean, required: true, default: true },
-  totalScore: { type: Number, required: true, default: 0 },
   name: { type: String, required: true, default: '' },
   class: { type: String, required: true, default: 'OTHER' },
   questionsAttempted: {
     type: [
       {
-        _id: mongoose.Types.ObjectId,
+        _id: { type: Schema.Types.ObjectId, ref: 'Question' },
         optionsSelected: {
           type: {
             a: { type: Boolean, default: false },
@@ -22,8 +21,12 @@ const userSchema = new Schema({
             d: { type: Boolean, default: false },
           },
         },
-        triesCount: { type: Number, required: true, default: 0 },
-        score: { type: Number, required: true, default: 0 },
+        state: {
+          type: String,
+          default: 'UNATTEMPTED',
+          enum: ['UNATTEMPTED', 'CORRECT', 'INCORRECT'],
+        },
+        dateAsked: { type: String, default: '' },
       },
     ],
     required: true,
