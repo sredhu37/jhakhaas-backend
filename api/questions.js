@@ -1,4 +1,3 @@
-'use strict';
 
 const express = require('express');
 const moment = require('moment');
@@ -128,7 +127,7 @@ const isUploadQuestionsBodyValid = (body) => {
 };
 
 /**
- *  Get ONE question
+ *  Get today's questions
  *
  *  Acceptable body: {
  *    userId: String,
@@ -152,7 +151,45 @@ questionsRouter.get('/', async (req, res) => {
     if (utils.exists(userId) && utils.exists(className) && utils.exists(subject) && utils.exists(chapter)) {
       const user = await UserModel.findById(userId).populate('questionsAttempted');
 
-      res.send(user);
+      const todaysDate = getDate();
+      const todaysQuestions = user.questionsAttempted.filter((que) => getDate(que.dateAsked) === todaysDate);
+
+      if (todaysQuestions.length) {
+        const todaysQuestionsAttemptedIdList = todaysQuestions.map((que) => que._id);
+        const askedQuestions = await QuestionModel.find({ _id: { $in: todaysQuestionsAttemptedIdList } });
+        logger.info(`Sending already asked questions: `, askedQuestions);
+        res.send(askedQuestions);
+      } else {
+        const questionsAttemptedIdList = user.questionsAttempted.map((que) => que._id);
+
+        const unAttemptedQuestions = await QuestionModel.find({
+          class: className,
+          subject,
+          chapter,
+          _id: { $nin: questionsAttemptedIdList },
+        }).limit(5);
+
+        const todaysAskedQuestions = unAttemptedQuestions.map(que => ({
+          _id: que._id,
+          optionsSelected: {
+            a: false,
+            b: false,
+            c: false,
+            d: false
+          },
+          state: 'UNATTEMPTED',
+          dateAsked: getDate()
+        }));
+
+        await UserModel.findOneAndUpdate({ _id: userId }, {
+          questionsAttempted: [
+            ...user.questionsAttempted,
+            ...todaysAskedQuestions,
+          ]
+        });
+        logger.info(`Sending new questions: `, unAttemptedQuestions);
+        res.send(unAttemptedQuestions);
+      }
     } else {
       res.sendStatus(400); // Bad request
     }
