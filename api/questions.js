@@ -133,8 +133,7 @@ const isUploadQuestionsBodyValid = (body) => {
  *    userId: String,
  *    className: String,
  *    subject: String,
- *    chapter: String,
- *    latestQueId: String, (optional)
+ *    chapter: String
  *  }
  *
  *  Return status:
@@ -145,7 +144,7 @@ const isUploadQuestionsBodyValid = (body) => {
 questionsRouter.get('/', async (req, res) => {
   const {
     userId, className, subject, chapter,
-  } = req.body;
+  } = req.query;
 
   try {
     if (utils.exists(userId) && utils.exists(className) && utils.exists(subject) && utils.exists(chapter)) {
@@ -154,10 +153,16 @@ questionsRouter.get('/', async (req, res) => {
       const todaysDate = getDate();
       const todaysQuestions = user.questionsAttempted.filter((que) => getDate(que.dateAsked) === todaysDate);
 
-      if (todaysQuestions.length) {
-        const todaysQuestionsAttemptedIdList = todaysQuestions.map((que) => que._id);
-        const askedQuestions = await QuestionModel.find({ _id: { $in: todaysQuestionsAttemptedIdList } });
-        logger.info(`Sending already asked questions: `, askedQuestions);
+      const todaysQuestionsAttemptedIdList = todaysQuestions.map((que) => que._id);
+      const askedQuestions = await QuestionModel.find({
+        class: className,
+        subject,
+        chapter,
+        _id: { $in: todaysQuestionsAttemptedIdList },
+      }, '_id problemStatement options');
+
+      if (askedQuestions.length) {
+        logger.info('Sending already asked questions: ', askedQuestions);
         res.send(askedQuestions);
       } else {
         const questionsAttemptedIdList = user.questionsAttempted.map((que) => que._id);
@@ -167,33 +172,34 @@ questionsRouter.get('/', async (req, res) => {
           subject,
           chapter,
           _id: { $nin: questionsAttemptedIdList },
-        }).limit(5);
+        }, '_id problemStatement options').limit(5);
 
-        const todaysAskedQuestions = unAttemptedQuestions.map(que => ({
+        const todaysAskedQuestions = unAttemptedQuestions.map((que) => ({
           _id: que._id,
           optionsSelected: {
             a: false,
             b: false,
             c: false,
-            d: false
+            d: false,
           },
           state: 'UNATTEMPTED',
-          dateAsked: getDate()
+          dateAsked: getDate(),
         }));
 
         await UserModel.findOneAndUpdate({ _id: userId }, {
           questionsAttempted: [
             ...user.questionsAttempted,
             ...todaysAskedQuestions,
-          ]
+          ],
         });
-        logger.info(`Sending new questions: `, unAttemptedQuestions);
+        logger.info('Sending new questions: ', unAttemptedQuestions);
         res.send(unAttemptedQuestions);
       }
     } else {
       res.sendStatus(400); // Bad request
     }
   } catch (err) {
+    logger.error(err);
     res.status(500).send(err.toString());
   }
 });
