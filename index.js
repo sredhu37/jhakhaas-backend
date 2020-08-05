@@ -22,7 +22,7 @@ app.use(cookieSession({
   name: 'jhakhaas-session',
   keys: ['jhakhaas-key1', 'jhakhaas-key2'],
   sameSite: 'none',
-  secure: true
+  secure: true,
 }));
 app.use(passport.initialize());
 app.use(passport.session());
