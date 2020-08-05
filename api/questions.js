@@ -164,7 +164,7 @@ questionsRouter.get('/', verifyAuthToken, async (req, res) => {
       if (askedQuestions.length) {
         const modifiedAskedQuestions = askedQuestions.map((que) => {
           const userCurrentQue = todaysQuestions.find((askedQue) => askedQue._id.toString().trim() === que._id.toString().trim());
-          console.log(`Sunny: `, userCurrentQue);
+          console.log('Sunny: ', userCurrentQue);
           return {
             ...que._doc,
             state: userCurrentQue.state,
@@ -252,18 +252,18 @@ questionsRouter.post('/submit', verifyAuthToken, async (req, res) => {
       const indexToUpdate = user.questionsAttempted.findIndex((que) => que._id.toString().trim() === questionId.toString().trim());
 
       let totalScore = 0;
-      user.questionsAttempted.forEach(que => {
+      user.questionsAttempted.forEach((que) => {
         if (que.state === 'CORRECT') {
-          totalScore++;
+          totalScore += 1;
         }
       });
       if (isAnswerCorrect(usersAnswer, question)) {
-        totalScore++;
+        totalScore += 1;
       }
 
       await UserModel.findByIdAndUpdate({ _id: userId }, {
         questionsAttempted: getUpdatedArray(user.questionsAttempted, indexToUpdate, newQuestionObject),
-        totalScore
+        totalScore,
       });
 
       if (isAnswerCorrect(usersAnswer, question)) {

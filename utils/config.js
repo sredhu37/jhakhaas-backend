@@ -67,7 +67,7 @@ if (NODE_ENV === 'DEV') {
 
   const otherObj = {
     HOST: process.env.HOST_PROD || 'http://127.0.0.1',
-    PORT: process.env.PORT_PROD || process.env.PORT || 3000,  // PORT env variable is automatically created by Heroku
+    PORT: process.env.PORT_PROD || process.env.PORT || 3000, // PORT env variable is automatically created by Heroku
     CLIENT_URL: process.env.CLIENT_URL_PROD,
   };
 
