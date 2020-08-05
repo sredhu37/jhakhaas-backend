@@ -18,7 +18,12 @@ app.use(helmet()); // good for security
 app.use(cors({ credentials: true, origin: config.other.CLIENT_URL }));
 app.use(express.json());
 app.use(middleware.logRequest);
-app.use(cookieSession({ name: 'jhakhaas-session', keys: ['jhakhaas-key1', 'jhakhaas-key2'] }));
+app.use(cookieSession({
+  name: 'jhakhaas-session',
+  keys: ['jhakhaas-key1', 'jhakhaas-key2'],
+  sameSite: 'none',
+  secure: true
+}));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use('/api/users', usersController.usersRouter);
