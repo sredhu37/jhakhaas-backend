@@ -141,7 +141,7 @@ const isUploadQuestionsBodyValid = (body) => {
  *  400 => Bad request
  *  500 => Error
 */
-questionsRouter.get('/', async (req, res) => {
+questionsRouter.get('/', verifyAuthToken, async (req, res) => {
   const {
     userId, className, subject, chapter,
   } = req.query;
@@ -237,7 +237,7 @@ questionsRouter.get('/', async (req, res) => {
  * 400 => Bad request
  * 500 => Error
  * */
-questionsRouter.post('/submit', async (req, res) => {
+questionsRouter.post('/submit', verifyAuthToken, async (req, res) => {
   const { body } = req;
   const { userId, questionId, usersAnswer } = body;
 
