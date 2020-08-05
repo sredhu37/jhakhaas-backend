@@ -13,17 +13,23 @@ const usersController = require('./api/users');
 const questionsController = require('./api/questions');
 const auth = require('./api/auth');
 
+let cookieObject = {
+  maxAge: 24 * 60 * 60 * 1000, // 1 day
+  name: 'jhakhaas-session',
+  keys: ['jhakhaas-key1', 'jhakhaas-key2'],
+};
+
+if (process.env.NODE_ENV === 'PROD') {
+  cookieObject['sameSite'] = 'none';
+  cookieObject['secure'] = true;
+}
+
 const app = express();
 app.use(helmet()); // good for security
 app.use(cors({ credentials: true, origin: config.other.CLIENT_URL }));
 app.use(express.json());
 app.use(middleware.logRequest);
-app.use(cookieSession({
-  name: 'jhakhaas-session',
-  keys: ['jhakhaas-key1', 'jhakhaas-key2'],
-  sameSite: 'none',
-  secure: true,
-}));
+app.use(cookieSession(cookieObject));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use('/api/users', usersController.usersRouter);

@@ -15,7 +15,7 @@ passport.use(new GoogleStrategy({
   callbackURL: config.google.REDIRECT_URI,
 },
 (accessToken, refreshToken, profile, done) => {
-  logger.info(`Profile: ${JSON.stringify(profile)}`);
+  // logger.info(`Google profile: ${JSON.stringify(profile)}`);
 
   UserModel.findOne({ googleId: profile.id })
     .then((user) => {
@@ -49,15 +49,20 @@ passport.use(new GoogleStrategy({
     });
 }));
 
+// Puts user id into the cookie which will be sent to the browser
 passport.serializeUser((user, done) => {
   done(null, user.id);
 });
 
+// Reads the cookie coming from the browser and verifies the user against the same id
 passport.deserializeUser(async (id, done) => {
   try {
     const user = await UserModel.findById(id, 'email');
+    logger.info(`Found the user with id(retrieved from cookie): `, JSON.stringify(user));
+    // This sets user property in req object in the route handler
     done(null, user);
   } catch (error) {
+    logger.info(`Couldn't find the user with id(retrieved from cookie): ${id}`);
     done(error, null);
   }
 });
