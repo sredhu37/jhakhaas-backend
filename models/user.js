@@ -9,6 +9,7 @@ const userSchema = new Schema({
   isActive: { type: Boolean, required: true, default: true },
   name: { type: String, required: true, default: '' },
   class: { type: String, required: true, default: 'OTHER' },
+  totalScore: { type: Number, required: true, default: 0 },
   questionsAttempted: {
     type: [
       {

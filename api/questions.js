@@ -162,19 +162,27 @@ questionsRouter.get('/', async (req, res) => {
       }, '_id problemStatement options');
 
       if (askedQuestions.length) {
-        logger.info('Sending already asked questions: ', askedQuestions);
-        res.send(askedQuestions);
+        const modifiedAskedQuestions = askedQuestions.map((que) => {
+          const userCurrentQue = todaysQuestions.find((askedQue) => askedQue._id.toString().trim() === que._id.toString().trim());
+          console.log(`Sunny: `, userCurrentQue);
+          return {
+            ...que._doc,
+            state: userCurrentQue.state,
+          };
+        });
+        logger.info('Sending already asked questions: ', modifiedAskedQuestions);
+        res.send(modifiedAskedQuestions);
       } else {
         const questionsAttemptedIdList = user.questionsAttempted.map((que) => que._id);
 
-        const unAttemptedQuestions = await QuestionModel.find({
+        const notAskedQuestions = await QuestionModel.find({
           class: className,
           subject,
           chapter,
           _id: { $nin: questionsAttemptedIdList },
         }, '_id problemStatement options').limit(5);
 
-        const todaysAskedQuestions = unAttemptedQuestions.map((que) => ({
+        const todaysAskedQuestions = notAskedQuestions.map((que) => ({
           _id: que._id,
           optionsSelected: {
             a: false,
@@ -192,8 +200,13 @@ questionsRouter.get('/', async (req, res) => {
             ...todaysAskedQuestions,
           ],
         });
-        logger.info('Sending new questions: ', unAttemptedQuestions);
-        res.send(unAttemptedQuestions);
+        logger.info('Sending new questions: ', notAskedQuestions);
+
+        const modifiedNotAskedQuestions = notAskedQuestions.map((que) => ({
+          ...que._doc,
+          state: 'UNATTEMPTED',
+        }));
+        res.send(modifiedNotAskedQuestions);
       }
     } else {
       res.sendStatus(400); // Bad request
@@ -236,24 +249,22 @@ questionsRouter.post('/submit', async (req, res) => {
 
       const newQuestionObject = getUpdatedQuestionObject(question, usersAnswer);
 
-      const isAlreadyAttempted = user.questionsAttempted
-        .map((que) => que._id.toString().trim())
-        .includes(questionId.toString().trim());
+      const indexToUpdate = user.questionsAttempted.findIndex((que) => que._id.toString().trim() === questionId.toString().trim());
 
-      if (isAlreadyAttempted) {
-        const indexToUpdate = user.questionsAttempted.findIndex((que) => que._id.toString().trim() === questionId.toString().trim());
-
-        await UserModel.findByIdAndUpdate({ _id: userId }, {
-          questionsAttempted: getUpdatedArray(user.questionsAttempted, indexToUpdate, newQuestionObject),
-        });
-      } else {
-        await UserModel.findByIdAndUpdate({ _id: userId }, {
-          questionsAttempted: [
-            ...user.questionsAttempted,
-            newQuestionObject,
-          ],
-        });
+      let totalScore = 0;
+      user.questionsAttempted.forEach(que => {
+        if (que.state === 'CORRECT') {
+          totalScore++;
+        }
+      });
+      if (isAnswerCorrect(usersAnswer, question)) {
+        totalScore++;
       }
+
+      await UserModel.findByIdAndUpdate({ _id: userId }, {
+        questionsAttempted: getUpdatedArray(user.questionsAttempted, indexToUpdate, newQuestionObject),
+        totalScore
+      });
 
       if (isAnswerCorrect(usersAnswer, question)) {
         res.sendStatus(200);
