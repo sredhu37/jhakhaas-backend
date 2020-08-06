@@ -21,6 +21,7 @@ const cookieObject = {
 
 if (process.env.NODE_ENV === 'PROD') {
   logger.info('Setting sameSite and secure flags in cookie!');
+  cookieObject.domain = config.other.CLIENT_URL;
   cookieObject.sameSite = 'none';
   cookieObject.secure = true;
 }
