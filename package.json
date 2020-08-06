@@ -13,11 +13,9 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.2",
-    "bcrypt": "^4.0.1",
     "cookie-session": "^1.4.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
-    "email-validator": "^2.0.4",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "helmet": "^3.23.0",
@@ -26,7 +24,6 @@
     "mongoose": "^5.9.11",
     "passport": "^0.4.1",
     "passport-google-oauth": "^2.0.0",
-    "password-validator": "^5.0.3",
     "path": "^0.12.7"
   },
   "devDependencies": {
