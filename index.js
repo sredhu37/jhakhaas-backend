@@ -17,10 +17,10 @@ const cookieObject = {
   maxAge: 24 * 60 * 60 * 1000, // 1 day
   name: 'jhakhaas-session',
   keys: ['jhakhaas-key1', 'jhakhaas-key2'],
-  httpOnly: true,
 };
 
 if (process.env.NODE_ENV === 'PROD') {
+  logger.info('Setting sameSite and secure flags in cookie!');
   cookieObject.sameSite = 'none';
   cookieObject.secure = true;
 }
