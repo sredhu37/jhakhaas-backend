@@ -13,15 +13,15 @@ const usersController = require('./api/users');
 const questionsController = require('./api/questions');
 const auth = require('./api/auth');
 
-let cookieObject = {
+const cookieObject = {
   maxAge: 24 * 60 * 60 * 1000, // 1 day
   name: 'jhakhaas-session',
   keys: ['jhakhaas-key1', 'jhakhaas-key2'],
 };
 
 if (process.env.NODE_ENV === 'PROD') {
-  cookieObject['sameSite'] = 'none';
-  cookieObject['secure'] = true;
+  cookieObject.sameSite = 'none';
+  cookieObject.secure = true;
 }
 
 const app = express();

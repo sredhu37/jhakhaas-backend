@@ -58,7 +58,7 @@ passport.serializeUser((user, done) => {
 passport.deserializeUser(async (id, done) => {
   try {
     const user = await UserModel.findById(id, 'email');
-    logger.info(`Found the user with id(retrieved from cookie): `, JSON.stringify(user));
+    logger.info('Found the user with id(retrieved from cookie): ', JSON.stringify(user));
     // This sets user property in req object in the route handler
     done(null, user);
   } catch (error) {
