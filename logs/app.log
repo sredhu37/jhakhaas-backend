@@ -1,0 +1,43 @@
+[2020-08-06T16:14:42.203] [INFO] Logging:  - Listening on http://127.0.0.1:4000
+[2020-08-06T16:14:54.603] [INFO] Logging:  - Successfully connected to MongoDB!
+[2020-08-06T16:15:47.920] [INFO] Logging:  - ---Request begins here---
+[2020-08-06T16:15:47.921] [INFO] Logging:  - Method: GET
+[2020-08-06T16:15:47.922] [INFO] Logging:  - Path:   /api/users/profile
+[2020-08-06T16:15:47.925] [INFO] Logging:  - Body:   {}
+[2020-08-06T16:15:47.927] [INFO] Logging:  - ---Request ends here---
+[2020-08-06T16:16:10.487] [INFO] Logging:  - ---Request begins here---
+[2020-08-06T16:16:10.488] [INFO] Logging:  - Method: GET
+[2020-08-06T16:16:10.489] [INFO] Logging:  - Path:   /auth/google/login
+[2020-08-06T16:16:10.494] [INFO] Logging:  - Body:   {}
+[2020-08-06T16:16:10.498] [INFO] Logging:  - ---Request ends here---
+[2020-08-06T16:16:10.764] [INFO] Logging:  - Found the user with id(retrieved from cookie):  {"_id":"5ed3b8e30a56eb1718e760e9","email":"redhusunny1994@gmail.com"}
+[2020-08-06T16:16:11.268] [INFO] Logging:  - ---Request begins here---
+[2020-08-06T16:16:11.269] [INFO] Logging:  - Method: GET
+[2020-08-06T16:16:11.270] [INFO] Logging:  - Path:   /auth/google/callback
+[2020-08-06T16:16:11.271] [INFO] Logging:  - Body:   {}
+[2020-08-06T16:16:11.272] [INFO] Logging:  - ---Request ends here---
+[2020-08-06T16:16:11.523] [INFO] Logging:  - Found the user with id(retrieved from cookie):  {"_id":"5ed3b8e30a56eb1718e760e9","email":"redhusunny1994@gmail.com"}
+[2020-08-06T16:16:12.224] [INFO] Logging:  - User redhusunny1994@gmail.com already exists. Logging in.
+[2020-08-06T16:16:12.769] [INFO] Logging:  - ---Request begins here---
+[2020-08-06T16:16:12.770] [INFO] Logging:  - Method: GET
+[2020-08-06T16:16:12.771] [INFO] Logging:  - Path:   /api/users/profile
+[2020-08-06T16:16:12.772] [INFO] Logging:  - Body:   {}
+[2020-08-06T16:16:12.773] [INFO] Logging:  - ---Request ends here---
+[2020-08-06T16:16:13.013] [INFO] Logging:  - Found the user with id(retrieved from cookie):  {"_id":"5ed3b8e30a56eb1718e760e9","email":"redhusunny1994@gmail.com"}
+[2020-08-06T16:16:18.591] [INFO] Logging:  - ---Request begins here---
+[2020-08-06T16:16:18.595] [INFO] Logging:  - Method: GET
+[2020-08-06T16:16:18.597] [INFO] Logging:  - Path:   /auth/logout
+[2020-08-06T16:16:18.598] [INFO] Logging:  - Body:   {}
+[2020-08-06T16:16:18.601] [INFO] Logging:  - ---Request ends here---
+[2020-08-06T16:16:18.625] [INFO] Logging:  - ---Request begins here---
+[2020-08-06T16:16:18.626] [INFO] Logging:  - Method: GET
+[2020-08-06T16:16:18.627] [INFO] Logging:  - Path:   /api/users/profile
+[2020-08-06T16:16:18.629] [INFO] Logging:  - Body:   {}
+[2020-08-06T16:16:18.630] [INFO] Logging:  - ---Request ends here---
+[2020-08-06T16:16:18.823] [INFO] Logging:  - Found the user with id(retrieved from cookie):  {"_id":"5ed3b8e30a56eb1718e760e9","email":"redhusunny1994@gmail.com"}
+[2020-08-06T16:16:19.069] [INFO] Logging:  - Found the user with id(retrieved from cookie):  {"_id":"5ed3b8e30a56eb1718e760e9","email":"redhusunny1994@gmail.com"}
+[2020-08-06T16:16:19.135] [INFO] Logging:  - ---Request begins here---
+[2020-08-06T16:16:19.137] [INFO] Logging:  - Method: GET
+[2020-08-06T16:16:19.142] [INFO] Logging:  - Path:   /api/users/profile
+[2020-08-06T16:16:19.145] [INFO] Logging:  - Body:   {}
+[2020-08-06T16:16:19.154] [INFO] Logging:  - ---Request ends here---
